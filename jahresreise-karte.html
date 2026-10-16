@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang='de'>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>Jahresreise | Lernwerkstatt Sanitärtechnik</title>
+<style>
+
+:root{--bg:#f5f8fb;--ink:#172634;--muted:#617484;--navy:#0e3450;--blue:#1f7296;--accent:#ee9b32;--line:#d8e5ec;--soft:#edf5f8;--water:#dff3fb;--waste:#f3eee9}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;background:linear-gradient(#fbfdff,#edf4f7);color:var(--ink)}
+a{color:inherit}.container{max-width:1250px;margin:auto;padding:0 22px}
+header{position:sticky;top:0;z-index:50;background:rgba(14,52,80,.97);border-bottom:1px solid rgba(255,255,255,.1)}
+.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none}.brand strong{display:block}.brand small{display:block;color:#c1d7e3;margin-top:2px}
+.menu{display:flex;gap:6px;flex-wrap:wrap}.menu a{color:#eef6fa;text-decoration:none;font-weight:750;font-size:.88rem;padding:9px 11px;border-radius:9px}.menu a:hover{background:rgba(255,255,255,.14)}
+.section{padding:38px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:20px}.section-head h2{margin:5px 0 0}.section-head p{margin:0;color:var(--muted);max-width:620px;line-height:1.55}.eyebrow{font-size:.74rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--blue)}
+.card{background:#fff;border:1px solid var(--line);border-radius:17px;padding:20px}.card p{color:var(--muted);line-height:1.55}
+.badge{display:inline-flex;padding:6px 10px;border-radius:999px;background:#e7f3f8;color:var(--blue);font-size:.82rem;font-weight:850}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:850;border:1px solid #c1d3df;background:#fff;color:var(--blue);transition:.15s}
+.btn:hover{transform:translateY(-1px);background:var(--soft)}.btn.primary{background:var(--accent);border-color:var(--accent);color:#173248}.btn.secondary{background:var(--soft)}
+.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:18px}.topic-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.topic-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;text-decoration:none;color:inherit;transition:.18s}.topic-card:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(28,58,78,.10)}
+.topic-card h4{margin:10px 0}.topic-card p{margin:0;color:var(--muted);line-height:1.5}.mebis-note{margin-top:12px;color:var(--blue);font-weight:850}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+details.group{background:#fff;border:1px solid var(--line);border-radius:14px;margin:12px 0;overflow:hidden}details.group summary{cursor:pointer;padding:16px 18px;font-weight:850}
+.link-list{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:0 16px 16px}.link-item{background:#f8fbfd;border:1px solid var(--line);padding:12px;border-radius:12px;display:flex;justify-content:space-between;gap:10px}.link-item a{color:var(--blue);font-weight:850;text-decoration:none}
+footer{background:#0d2c43;color:#aec1cf;padding:26px 0;margin-top:28px}
+@media(max-width:850px){.topic-grid,.grid-3,.grid-2,.link-list{grid-template-columns:1fr}.section-head,.nav{flex-direction:column;align-items:flex-start}}
+
+.journey{position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:0 18px 48px rgba(25,52,70,.14);background:#fff;line-height:0}
+.journey img{display:block;width:100%;height:auto}
+.journey svg{position:absolute;inset:0;width:100%;height:100%}
+.journey svg rect{fill:rgba(238,155,50,0);stroke:transparent;stroke-width:4;vector-effect:non-scaling-stroke;transition:.15s}
+.journey svg a:hover rect,.journey svg a:focus-visible rect{fill:rgba(238,155,50,.16);stroke:#f6ad3e}
+.hint{margin-top:14px;color:var(--muted);line-height:1.55}
+</style>
+</head>
+<body>
+<header>
+  <div class='container nav'>
+    <a class='brand' href='index.html'>
+      <span style='font-size:1.5rem'>💧</span>
+      <span><strong>Lernwerkstatt Sanitärtechnik</strong><small>11. Klasse</small></span>
+    </a>
+    <nav class='menu'><a href='index.html'>Startseite</a></nav>
+  </div>
+</header>
+
+<main>
+<section class='section'>
+  <div class='container'>
+    <div class='section-head'>
+      <div>
+        <div class='eyebrow'>Jahresreise</div>
+        <h2>Sanitärtechnik · 11. Klasse</h2>
+      </div>
+      <p>Klicke direkt auf die gewünschte Blockwoche in der Jahresreise.</p>
+    </div>
+
+    <div class='journey'>
+      <img src='jahresreise.png' alt='Jahresreise Sanitärtechnik 11. Klasse'>
+      <svg viewBox='0 0 1672 941' preserveAspectRatio='none' aria-label='Anklickbare Blockwochen'>
+        <a href='lernpfad.html?bw=1' aria-label='Blockwoche 1 öffnen'><rect x='200' y='210' width='170' height='190' rx='12'/></a><a href='lernpfad.html?bw=2' aria-label='Blockwoche 2 öffnen'><rect x='455' y='205' width='175' height='195' rx='12'/></a><a href='lernpfad.html?bw=3' aria-label='Blockwoche 3 öffnen'><rect x='720' y='210' width='175' height='190' rx='12'/></a><a href='lernpfad.html?bw=4' aria-label='Blockwoche 4 öffnen'><rect x='950' y='210' width='165' height='190' rx='12'/></a><a href='lernpfad.html?bw=5' aria-label='Blockwoche 5 öffnen'><rect x='65' y='475' width='190' height='190' rx='12'/></a><a href='lernpfad.html?bw=6' aria-label='Blockwoche 6 öffnen'><rect x='540' y='450' width='220' height='185' rx='12'/></a><a href='lernpfad.html?bw=7' aria-label='Blockwoche 7 öffnen'><rect x='845' y='470' width='195' height='185' rx='12'/></a><a href='lernpfad.html?bw=8' aria-label='Blockwoche 8 öffnen'><rect x='1110' y='470' width='205' height='180' rx='12'/></a><a href='lernpfad.html?bw=9' aria-label='Blockwoche 9 öffnen'><rect x='90' y='690' width='210' height='175' rx='12'/></a><a href='lernpfad.html?bw=10' aria-label='Blockwoche 10 öffnen'><rect x='330' y='690' width='210' height='175' rx='12'/></a><a href='lernpfad.html?bw=11' aria-label='Blockwoche 11 öffnen'><rect x='550' y='690' width='210' height='175' rx='12'/></a><a href='lernpfad.html?bw=12' aria-label='Blockwoche 12 öffnen'><rect x='775' y='690' width='210' height='175' rx='12'/></a>
+      </svg>
+    </div>
+
+    <p class='hint'>Die Grafik bleibt deine Jahresübersicht. Ein Klick auf eine Woche öffnet direkt den passenden Lernpfad.</p>
+  </div>
+</section>
+</main>
+
+<footer><div class='container'>Lernwerkstatt Sanitärtechnik · 11. Klasse</div></footer>
+</body>
+</html>
