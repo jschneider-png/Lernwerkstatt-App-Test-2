@@ -1,0 +1,5 @@
+CODE BLAU – Meisterfreigabe
+
+Beide Dateien ins Hauptverzeichnis des GitHub-Repositories hochladen. Vorhandene gleichnamige Dateien ersetzen. Andere Dateien unverändert lassen.
+
+Die missionen.html bindet missionen.css, missionen-daten.js, missionen.js, lehrkraft-inhalte.js und meisterfreigabe.js ein. Diese Dateien müssen weiterhin vorhanden sein.
