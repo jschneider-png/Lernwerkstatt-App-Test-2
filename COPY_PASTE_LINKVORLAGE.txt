@@ -1,0 +1,15 @@
+// COPY-&-PASTE-VORLAGE
+const KURS_LINKS = {
+  1:{mebis:'',drive:'',arbeitsblaetter:'',zusatzmaterial:'',videos:'',weitereLinks:''},
+  2:{mebis:'',drive:'',arbeitsblaetter:'',zusatzmaterial:'',videos:'',weitereLinks:''},
+  3:{mebis:'',drive:'',arbeitsblaetter:'',zusatzmaterial:'',videos:'',weitereLinks:''},
+  4:{mebis:'',drive:'',arbeitsblaetter:'',zusatzmaterial:'',videos:'',weitereLinks:''},
+  5:{mebis:'',drive:'',arbeitsblaetter:'',zusatzmaterial:'',videos:'',weitereLinks:''},
+  6:{mebis:'',drive:'',arbeitsblaetter:'',zusatzmaterial:'',videos:'',weitereLinks:''},
+  7:{mebis:'',drive:'',arbeitsblaetter:'',zusatzmaterial:'',videos:'',weitereLinks:''},
+  8:{mebis:'',drive:'',arbeitsblaetter:'',zusatzmaterial:'',videos:'',weitereLinks:''},
+  9:{mebis:'',drive:'',arbeitsblaetter:'',zusatzmaterial:'',videos:'',weitereLinks:''},
+ 10:{mebis:'',drive:'',arbeitsblaetter:'',zusatzmaterial:'',videos:'',weitereLinks:''},
+ 11:{mebis:'',drive:'',arbeitsblaetter:'',zusatzmaterial:'',videos:'',weitereLinks:''},
+ 12:{mebis:'',drive:'',arbeitsblaetter:'',zusatzmaterial:'',videos:'',weitereLinks:''}
+};
