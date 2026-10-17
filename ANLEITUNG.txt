@@ -1,5 +1,11 @@
-CODE BLAU – Meisterfreigabe
+BW01 – Interaktiver Lerncheck
 
-Beide Dateien ins Hauptverzeichnis des GitHub-Repositories hochladen. Vorhandene gleichnamige Dateien ersetzen. Andere Dateien unverändert lassen.
+1. Beide HTML-Dateien in das Hauptverzeichnis deines GitHub-Repositories hochladen.
+2. Die vorhandene wiederholung.html ersetzen.
+3. Die vorhandene wiederholungen-inhalte.js NICHT ersetzen.
+4. BW01 öffnen: wiederholung.html?bw=1
+5. BW02 bis BW12 bleiben unverändert.
 
-Die missionen.html bindet missionen.css, missionen-daten.js, missionen.js, lehrkraft-inhalte.js und meisterfreigabe.js ein. Diese Dateien müssen weiterhin vorhanden sein.
+BW01 enthält 16 automatisch geprüfte Aufgaben in 4 Stationen. 100 XP maximal.
+Die Aufgaben laufen direkt auf GitHub Pages und sind keine importierbaren H5P-Dateien.
+Es erfolgt keine automatische mebis-Notenübertragung.
