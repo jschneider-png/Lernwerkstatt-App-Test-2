@@ -1,9 +1,6 @@
-ANZEIGE-FIX 17.10.2026
+BW01 – Aufgabenvielfalt
 
-1. Beide HTML-Dateien in das HAUPTVERZEICHNIS des GitHub-Repositories hochladen und wiederholung.html ersetzen (Commit changes).
-2. GitHub Pages-Veröffentlichung abwarten.
-3. Seite mit ?bw=2&v=fix2 öffnen und nach „Version: Anzeige-FIX 17.10.2026“ schauen.
-4. BW01 mit ?bw=1&v=fix2 prüfen.
-5. Falls Versionshinweis fehlt, wird noch eine ältere Datei ausgeliefert.
-
-Die Datei wiederholungen-inhalte.js bleibt unverändert.
+Ersetze im Hauptverzeichnis deines GitHub-Repositories ausschließlich die Datei bw01-interaktiv.html.
+Die vorhandene wiederholung.html leitet BW01 bereits auf diese Datei weiter.
+Enthalten: 16 Aufgaben, 4 Stationen, Multiple Choice, Mehrfachauswahl, Zuordnung per Klick, Kurzantwort, Reihenfolge und anklickbares Wasserkreislauf-Bild.
+Die Übungen laufen direkt im Browser; es sind keine nativen H5P-Dateien. Ergebnisse werden nicht an mebis übertragen.
