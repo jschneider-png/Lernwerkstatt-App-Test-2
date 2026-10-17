@@ -13,7 +13,7 @@ window.LEHRKRAFT = {
     weitereLinks: ''
   },
   2: {
-    mebis: 'https://lernplattform.bycs.de/course/section.php?id=26062618',
+    mebis: 'https://lernplattform.bycs.de/course/view.php?id=2719471',
     drive: '',
     arbeitsblaetter: '',
     zusatzmaterial: '',
