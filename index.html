@@ -71,7 +71,7 @@ footer{background:#0d2c43;color:#aec1cf;padding:26px 0;margin-top:28px}
 (function(){var data=window.WIEDERHOLUNGEN||{};var key=window.AKTUELLE_WIEDERHOLUNG||1;var item=data[key];if(!item)return;
 var set=function(id,value){var el=document.getElementById(id);if(el)el.textContent=value};
 set('review-description','BW '+String(key).padStart(2,'0')+' · '+item.titel+' – die Vorbereitung auf die nächste Blockwoche.');
-set('review-duration','◷ '+item.dauer+' MINUTEN');sset('review-stations','▦ '+item.stationen.length+' LERNSTATIONEN');set('review-points','★ '+item.punkte+' XP');
+set('review-duration','◷ '+item.dauer+' MINUTEN');set('review-stations','▦ '+item.stationen.length+' LERNSTATIONEN');set('review-points','★ '+item.punkte+' XP');
 document.getElementById('review-start').href='wiederholung.html?bw='+key;
 if(item.status!=='verfuegbar'){document.getElementById('review-start').removeAttribute('href');document.getElementById('review-start').textContent='IN VORBEREITUNG';}
 })();
