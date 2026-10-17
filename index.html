@@ -39,6 +39,11 @@ footer{background:#0d2c43;color:#aec1cf;padding:26px 0;margin-top:28px}
 @media(max-width:780px){.codeblau-hero{padding:22px;flex-wrap:wrap;gap:14px}.codeblau-symbol{width:65px;height:65px;border-radius:15px}.codeblau-symbol span{font-size:1.65rem}.codeblau-copy{flex-basis:calc(100% - 90px)}.codeblau-cta{width:100%;min-width:0;justify-content:center}}
 @media(max-width:480px){.codeblau-hero{padding:19px}.codeblau-symbol{display:none}.codeblau-copy{flex-basis:100%}.codeblau-kicker{font-size:.6rem}.codeblau-copy h3{font-size:2rem}}
 @media(prefers-reduced-motion:reduce){.codeblau-cta{transition:none}}
+
+/* Wiederholungsbereich – unabhängig von CODE BLAU */
+.review-hero{display:flex;align-items:center;gap:22px;flex-wrap:wrap;position:relative;overflow:hidden;margin:0 0 24px;padding:25px 28px;border-radius:19px;background:radial-gradient(circle at 90% 0%,#215778 0%,transparent 40%),linear-gradient(115deg,#092236,#103e5b);border:1px solid #367596;color:white;box-shadow:0 16px 32px rgba(9,42,65,.15)}
+.review-copy{flex:1 1 380px}.review-kicker{color:#8bdfff;font-weight:900;font-size:.74rem;letter-spacing:.13em}.review-copy h3{font-size:clamp(1.55rem,3vw,2.3rem);margin:10px 0 7px;line-height:1.1}.review-copy p{color:#d0e7f2;line-height:1.5;margin:8px 0 15px}.review-stats{display:flex;gap:9px;flex-wrap:wrap}.review-stats span{border:1px solid #39718c;border-radius:9px;background:#143f58;padding:9px 11px;color:#e4f8ff;font-size:.82rem;font-weight:800}.review-cta{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;background:#8ce5ff;color:#07283d;padding:17px 20px;border-radius:12px;font-weight:950;letter-spacing:.04em;min-height:58px}.review-cta:hover{background:#c4f2ff;transform:translateY(-2px)}.review-cta:focus-visible{outline:3px solid white;outline-offset:3px}.review-archive{margin-top:12px;color:#bde4f5;font-size:.83rem}.review-archive a{color:#bdefff}
+@media(max-width:700px){.review-hero{padding:21px}.review-cta{width:100%}}
 </style></head><body>
 <header><div class='container nav'><a class='brand' href='index.html'><span style='font-size:1.5rem'>💧</span><span><strong>Lernwerkstatt Sanitärtechnik</strong><small>11. Klasse · digitales Klassenzimmer</small></span></a><nav class='menu'><a href='index.html'>Startseite</a></nav></div></header>
 <main><section class='section'><div class='container'>
@@ -54,6 +59,23 @@ footer{background:#0d2c43;color:#aec1cf;padding:26px 0;margin-top:28px}
   </div>
   <a class='codeblau-cta' href='missionen.html' aria-label='CODE BLAU Escape Room starten'><span>MISSION STARTEN</span><span class='codeblau-arrow' aria-hidden='true'>↗</span></a>
  </aside>
+<aside class="review-hero" aria-label="Wiederholung der letzten Blockwoche">
+ <div class="review-copy"><div class="review-kicker">↻ FLIPPED CLASSROOM · WISSEN AKTIVIEREN</div>
+ <h3>Wiederholung der letzten Blockwoche</h3>
+ <p id="review-description">Wiederhole die Grundlagen der vergangenen Blockwoche – interaktiv und in deinem Tempo.</p>
+ <div class="review-stats"><span id="review-duration">◷ 20–25 MINUTEN</span><span id="review-stations">▦ 6 LERNSTATIONEN</span><span id="review-points">★ 100 XP</span></div>
+ <div class="review-archive"><a href="wiederholungen.html">Alle Wiederholungen ansehen →</a></div></div>
+ <a class="review-cta" id="review-start" href="wiederholung.html?bw=1">WIEDERHOLUNG STARTEN ↗</a>
+</aside>
+<script src="wiederholungen-inhalte.js"></script><script>
+(function(){var data=window.WIEDERHOLUNGEN||{};var key=window.AKTUELLE_WIEDERHOLUNG||1;var item=data[key];if(!item)return;
+var set=function(id,value){var el=document.getElementById(id);if(el)el.textContent=value};
+set('review-description','BW '+String(key).padStart(2,'0')+' · '+item.titel+' – die Vorbereitung auf die nächste Blockwoche.');
+set('review-duration','◷ '+item.dauer+' MINUTEN');set('review-stations','▦ '+item.stationen+' LERNSTATIONEN');set('review-points','★ '+item.punkte+' XP');
+document.getElementById('review-start').href='wiederholung.html?bw='+key;
+if(item.status!=='verfuegbar'){document.getElementById('review-start').removeAttribute('href');document.getElementById('review-start').textContent='IN VORBEREITUNG';}
+})();
+</script>
 <div class='room'><img src='klassenzimmer.png' alt='Virtuelles Klassenzimmer Sanitärtechnik'>
 <svg class='hotspot-map' viewBox='0 0 1536 1024' preserveAspectRatio='none'>
 <a href='lernpfad.html?bw=1'><rect x='145' y='120' width='270' height='350'/></a>
