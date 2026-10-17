@@ -5,7 +5,7 @@ window.LEHRKRAFT = {
   // 1. Kurslinks für die Blockwochen (mebis, drive, arbeitsblaetter, zusatzmaterial, videos, weitereLinks)
   KURS_LINKS: {
   1: {
-    mebis: '',
+    mebis: 'https://lernplattform.bycs.de/course/section.php?id=26062615',
     drive: '',
     arbeitsblaetter: '',
     zusatzmaterial: '',
@@ -13,7 +13,7 @@ window.LEHRKRAFT = {
     weitereLinks: ''
   },
   2: {
-    mebis: '',
+    mebis: 'https://lernplattform.bycs.de/course/section.php?id=26062618',
     drive: '',
     arbeitsblaetter: '',
     zusatzmaterial: '',
