@@ -8,9 +8,9 @@ window.LEHRKRAFT = {
     mebis: 'https://lernplattform.bycs.de/course/section.php?id=26062615',
     drive: '',
     arbeitsblaetter: '',
-    zusatzmaterial: '',
+    zusatzmaterial: 'https://lernplattform.bycs.de/mod/lightboxgallery/view.php?id=101473993',
     videos: '',
-    weitereLinks: ''
+    weitereLinks: 'https://lernplattform.bycs.de/mod/folder/view.php?id=101954051'
   },
   2: {
     mebis: 'https://lernplattform.bycs.de/course/view.php?id=2719471',
@@ -103,8 +103,8 @@ window.LEHRKRAFT = {
 },
   // 2. Direktlinks pro Stunde (stunde1 bis stunde4)
   STUNDEN_LINKS: {
-  1: {stunde1:'', stunde2:'', stunde3:'', stunde4:''},
-  2: {stunde1:'https://lernplattform.bycs.de/mod/folder/view.php?id=101503969', stunde2:'https://lernplattform.bycs.de/mod/folder/view.php?id=103030946', stunde3:'', stunde4:''},
+  1: {stunde1:'https://lernplattform.bycs.de/mod/folder/view.php?id=101473966', stunde2:'https://lernplattform.bycs.de/mod/folder/view.php?id=101473969', stunde3:'https://lernplattform.bycs.de/mod/folder/view.php?id=101473969', stunde4:'https://lernplattform.bycs.de/mod/resource/view.php?id=101473984'},
+  2: {stunde1:'https://lernplattform.bycs.de/mod/folder/view.php?id=101473972', stunde2:'https://lernplattform.bycs.de/mod/folder/view.php?id=101503969', stunde3:'https://lernplattform.bycs.de/mod/folder/view.php?id=103030946', stunde4:''},
   3: {stunde1:'', stunde2:'', stunde3:'', stunde4:''},
   4: {stunde1:'', stunde2:'', stunde3:'', stunde4:''},
   5: {stunde1:'', stunde2:'', stunde3:'', stunde4:''},
