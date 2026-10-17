@@ -104,7 +104,7 @@ window.LEHRKRAFT = {
   // 2. Direktlinks pro Stunde (stunde1 bis stunde4)
   STUNDEN_LINKS: {
   1: {stunde1:'', stunde2:'', stunde3:'', stunde4:''},
-  2: {stunde1:'', stunde2:'', stunde3:'', stunde4:''},
+  2: {stunde1:'https://lernplattform.bycs.de/mod/folder/view.php?id=101503969', stunde2:'https://lernplattform.bycs.de/mod/folder/view.php?id=103030946', stunde3:'', stunde4:''},
   3: {stunde1:'', stunde2:'', stunde3:'', stunde4:''},
   4: {stunde1:'', stunde2:'', stunde3:'', stunde4:''},
   5: {stunde1:'', stunde2:'', stunde3:'', stunde4:''},
