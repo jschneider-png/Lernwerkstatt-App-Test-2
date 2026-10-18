@@ -30,12 +30,12 @@ const STUNDEN_BUTTONS = {
         {
           titel: '📁 Unterrichtsmaterial',
           beschreibung: 'Arbeitsblätter, Präsentationen, Aufgaben oder Unterrichtsunterlagen.',
-          link: ''
+          link: 'https://lernplattform.bycs.de/mod/folder/view.php?id=101473966'
         },
         {
           titel: '➕ Zusatzmaterial',
           beschreibung: 'Vertiefungen, Hilfen, Videos oder ergänzende Materialien.',
-          link: ''
+          link: 'https://lernplattform.bycs.de/mod/url/view.php?id=101590195'
         }
       ]
     },
@@ -46,13 +46,18 @@ const STUNDEN_BUTTONS = {
         {
           titel: '📁 Unterrichtsmaterial',
           beschreibung: 'Arbeitsblätter, Präsentationen, Aufgaben oder Unterrichtsunterlagen.',
-          link: ''
+          link: 'https://lernplattform.bycs.de/mod/folder/view.php?id=101473969'
         },
         {
           titel: '➕ Zusatzmaterial',
           beschreibung: 'Vertiefungen, Hilfen, Videos oder ergänzende Materialien.',
           link: ''
         }
+          {
+    titel: '📁 Unterrichtsmaterial',
+    beschreibung: 'Arbeitsblätter, Präsentationen, Aufgaben oder Unterrichtsunterlagen.',
+    link: 'https://lernplattform.bycs.de/mod/folder/view.php?id=101473975'
+  },
       ]
     },
 
@@ -62,23 +67,23 @@ const STUNDEN_BUTTONS = {
         {
           titel: '📁 Unterrichtsmaterial',
           beschreibung: 'Arbeitsblätter, Präsentationen, Aufgaben oder Unterrichtsunterlagen.',
-          link: ''
+          link: 'https://lernplattform.bycs.de/mod/folder/view.php?id=101473990'
         },
         {
           titel: '➕ Zusatzmaterial',
           beschreibung: 'Vertiefungen, Hilfen, Videos oder ergänzende Materialien.',
-          link: ''
+          link: 'https://lernplattform.bycs.de/mod/resource/view.php?id=101473984'
         }
       ]
     },
 
-    /* Stunde 4: Anwendung / Mebis-Interaktion */
+    /* Stunde 4: Trinkwassergewinnung */
     4: {
       buttons: [
         {
           titel: '📁 Unterrichtsmaterial',
           beschreibung: 'Arbeitsblätter, Präsentationen, Aufgaben oder Unterrichtsunterlagen.',
-          link: ''
+          link: 'https://lernplattform.bycs.de/mod/folder/view.php?id=101473987'
         },
         {
           titel: '➕ Zusatzmaterial',
@@ -101,7 +106,7 @@ const STUNDEN_BUTTONS = {
         {
           titel: '📁 Unterrichtsmaterial',
           beschreibung: 'Arbeitsblätter, Präsentationen, Aufgaben oder Unterrichtsunterlagen.',
-          link: ''
+          link: 'https://lernplattform.bycs.de/mod/folder/view.php?id=101473972'
         },
         {
           titel: '➕ Zusatzmaterial',
@@ -117,12 +122,12 @@ const STUNDEN_BUTTONS = {
         {
           titel: '📁 Unterrichtsmaterial',
           beschreibung: 'Arbeitsblätter, Präsentationen, Aufgaben oder Unterrichtsunterlagen.',
-          link: ''
+          link: 'https://lernplattform.bycs.de/mod/folder/view.php?id=101503969'
         },
         {
           titel: '➕ Zusatzmaterial',
           beschreibung: 'Vertiefungen, Hilfen, Videos oder ergänzende Materialien.',
-          link: ''
+          link: 'https://lernplattform.bycs.de/mod/hvp/view.php?id=103025867'
         }
       ]
     },
@@ -133,12 +138,12 @@ const STUNDEN_BUTTONS = {
         {
           titel: '📁 Unterrichtsmaterial',
           beschreibung: 'Arbeitsblätter, Präsentationen, Aufgaben oder Unterrichtsunterlagen.',
-          link: ''
+          link: 'https://lernplattform.bycs.de/mod/folder/view.php?id=103030946'
         },
         {
           titel: '➕ Zusatzmaterial',
           beschreibung: 'Vertiefungen, Hilfen, Videos oder ergänzende Materialien.',
-          link: ''
+          link: 'https://lernplattform.bycs.de/mod/hvp/view.php?id=103030181'
         }
       ]
     },
