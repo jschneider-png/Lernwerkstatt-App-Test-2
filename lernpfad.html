@@ -490,7 +490,8 @@ html[data-theme="christmas"] .material-page-btn{
   background:#edf8f0!important;color:#0d6940!important;border-color:#91c5a3!important;
 }
 
-</style></head><body>
+</style><script src="saison.js"></script>
+</head><body>
 <header><div class="container nav"><a class="brand" href="index.html">💧 Lernwerkstatt Sanitärtechnik · 11. Klasse</a><nav class="menu"><a href="index.html">Start</a><a href="lernorte.html">Links & Lernorte</a><a href="aktuelles.html">Aktuelles</a><a href="jahresreise-karte.html">Jahresreise</a></nav></div></header>
 <section class="hero"><div class="container"><div class="badge" id="heroBadge">Interaktiver Lernpfad</div><h1 id="heroTitle">Blockwoche</h1><p id="heroText">Lerninhalte werden geladen …</p></div></section>
 <main class="section"><div class="container">
@@ -672,30 +673,6 @@ function render(){
 }
 render();
 </script>
-<div class="theme-switcher" aria-label="Saisonmodus">
-  <button type="button" data-theme-choice="normal">☀️ Normal</button>
-  <button type="button" class="halloween" data-theme-choice="halloween">🎃 Halloween</button>
-  <button type="button" class="christmas" data-theme-choice="christmas">🎄 Weihnachten</button>
-</div>
-
-<script>
-(function(){
-  const KEY='sani11_theme';
-  const root=document.documentElement;
-  function applyTheme(t){
-    if(t==='normal') root.removeAttribute('data-theme');
-    else root.setAttribute('data-theme',t);
-    localStorage.setItem(KEY,t);
-    document.querySelectorAll('[data-theme-choice]').forEach(b=>b.classList.toggle('active', b.dataset.themeChoice===t));
-  }
-  applyTheme(localStorage.getItem(KEY)||'normal');
-  document.addEventListener('click',e=>{
-    const b=e.target.closest('[data-theme-choice]');
-    if(b) applyTheme(b.dataset.themeChoice);
-  });
-})();
-</script>
-
 <div class="season-decor halloween-decor" aria-hidden="true"><div class="bat b1">🦇</div><div class="bat b2">🦇</div><div class="bat b3">🦇</div><div class="bat b4">🦇</div><div class="bat b5">🦇</div><div class="ghost-mini g1">👻</div><div class="ghost-mini g2">👻</div>
   <div class="web left">🕸️</div>
   <div class="web right">🕸️</div>

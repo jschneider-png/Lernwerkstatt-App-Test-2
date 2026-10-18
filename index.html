@@ -456,7 +456,8 @@ html[data-theme="christmas"] .hero:after{
   }
 }
 
-</style></head><body>
+</style><script src="saison.js"></script>
+</head><body>
 <header><div class='container nav'><a class='brand' href='index.html'><span style='font-size:1.5rem'>💧</span><span><strong>Lernwerkstatt Sanitärtechnik</strong><small>11. Klasse · digitales Klassenzimmer</small></span></a><nav class='menu'><a href='index.html'>Startseite</a></nav></div></header>
 <main><section class='section'><div class='container'>
 <div class='section-head'><div><div class='eyebrow'>Dein digitaler Fachraum</div><h2>Virtuelles Klassenzimmer Sanitärtechnik</h2></div><p>Klicke direkt auf einen Bereich oder unten auf die gewünschte Blockwoche.</p></div>
@@ -470,30 +471,6 @@ html[data-theme="christmas"] .hero:after{
 <a href='lernpfad.html?bw=1' aria-label='Blockwoche 1'><rect x='0' y='720' width='128' height='304'/></a><a href='lernpfad.html?bw=2' aria-label='Blockwoche 2'><rect x='128' y='720' width='128' height='304'/></a><a href='lernpfad.html?bw=3' aria-label='Blockwoche 3'><rect x='256' y='720' width='128' height='304'/></a><a href='lernpfad.html?bw=4' aria-label='Blockwoche 4'><rect x='384' y='720' width='128' height='304'/></a><a href='lernpfad.html?bw=5' aria-label='Blockwoche 5'><rect x='512' y='720' width='128' height='304'/></a><a href='lernpfad.html?bw=6' aria-label='Blockwoche 6'><rect x='640' y='720' width='128' height='304'/></a><a href='lernpfad.html?bw=7' aria-label='Blockwoche 7'><rect x='768' y='720' width='128' height='304'/></a><a href='lernpfad.html?bw=8' aria-label='Blockwoche 8'><rect x='896' y='720' width='128' height='304'/></a><a href='lernpfad.html?bw=9' aria-label='Blockwoche 9'><rect x='1024' y='720' width='128' height='304'/></a><a href='lernpfad.html?bw=10' aria-label='Blockwoche 10'><rect x='1152' y='720' width='128' height='304'/></a><a href='lernpfad.html?bw=11' aria-label='Blockwoche 11'><rect x='1280' y='720' width='128' height='304'/></a><a href='lernpfad.html?bw=12' aria-label='Blockwoche 12'><rect x='1408' y='720' width='128' height='304'/></a>
 </svg></div></div></section></main>
 <footer><div class='container'>Lernwerkstatt Sanitärtechnik · 11. Klasse</div></footer>
-<div class="theme-switcher" aria-label="Saisonmodus">
-  <button type="button" data-theme-choice="normal">☀️ Normal</button>
-  <button type="button" class="halloween" data-theme-choice="halloween">🎃 Halloween</button>
-  <button type="button" class="christmas" data-theme-choice="christmas">🎄 Weihnachten</button>
-</div>
-
-<script>
-(function(){
-  const KEY='sani11_theme';
-  const root=document.documentElement;
-  function applyTheme(t){
-    if(t==='normal') root.removeAttribute('data-theme');
-    else root.setAttribute('data-theme',t);
-    localStorage.setItem(KEY,t);
-    document.querySelectorAll('[data-theme-choice]').forEach(b=>b.classList.toggle('active', b.dataset.themeChoice===t));
-  }
-  applyTheme(localStorage.getItem(KEY)||'normal');
-  document.addEventListener('click',e=>{
-    const b=e.target.closest('[data-theme-choice]');
-    if(b) applyTheme(b.dataset.themeChoice);
-  });
-})();
-</script>
-
 <div class="season-decor halloween-decor" aria-hidden="true"><div class="bat b1">🦇</div><div class="bat b2">🦇</div><div class="bat b3">🦇</div><div class="bat b4">🦇</div><div class="bat b5">🦇</div><div class="ghost-mini g1">👻</div><div class="ghost-mini g2">👻</div>
   <div class="web left">🕸️</div>
   <div class="web right">🕸️</div>
