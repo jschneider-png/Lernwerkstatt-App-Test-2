@@ -19,6 +19,221 @@ details.group{background:#fff;border:1px solid var(--line);border-radius:14px;ma
 .link-list{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:0 16px 16px}.link-item{background:#f8fbfd;border:1px solid var(--line);padding:12px;border-radius:12px;display:flex;justify-content:space-between;gap:10px}.link-item a{color:var(--blue);font-weight:850;text-decoration:none}
 footer{background:#0d2c43;color:#aec1cf;padding:26px 0;margin-top:28px}
 @media(max-width:850px){.topic-grid,.grid-3,.grid-2,.link-list{grid-template-columns:1fr}.section-head,.nav{flex-direction:column;align-items:flex-start}}
+
+/* SAISON-MODI */
+.theme-switcher{position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:6px;padding:7px;border-radius:999px;background:rgba(255,255,255,.94);border:1px solid rgba(20,50,75,.16);box-shadow:0 8px 24px rgba(0,0,0,.14);backdrop-filter:blur(8px)}
+.theme-switcher button{border:0;border-radius:999px;padding:8px 11px;cursor:pointer;font:700 13px/1 system-ui,-apple-system,"Segoe UI",Arial,sans-serif;background:#edf4f8;color:#17364e}
+.theme-switcher button.active{outline:2px solid currentColor}
+.theme-switcher .halloween{background:#2a1d33;color:#ff9d2f}
+.theme-switcher .christmas{background:#edf7f1;color:#0f6c3b}
+html[data-theme="halloween"] body{background:radial-gradient(circle at 15% 10%,rgba(106,41,139,.28),transparent 25%),radial-gradient(circle at 85% 20%,rgba(255,112,0,.18),transparent 20%),linear-gradient(180deg,#17131e,#221927 60%,#151219);color:#f4eee8}
+html[data-theme="halloween"] header,html[data-theme="halloween"] .hero,html[data-theme="halloween"] .sidebar{background:linear-gradient(135deg,#18111f,#29172e 55%,#3a1a20)!important;color:#fff!important}
+html[data-theme="halloween"] .card,html[data-theme="halloween"] .topic-card,html[data-theme="halloween"] .panel,html[data-theme="halloween"] .box,html[data-theme="halloween"] .poster,html[data-theme="halloween"] .material-panel,html[data-theme="halloween"] .materials,html[data-theme="halloween"] .progress,html[data-theme="halloween"] .testbox,html[data-theme="halloween"] .insight{background:#241d29!important;color:#f6efe9!important;border-color:#5c3b63!important}
+html[data-theme="halloween"] .muted,html[data-theme="halloween"] p,html[data-theme="halloween"] small{color:#d7c8d8!important}
+html[data-theme="halloween"] h1,html[data-theme="halloween"] h2,html[data-theme="halloween"] h3,html[data-theme="halloween"] strong{color:#fff6ec!important}
+html[data-theme="halloween"] .btn.primary{background:#e46f1f!important;color:#fff!important;border-color:#e46f1f!important}
+html[data-theme="halloween"] .badge{background:#3a2943!important;color:#ffb15d!important}
+html[data-theme="christmas"] body{background:radial-gradient(circle at 10% 20%,rgba(255,255,255,.65),transparent 24%),radial-gradient(circle at 90% 10%,rgba(255,255,255,.55),transparent 22%),linear-gradient(180deg,#eef7f2,#f9fbfa 55%,#e6f1ea);color:#173d2e}
+html[data-theme="christmas"] header,html[data-theme="christmas"] .hero,html[data-theme="christmas"] .sidebar{background:linear-gradient(135deg,#0e5b3d,#0a6d47 55%,#8b1f2e)!important;color:#fff!important}
+html[data-theme="christmas"] .card,html[data-theme="christmas"] .topic-card,html[data-theme="christmas"] .panel,html[data-theme="christmas"] .box,html[data-theme="christmas"] .poster,html[data-theme="christmas"] .material-panel,html[data-theme="christmas"] .materials,html[data-theme="christmas"] .progress,html[data-theme="christmas"] .testbox,html[data-theme="christmas"] .insight{background:#fff!important;color:#173d2e!important;border-color:#bfd9c7!important}
+html[data-theme="christmas"] .btn.primary{background:#9f2433!important;color:#fff!important;border-color:#9f2433!important}
+html[data-theme="christmas"] .badge{background:#e8f4ec!important;color:#0e6a43!important}
+
+
+/* ============================================================
+   SAISONMODI DELUXE – DEKORATIONEN & ANIMATIONEN
+   ============================================================ */
+.season-decor{
+  position:fixed;
+  inset:0;
+  z-index:9000;
+  pointer-events:none;
+  overflow:hidden;
+  display:none;
+}
+html[data-theme="halloween"] .season-decor.halloween-decor,
+html[data-theme="christmas"] .season-decor.christmas-decor{display:block}
+
+/* Halloween */
+.halloween-decor .web{
+  position:absolute;
+  top:-8px;
+  width:115px;
+  height:115px;
+  opacity:.42;
+  font-size:96px;
+  line-height:1;
+  filter:grayscale(.2);
+}
+.halloween-decor .web.left{left:-12px;transform:rotate(-20deg)}
+.halloween-decor .web.right{right:-12px;transform:scaleX(-1) rotate(-20deg)}
+.halloween-decor .pumpkin{
+  position:absolute;
+  bottom:10px;
+  font-size:48px;
+  filter:drop-shadow(0 6px 8px rgba(0,0,0,.35));
+  animation:pumpkinBob 3.4s ease-in-out infinite;
+}
+.halloween-decor .pumpkin.p1{left:3%}
+.halloween-decor .pumpkin.p2{right:4%;font-size:58px;animation-delay:.8s}
+.halloween-decor .pumpkin.p3{left:47%;font-size:38px;animation-delay:1.5s}
+.halloween-decor .zombie{
+  position:absolute;
+  bottom:4px;
+  left:12%;
+  font-size:54px;
+  animation:zombieSway 4.2s ease-in-out infinite;
+  filter:drop-shadow(0 5px 7px rgba(0,0,0,.38));
+}
+.halloween-decor .ghost{
+  position:absolute;
+  top:24%;
+  right:3%;
+  font-size:47px;
+  opacity:.72;
+  animation:ghostFloat 5.5s ease-in-out infinite;
+}
+.halloween-decor .witch{
+  position:absolute;
+  top:74px;
+  left:-140px;
+  font-size:62px;
+  animation:witchFly 18s linear infinite;
+  filter:drop-shadow(0 8px 8px rgba(0,0,0,.4));
+}
+.halloween-decor .bats{
+  position:absolute;
+  top:18px;
+  left:34%;
+  font-size:25px;
+  letter-spacing:15px;
+  opacity:.72;
+  animation:batsDrift 8s ease-in-out infinite;
+}
+.halloween-decor .fog{
+  position:absolute;
+  left:-10%;
+  right:-10%;
+  bottom:-30px;
+  height:135px;
+  background:
+    radial-gradient(ellipse at 15% 70%,rgba(220,215,235,.18),transparent 45%),
+    radial-gradient(ellipse at 55% 65%,rgba(210,200,230,.16),transparent 43%),
+    radial-gradient(ellipse at 85% 72%,rgba(220,215,235,.14),transparent 46%);
+  filter:blur(12px);
+  animation:fogMove 10s ease-in-out infinite alternate;
+}
+
+/* Christmas */
+.christmas-decor .lights{
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:38px;
+  display:flex;
+  justify-content:space-around;
+  align-items:flex-start;
+  padding:3px 12px 0;
+  background:linear-gradient(180deg,rgba(11,76,48,.35),transparent);
+}
+.christmas-decor .bulb{
+  width:11px;height:16px;border-radius:50% 50% 45% 45%;
+  box-shadow:0 0 12px currentColor;
+  animation:twinkle 1.8s ease-in-out infinite alternate;
+}
+.christmas-decor .bulb:nth-child(4n+1){color:#e92d3f;background:#e92d3f}
+.christmas-decor .bulb:nth-child(4n+2){color:#ffd65c;background:#ffd65c;animation-delay:.35s}
+.christmas-decor .bulb:nth-child(4n+3){color:#4cc4ff;background:#4cc4ff;animation-delay:.7s}
+.christmas-decor .bulb:nth-child(4n){color:#59d27c;background:#59d27c;animation-delay:1s}
+.christmas-decor .snowman{
+  position:absolute;
+  bottom:10px;
+  left:3%;
+  font-size:58px;
+  animation:snowmanBob 4s ease-in-out infinite;
+}
+.christmas-decor .reindeer{
+  position:absolute;
+  bottom:10px;
+  right:4%;
+  font-size:58px;
+  animation:reindeerBob 3.8s ease-in-out infinite;
+}
+.christmas-decor .santa{
+  position:absolute;
+  top:64px;
+  left:-180px;
+  font-size:60px;
+  animation:santaFly 20s linear infinite;
+  filter:drop-shadow(0 7px 7px rgba(0,0,0,.22));
+}
+.christmas-decor .tree{
+  position:absolute;
+  bottom:5px;
+  right:13%;
+  font-size:49px;
+  filter:drop-shadow(0 5px 6px rgba(0,0,0,.16));
+}
+.christmas-decor .gift{
+  position:absolute;
+  bottom:5px;
+  right:18%;
+  font-size:34px;
+}
+.snowflake{
+  position:absolute;
+  top:-30px;
+  color:#fff;
+  opacity:.82;
+  text-shadow:0 0 5px rgba(255,255,255,.9);
+  animation:snowFall linear infinite;
+}
+
+/* kleine saisonale Beschriftung */
+.theme-season-label{
+  display:none;
+  position:fixed;
+  left:14px;
+  bottom:14px;
+  z-index:8999;
+  padding:8px 12px;
+  border-radius:999px;
+  font:800 12px/1 system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  pointer-events:none;
+  box-shadow:0 6px 20px rgba(0,0,0,.12);
+}
+html[data-theme="halloween"] .theme-season-label.halloween-label{
+  display:block;background:#2b1b31;color:#ffad4e;border:1px solid #6e466f;
+}
+html[data-theme="christmas"] .theme-season-label.christmas-label{
+  display:block;background:#f8fff9;color:#0f6a3c;border:1px solid #b9d8c3;
+}
+
+@keyframes pumpkinBob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-7px) rotate(2deg)}}
+@keyframes zombieSway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg) translateY(-3px)}}
+@keyframes ghostFloat{0%,100%{transform:translateY(0) translateX(0)}50%{transform:translateY(-18px) translateX(-12px)}}
+@keyframes witchFly{0%{transform:translateX(0) translateY(0) rotate(-4deg)}45%{transform:translateX(58vw) translateY(25px) rotate(3deg)}100%{transform:translateX(125vw) translateY(-10px) rotate(-2deg)}}
+@keyframes batsDrift{0%,100%{transform:translateX(0) translateY(0)}50%{transform:translateX(45px) translateY(13px)}}
+@keyframes fogMove{from{transform:translateX(-2%)}to{transform:translateX(4%)}}
+@keyframes twinkle{from{opacity:.45;transform:scale(.85)}to{opacity:1;transform:scale(1.12)}}
+@keyframes snowmanBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes reindeerBob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-7px) rotate(2deg)}}
+@keyframes santaFly{0%{transform:translateX(0) translateY(0)}50%{transform:translateX(62vw) translateY(18px)}100%{transform:translateX(128vw) translateY(-5px)}}
+@keyframes snowFall{0%{transform:translateY(-30px) rotate(0deg)}100%{transform:translateY(110vh) rotate(360deg)}}
+
+@media(max-width:700px){
+  .halloween-decor .zombie{font-size:42px;left:8%}
+  .halloween-decor .pumpkin.p3{display:none}
+  .christmas-decor .tree,.christmas-decor .gift{display:none}
+  .halloween-decor .witch,.christmas-decor .santa{font-size:48px}
+}
+@media(prefers-reduced-motion:reduce){
+  .season-decor *{animation:none!important}
+  .halloween-decor .witch,.christmas-decor .santa{display:none}
+  .snowflake{display:none}
+}
+
 </style>
 <style>
 html{-webkit-text-size-adjust:100%;text-size-adjust:100%;text-rendering:optimizeLegibility}
@@ -159,4 +374,28 @@ setLink('tafel-gesamt',TAFELBILDER_LINKS.gesamt);
 setLink('tafel-aktuell',TAFELBILDER_LINKS.aktuell);
 setLink('tafel-archiv',TAFELBILDER_LINKS.archiv);
 for(let i=1;i<=12;i++){const x=ARBEITSBLATT_LINKS[i]||{};setLink('ab-'+i,x.ab);setLink('zusatz-'+i,x.zusatz);setLink('uebung-'+i,x.uebung);setLink('video-'+i,VIDEO_LINKS[i]);}
-</script></body></html>
+</script>
+<div class="theme-switcher" aria-label="Saisonmodus">
+  <button type="button" data-theme-choice="normal">☀️ Normal</button>
+  <button type="button" class="halloween" data-theme-choice="halloween">🎃 Halloween</button>
+  <button type="button" class="christmas" data-theme-choice="christmas">🎄 Weihnachten</button>
+</div>
+
+<script>
+(function(){
+  const KEY='sani11_theme';
+  const root=document.documentElement;
+  function applyTheme(t){
+    if(t==='normal') root.removeAttribute('data-theme');
+    else root.setAttribute('data-theme',t);
+    localStorage.setItem(KEY,t);
+    document.querySelectorAll('[data-theme-choice]').forEach(b=>b.classList.toggle('active', b.dataset.themeChoice===t));
+  }
+  applyTheme(localStorage.getItem(KEY)||'normal');
+  document.addEventListener('click',e=>{
+    const b=e.target.closest('[data-theme-choice]');
+    if(b) applyTheme(b.dataset.themeChoice);
+  });
+})();
+</script>
+</body></html>
