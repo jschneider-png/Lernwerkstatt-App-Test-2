@@ -4,7 +4,7 @@
    normal | halloween | weihnachten | fruehling | sommer
    ============================================================ */
 
-const SAISON = 'normal';
+const SAISON = 'halloween';
 
 (function () {
   const html = document.documentElement;
