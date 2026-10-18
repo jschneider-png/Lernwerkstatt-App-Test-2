@@ -13,6 +13,75 @@ main{padding:24px 20px}.intro,.card{background:#fff;border:1px solid var(--line)
 html[data-theme="halloween"] body{background:#1b151e;color:#f5edf2}html[data-theme="halloween"] header{background:linear-gradient(120deg,#211126,#5c2929)}html[data-theme="halloween"] .intro,html[data-theme="halloween"] .card{background:#28202c;border-color:#654260}html[data-theme="halloween"] .card p{color:#d8c8d7}html[data-theme="halloween"] .badge{background:#39253e;color:#ffad50}html[data-theme="halloween"] .link{background:#3d2938;color:#ffb15d;border-color:#7a536e}
 html[data-theme="christmas"] body{background:#eff7f1}html[data-theme="christmas"] header{background:linear-gradient(120deg,#0b6540,#a12637)}html[data-theme="christmas"] .link{background:#edf8f0;color:#0b6640;border-color:#abd1b8}
 @media(max-width:720px){.grid{grid-template-columns:1fr}}
+
+/* ============================================================
+   LESBARKEITS-FIX FÜR STUNDENMATERIAL
+   ============================================================ */
+
+/* Lehrkraft-Hinweis immer gut lesbar */
+.teacher{
+  margin-top:15px;
+  padding:14px;
+  border-left:5px solid var(--orange);
+  background:#fff8eb !important;
+  border-radius:10px;
+  color:#3c2a18 !important;
+}
+
+.teacher strong{
+  color:#2d1d10 !important;
+}
+
+.teacher code{
+  background:#fff1d8 !important;
+  color:#7a3f00 !important;
+  padding:2px 6px;
+  border-radius:6px;
+  font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+/* Zurück-Link lesbar halten */
+.back{
+  display:inline-flex;
+  margin-top:17px;
+  color:#12678e !important;
+  text-decoration:none;
+  font-weight:850;
+}
+
+/* In allen Saisonmodi ebenfalls sauber lesbar */
+html[data-theme="halloween"] .teacher,
+html[data-theme="christmas"] .teacher,
+html[data-theme="spring"] .teacher,
+html[data-theme="summer"] .teacher{
+  background:#fff8eb !important;
+  color:#3c2a18 !important;
+  border-left:5px solid #ee9b32 !important;
+}
+
+html[data-theme="halloween"] .teacher strong,
+html[data-theme="christmas"] .teacher strong,
+html[data-theme="spring"] .teacher strong,
+html[data-theme="summer"] .teacher strong{
+  color:#2d1d10 !important;
+}
+
+html[data-theme="halloween"] .teacher code,
+html[data-theme="christmas"] .teacher code,
+html[data-theme="spring"] .teacher code,
+html[data-theme="summer"] .teacher code{
+  background:#fff1d8 !important;
+  color:#7a3f00 !important;
+}
+
+html[data-theme="halloween"] .back,
+html[data-theme="christmas"] .back,
+html[data-theme="spring"] .back,
+html[data-theme="summer"] .back{
+  color:#8fe3ff !important;
+  text-shadow:0 1px 2px rgba(0,0,0,.45);
+}
+
 </style>
 <script src="saison.js"></script>
 </head>
