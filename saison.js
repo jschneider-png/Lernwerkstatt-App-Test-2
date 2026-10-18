@@ -14,7 +14,7 @@
    NORMAL = ursprüngliche Kursoptik, ohne saisonale Ebene.
    ============================================================ */
 
-const SAISON = 'normal';
+const SAISON = 'halloween';
 
 (function () {
   const html = document.documentElement;
