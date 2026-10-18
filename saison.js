@@ -5,7 +5,7 @@
 
    ÄNDERE NUR DIESE EINE ZEILE:
 
-   const SAISON = 'normal';
+   const SAISON = 'halloween';
 
    Mögliche Werte:
    'normal'
