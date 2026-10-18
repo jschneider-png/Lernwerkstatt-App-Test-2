@@ -4,116 +4,306 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Stundenmaterial · Sanitärtechnik 11</title>
+
 <style>
-:root{--navy:#103b5b;--blue:#1776a4;--orange:#ee9b32;--bg:#eef5f2;--line:#cadfd4;--ink:#17372c;--muted:#617b71}
-*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;background:linear-gradient(#f7fbf9,#eaf3ef);color:var(--ink)}
-header{background:linear-gradient(120deg,#0e4965,#1b7185);color:#fff;padding:28px 20px}.wrap{max-width:1050px;margin:auto}header h1{margin:7px 0 5px;font-size:clamp(1.9rem,4vw,3rem)}header p{margin:0;color:#d9eff3}.badge{display:inline-flex;padding:6px 10px;border-radius:999px;background:#e8f4ec;color:#0a6940;font-weight:850;font-size:.82rem}
-main{padding:24px 20px}.intro,.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 8px 24px rgba(20,60,45,.07)}.intro{margin-bottom:15px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}.card h2{margin:0 0 7px;font-size:1.08rem}.card p{color:var(--muted);margin:0 0 14px;line-height:1.45}.link{display:inline-flex;align-items:center;justify-content:center;min-height:43px;padding:10px 14px;border-radius:10px;background:#eaf4f8;color:#0b618b;text-decoration:none;font-weight:850;border:1px solid #bad5e3}.link.disabled{opacity:.45;pointer-events:none}.back{display:inline-flex;margin-top:17px;color:#12678e;text-decoration:none;font-weight:850}.teacher{margin-top:15px;padding:14px;border-left:5px solid var(--orange);background:#fff8eb;border-radius:10px}
-.theme-switcher{position:fixed;right:14px;bottom:14px;display:flex;gap:5px;padding:6px;background:#fff;border:1px solid #d3e1da;border-radius:999px;box-shadow:0 7px 22px rgba(0,0,0,.12)}.theme-switcher button{border:0;border-radius:999px;padding:8px;cursor:pointer}
-html[data-theme="halloween"] body{background:#1b151e;color:#f5edf2}html[data-theme="halloween"] header{background:linear-gradient(120deg,#211126,#5c2929)}html[data-theme="halloween"] .intro,html[data-theme="halloween"] .card{background:#28202c;border-color:#654260}html[data-theme="halloween"] .card p{color:#d8c8d7}html[data-theme="halloween"] .badge{background:#39253e;color:#ffad50}html[data-theme="halloween"] .link{background:#3d2938;color:#ffb15d;border-color:#7a536e}
-html[data-theme="christmas"] body{background:#eff7f1}html[data-theme="christmas"] header{background:linear-gradient(120deg,#0b6540,#a12637)}html[data-theme="christmas"] .link{background:#edf8f0;color:#0b6640;border-color:#abd1b8}
-@media(max-width:720px){.grid{grid-template-columns:1fr}}
+:root{
+  --navy:#103b5b;
+  --blue:#1776a4;
+  --orange:#ee9b32;
+  --bg:#eef5f2;
+  --line:#cadfd4;
+  --ink:#17372c;
+  --muted:#617b71;
+}
 
-/* ============================================================
-   LESBARKEITS-FIX FÜR STUNDENMATERIAL
-   ============================================================ */
+*{box-sizing:border-box}
 
-/* Lehrkraft-Hinweis immer gut lesbar */
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  background:linear-gradient(#f7fbf9,#eaf3ef);
+  color:var(--ink);
+}
+
+header{
+  background:linear-gradient(120deg,#0e4965,#1b7185);
+  color:#fff;
+  padding:28px 20px;
+}
+
+.wrap{max-width:1050px;margin:auto}
+
+header h1{
+  margin:7px 0 5px;
+  font-size:clamp(1.9rem,4vw,3rem);
+  color:#fff !important;
+}
+
+header p{
+  margin:0;
+  color:#d9eff3 !important;
+}
+
+.badge{
+  display:inline-flex;
+  padding:6px 10px;
+  border-radius:999px;
+  background:#e8f4ec;
+  color:#0a6940 !important;
+  font-weight:850;
+  font-size:.82rem;
+}
+
+main{padding:24px 20px}
+
+.intro,
+.card{
+  background:rgba(255,255,255,.96) !important;
+  border:1px solid var(--line) !important;
+  border-radius:16px;
+  padding:18px;
+  box-shadow:0 8px 24px rgba(20,60,45,.10);
+  color:#17372c !important;
+}
+
+.intro{margin-bottom:15px}
+
+.intro h2,
+.intro p,
+.card h2,
+.card p{
+  color:#17372c !important;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:13px;
+}
+
+.card h2{
+  margin:0 0 7px;
+  font-size:1.08rem;
+}
+
+.card p{
+  margin:0 0 14px;
+  line-height:1.45;
+  color:#526b62 !important;
+}
+
+.link{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:43px;
+  padding:10px 14px;
+  border-radius:10px;
+  background:#eaf4f8 !important;
+  color:#0b618b !important;
+  text-decoration:none;
+  font-weight:850;
+  border:1px solid #bad5e3 !important;
+}
+
+.link:hover{
+  filter:brightness(.97);
+  transform:translateY(-1px);
+}
+
+.link.disabled{
+  opacity:.58;
+  pointer-events:none;
+}
+
 .teacher{
   margin-top:15px;
   padding:14px;
-  border-left:5px solid var(--orange);
+  border-left:5px solid var(--orange) !important;
   background:#fff8eb !important;
   border-radius:10px;
   color:#3c2a18 !important;
 }
 
-.teacher strong{
-  color:#2d1d10 !important;
-}
+.teacher strong{color:#2d1d10 !important}
 
 .teacher code{
   background:#fff1d8 !important;
   color:#7a3f00 !important;
   padding:2px 6px;
   border-radius:6px;
-  font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 
-/* Zurück-Link lesbar halten */
 .back{
   display:inline-flex;
   margin-top:17px;
+  padding:9px 12px;
+  border-radius:10px;
+  background:rgba(255,255,255,.94) !important;
   color:#12678e !important;
   text-decoration:none;
   font-weight:850;
+  box-shadow:0 4px 14px rgba(0,0,0,.08);
 }
 
-/* In allen Saisonmodi ebenfalls sauber lesbar */
-html[data-theme="halloween"] .teacher,
-html[data-theme="christmas"] .teacher,
-html[data-theme="spring"] .teacher,
-html[data-theme="summer"] .teacher{
+/* ------------------------------------------------------------
+   LESBARKEIT IN ALLEN SAISONMODI
+   Diese Regeln sind absichtlich kräftig und überschreiben
+   Saison-Schriftfarben nur auf dieser Materialseite.
+   ------------------------------------------------------------ */
+
+html[data-theme] body.materials-page .intro,
+html[data-theme] body.materials-page .card{
+  background:rgba(255,255,255,.96) !important;
+  color:#17372c !important;
+  border-color:#cadfd4 !important;
+}
+
+html[data-theme] body.materials-page .intro h2,
+html[data-theme] body.materials-page .intro p,
+html[data-theme] body.materials-page .card h2{
+  color:#17372c !important;
+}
+
+html[data-theme] body.materials-page .card p{
+  color:#526b62 !important;
+}
+
+html[data-theme] body.materials-page .link{
+  background:#eaf4f8 !important;
+  color:#0b618b !important;
+  border-color:#bad5e3 !important;
+}
+
+html[data-theme] body.materials-page .teacher{
   background:#fff8eb !important;
   color:#3c2a18 !important;
-  border-left:5px solid #ee9b32 !important;
+  border-left-color:#ee9b32 !important;
 }
 
-html[data-theme="halloween"] .teacher strong,
-html[data-theme="christmas"] .teacher strong,
-html[data-theme="spring"] .teacher strong,
-html[data-theme="summer"] .teacher strong{
+html[data-theme] body.materials-page .teacher strong{
   color:#2d1d10 !important;
 }
 
-html[data-theme="halloween"] .teacher code,
-html[data-theme="christmas"] .teacher code,
-html[data-theme="spring"] .teacher code,
-html[data-theme="summer"] .teacher code{
+html[data-theme] body.materials-page .teacher code{
   background:#fff1d8 !important;
   color:#7a3f00 !important;
 }
 
-html[data-theme="halloween"] .back,
-html[data-theme="christmas"] .back,
-html[data-theme="spring"] .back,
-html[data-theme="summer"] .back{
-  color:#8fe3ff !important;
-  text-shadow:0 1px 2px rgba(0,0,0,.45);
+html[data-theme] body.materials-page .back{
+  background:rgba(255,255,255,.94) !important;
+  color:#12678e !important;
 }
 
+@media(max-width:720px){
+  .grid{grid-template-columns:1fr}
+  main{padding:18px 12px}
+  header{padding:24px 14px}
+}
 </style>
+
 <script src="saison.js"></script>
 </head>
-<body>
-<header><div class="wrap"><span class="badge" id="badge">Stundenmaterial</span><h1 id="title">Materialien werden geladen …</h1><p id="subtitle"></p></div></header>
-<main><div class="wrap">
-  <section class="intro"><h2 style="margin-top:0">🎓 Mebis & Zusatzmaterialien</h2><p>Hier findest du alle digitalen Materialien für genau diese Unterrichtsstunde.</p></section>
-  <section class="grid" id="grid"></section>
-  <div class="teacher"><strong>👩‍🏫 Lehrkraft:</strong> Alle URLs dieser Seite werden zentral in <code>kurs-links.js</code> gepflegt. Bei späteren Design-Updates bleiben sie dadurch erhalten.</div>
-  <a class="back" id="back" href="lernpfad.html">← Zurück zum Lernpfad</a>
-</div></main>
 
+<body class="materials-page">
+
+<header>
+  <div class="wrap">
+    <span class="badge" id="badge">Stundenmaterial</span>
+    <h1 id="title">Materialien werden geladen …</h1>
+    <p id="subtitle"></p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="intro">
+      <h2 style="margin-top:0">🎓 Materialien dieser Unterrichtsstunde</h2>
+      <p>Hier findest du die Materialien, die für diese Stunde hinterlegt wurden.</p>
+    </section>
+
+    <section class="grid" id="grid"></section>
+
+    <div class="teacher">
+      <strong>👩‍🏫 Lehrkraft:</strong>
+      Die Buttons und Links werden zentral in <code>stunden-buttons.js</code> gepflegt.
+      Pro Stunde können beliebig viele Buttons ergänzt werden.
+    </div>
+
+    <a class="back" id="back" href="lernpfad.html">← Zurück zum Lernpfad</a>
+  </div>
+</main>
+
+<!-- Bestehende Linkdatei bleibt aus Kompatibilitätsgründen erhalten -->
 <script src="kurs-links.js"></script>
+
+<!-- NEU: Diese Datei bearbeitest du für die Stundenmaterial-Buttons -->
+<script src="stunden-buttons.js"></script>
+
 <script>
 const WEEKS={"1": {"title": "Trinkwasser allgemein", "stunden": ["Trinkwasser allgemein – Grundlagen", "Anforderungen an Trinkwasser", "Trinkwasserversorgung im Überblick", "Anwendung / Mebis-Interaktion"]}, "2": {"title": "Eigenschaften von Trinkwasser", "stunden": ["Eigenschaften von Trinkwasser", "Wasserhärte", "Der pH-Wert", "Trinkwasserbehandlung"]}, "3": {"title": "Trinkwasserversorgung & Installation", "stunden": ["Trinkwasserversorgung", "Trinkwasserbehandlung", "Trinkwasserinstallation", "Schutz des Trinkwassers"]}, "4": {"title": "Trinkwasserinstallation & Schutz", "stunden": ["Trinkwasserversorgung – Vertiefung", "Trinkwasserbehandlung – Vertiefung", "Trinkwasserinstallation – Vertiefung", "Schutz des Trinkwassers – Vertiefung"]}, "5": {"title": "Druck, Druckverluste & Volumenstrom", "stunden": ["Druck", "Druckverluste", "Volumenstrom", "Anwendung / Berechnung"]}, "6": {"title": "Abwasser – Lüftung & Gefälle", "stunden": ["Abwasser – Grundlagen", "Lüftungsleitung", "Gefälle", "Eine unangenehme Sache – Abwasser"]}, "7": {"title": "Abwasser – Grundlagen & Dimensionierung I", "stunden": ["Abwasser – Grundlagen", "Entwässerungsgegenstände", "Leitungsarten", "Dimensionierung – Einstieg"]}, "8": {"title": "Abwasser – Grundlagen & Dimensionierung II", "stunden": ["Abwasser – Grundlagen vertiefen", "Anschlussleitungen", "Sammelleitungen", "Dimensionierung – Übung"]}, "9": {"title": "Abwasser – Grundlagen & Dimensionierung III", "stunden": ["Abwasser – Systemübersicht", "Gefälle und Fließverhalten", "Lüftung im Abwassersystem", "Dimensionierung – Anwendung"]}, "10": {"title": "Abwasser – Grundlagen & Dimensionierung IV", "stunden": ["Abwasser – Planung", "Rohrführung", "Bemessung", "Dimensionierung – Kundenauftrag"]}, "11": {"title": "Abwasser – Grundlagen & Dimensionierung V", "stunden": ["Abwasser – Wiederholung", "Dimensionierung – Vertiefung", "Fehler erkennen", "Praxisaufgabe"]}, "12": {"title": "Abwasser – Grundlagen & Dimensionierung VI", "stunden": ["Abwasser – Gesamtwiederholung", "Dimensionierung – Gesamtaufgabe", "Anwendung / Prüfungsvorbereitung", "Abschluss / Lernerfolgssicherung"]}};
-const p=new URLSearchParams(location.search),bw=Number(p.get('bw')||1),st=Number(p.get('stunde')||1);
-const w=WEEKS[String(bw)]||WEEKS["1"], sm=((STUNDEN_MATERIAL[bw]||{})[st]||{}), kl=(KURS_LINKS[bw]||{});
+
+const p=new URLSearchParams(location.search);
+const bw=Number(p.get('bw')||1);
+const st=Number(p.get('stunde')||1);
+
+const w=WEEKS[String(bw)]||WEEKS["1"];
+
 document.getElementById('badge').textContent='Blockwoche '+bw+' · Stunde '+st;
 document.getElementById('title').textContent=w.stunden[st-1]||'Stundenmaterial';
 document.getElementById('subtitle').textContent=w.title;
 document.getElementById('back').href='lernpfad.html?bw='+bw;
 
-const entries=[
- ['🎓','Mebis – diese Stunde','Aufgaben, Kursseite oder Aktivität in Mebis öffnen.',sm.mebis||kl.mebis],
- ['📄','Arbeitsblatt','Passendes Arbeitsblatt oder Aufgabenblatt öffnen.',sm.arbeitsblatt||kl.arbeitsblaetter],
- ['☁️','Drive / Dateien','Dateien, Bilder, Präsentationen oder weitere Unterlagen.',sm.drive||kl.drive],
- ['➕','Zusatzmaterial','Vertiefungen, Hilfen und ergänzende Materialien.',sm.zusatzmaterial||kl.zusatzmaterial],
- ['🎬','Video','Erklärvideo oder passende Medien öffnen.',sm.video||kl.videos],
- ['🔗','Weitere Links','Weitere Quellen und Lernangebote.',sm.weitereLinks||kl.weitereLinks]
-];
-document.getElementById('grid').innerHTML=entries.map(x=>'<article class="card"><h2>'+x[0]+' '+x[1]+'</h2><p>'+x[2]+'</p><a class="link '+(x[3]?'':'disabled')+'" '+(x[3]?'href="'+x[3]+'" target="_blank" rel="noopener"':'href="#"')+'>'+(x[3]?'Öffnen ↗':'Noch nicht hinterlegt')+'</a></article>').join('');
+function getFlexibleButtons(){
+  try{
+    const item=((STUNDEN_BUTTONS[bw]||{})[st]||{});
+    if(Array.isArray(item.buttons)) return item.buttons;
+  }catch(e){}
+  return null;
+}
 
+function getLegacyButtons(){
+  const sm=(typeof STUNDEN_MATERIAL!=='undefined' && STUNDEN_MATERIAL[bw])
+    ? (STUNDEN_MATERIAL[bw][st]||{})
+    : {};
 
+  const kl=(typeof KURS_LINKS!=='undefined' && KURS_LINKS[bw])
+    ? KURS_LINKS[bw]
+    : {};
+
+  return [
+    {
+      titel:'📁 Unterrichtsmaterial',
+      beschreibung:'Arbeitsblätter, Präsentationen, Aufgaben oder Unterrichtsunterlagen.',
+      link:sm.arbeitsblatt||sm.mebis||sm.drive||kl.arbeitsblaetter||kl.mebis||kl.drive||''
+    },
+    {
+      titel:'➕ Zusatzmaterial',
+      beschreibung:'Vertiefungen, Hilfen, Videos oder ergänzende Materialien.',
+      link:sm.zusatzmaterial||sm.video||sm.weitereLinks||kl.zusatzmaterial||kl.videos||kl.weitereLinks||''
+    }
+  ];
+}
+
+const buttons=getFlexibleButtons() || getLegacyButtons();
+
+document.getElementById('grid').innerHTML=buttons.map(b=>{
+  const titel=b.titel||'Material';
+  const beschreibung=b.beschreibung||'';
+  const link=(b.link||'').trim();
+
+  return `
+    <article class="card">
+      <h2>${titel}</h2>
+      ${beschreibung ? `<p>${beschreibung}</p>` : ''}
+      <a class="link ${link?'':'disabled'}"
+         ${link ? `href="${link}" target="_blank" rel="noopener"` : 'href="#"'}>
+         ${link ? 'Öffnen ↗' : 'Noch nicht hinterlegt'}
+      </a>
+    </article>
+  `;
+}).join('');
 </script>
-</body></html>
+
+</body>
+</html>
