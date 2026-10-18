@@ -1,0 +1,325 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Virtuelles Klassenzimmer BW 8 · Sanitärtechnik 11</title>
+<style>
+:root{--navy:#0b2f5e;--blue:#1473e6;--bg:#f3f8fc;--line:#d9e7f1;--ink:#14304d;--muted:#647c91;--shadow:0 10px 28px rgba(28,68,105,.12)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;background:#eaf3f8;color:var(--ink)}button,a{font:inherit}button{cursor:pointer}.app{min-height:100vh;background:#fff;display:grid;grid-template-columns:210px 1fr}.sidebar{background:#fff;border-right:1px solid var(--line);padding:18px 14px;position:sticky;top:0;height:100vh}.logo{display:flex;gap:10px;align-items:center;font-weight:900;font-size:1.16rem;color:var(--navy);margin:0 8px 18px}.logo .drop{font-size:2rem}.sidebtn{width:100%;border:0;background:transparent;color:#1f3a5d;padding:11px 12px;border-radius:10px;text-align:left;font-weight:750;margin:3px 0;display:flex;gap:10px;align-items:center}.sidebtn:hover,.sidebtn.active{background:#e7f3ff;color:#1264bc}.content{min-width:0;background:linear-gradient(#fbfdff,#f2f8fc)}.hero{position:relative;overflow:hidden;min-height:218px;padding:18px 28px 22px;background:radial-gradient(circle at 18% 130%,rgba(38,185,225,.40),transparent 30%),radial-gradient(circle at 83% 0%,rgba(255,255,255,.50),transparent 28%),linear-gradient(115deg,#cfeefa,#84cdf0 45%,#d8f3ff);border-bottom:1px solid #b8dbea}.hero h1{text-align:center;color:#082b5d;font-size:clamp(2rem,4vw,3.1rem);line-height:1.02;margin:0 0 4px}.hero .sub{text-align:center;color:#0875d1;font-weight:850;font-size:1.15rem;margin-bottom:14px}.goal-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:900px;margin:auto}.goal{border:1px solid rgba(255,255,255,.8);background:rgba(255,255,255,.86);border-radius:15px;padding:11px 13px;display:flex;gap:11px;align-items:center;box-shadow:0 4px 16px rgba(24,92,132,.12)}.goal-icon{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:#0b8b73;color:#fff;font-size:1.35rem;flex:none}.goal:nth-child(2) .goal-icon{background:#0a78c9}.goal:nth-child(3) .goal-icon{background:#078da7}.goal strong{display:block;font-size:.88rem;color:#0b2f5e}.goal small{display:block;color:#466a85;margin-top:2px}.wrap{padding:10px 20px 24px}.section-title{font-weight:900;color:#102f58;font-size:1.08rem;margin:7px 0 8px}.topic-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}.topic-card{position:relative;border:1px solid #d4e4ef;background:#fff;border-radius:9px;overflow:hidden;min-height:174px;padding:0;text-align:left;box-shadow:0 3px 10px rgba(38,75,107,.07);transition:.18s}.topic-card:hover{transform:translateY(-2px);box-shadow:var(--shadow)}.topic-top{background:var(--c);color:#fff;padding:8px 9px;font-size:.86rem;display:flex;gap:8px;align-items:center;min-height:42px}.num{border:2px solid #fff;border-radius:50%;width:30px;height:30px;display:grid;place-items:center;font-size:1rem;flex:none}.topic-visual{height:76px;display:grid;place-items:center;background:#edf7fb}.topic-visual span{font-size:2.45rem}.topic-card p{font-size:.76rem;color:#3d5b73;line-height:1.3;margin:7px 11px 12px;min-height:40px}.arrow{position:absolute;right:9px;bottom:9px;background:#fff;border:1px solid #dae7ef;color:#1473e6;width:31px;height:31px;border-radius:50%;display:grid;place-items:center;font-weight:900}.panel{background:#fff;border:1px solid var(--line);border-radius:12px;margin-top:10px;padding:11px}.insights{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}.insight{display:grid;grid-template-columns:1.18fr .72fr;border:1px solid #e0ebf2;border-radius:9px;overflow:hidden;min-height:155px;background:#fff}.insight-text{padding:10px}.insight h3{font-size:.83rem;margin:0 0 6px}.insight p{font-size:.72rem;line-height:1.35;color:#526b80;margin:0 0 8px}.small-btn{border:1px solid #58a3f0;color:#1264bc;background:#fff;border-radius:999px;padding:5px 9px;font-size:.7rem;font-weight:800}.mini-visual{display:grid;place-items:center;background:#edf7fb}.mini-visual span{font-size:2.6rem}.activities{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.activity{border:0;border-radius:10px;min-height:64px;padding:9px 11px;display:flex;gap:10px;align-items:center;text-align:left;font-weight:800;color:#1e3d5e}.activity span:first-child{width:40px;height:40px;border-radius:9px;display:grid;place-items:center;font-size:1.35rem;background:#fff}.activity small{display:block;font-weight:500;color:#577188}.activity:nth-child(1){background:#ddf7e7}.activity:nth-child(2){background:#dbeeff}.activity:nth-child(3){background:#fff0c9}.activity:nth-child(4){background:#eadcff}.activity:nth-child(5){background:#ffdfe3}.bottom{display:grid;grid-template-columns:1.3fr 1.35fr .65fr;gap:10px;margin-top:10px}.materials,.progress,.testbox{background:#fff;border:1px solid var(--line);border-radius:11px;padding:11px}.material-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px}.mat{border:1px solid #e1ebf2;background:#fff;border-radius:7px;padding:8px;text-align:left;color:#2e4b65;font-size:.76rem;font-weight:700}.mat.disabled{opacity:.42}.progress-bars{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.level{border-radius:9px;padding:9px;background:#e8f7ec}.level:nth-child(2){background:#fff5d7}.level:nth-child(3){background:#ffe9ec}.bar{height:7px;background:#d9e4e9;border-radius:99px;overflow:hidden;margin-top:6px}.bar i{display:block;height:100%;width:0;background:#18a45e;transition:.2s}.testbox{display:flex;flex-direction:column;justify-content:center}.btn{border:0;background:#0e75d8;color:#fff;border-radius:8px;padding:9px 11px;font-weight:850}.btn.alt{background:#fff;color:#0e65bb;border:1px solid #77b1e8}.drawer-bg{position:fixed;inset:0;background:rgba(6,31,57,.45);display:none;z-index:100}.drawer-bg.open{display:block}.drawer{position:fixed;top:0;right:0;width:min(650px,95vw);height:100vh;background:#f8fbfd;z-index:110;transform:translateX(103%);transition:.23s;box-shadow:-15px 0 45px rgba(0,0,0,.18);overflow:auto}.drawer.open{transform:none}.drawer-head{position:sticky;top:0;background:#0c3e72;color:#fff;padding:16px 18px;display:flex;justify-content:space-between;gap:12px;z-index:2}.drawer-head h2{margin:0;font-size:1.28rem}.close{border:0;background:rgba(255,255,255,.18);color:#fff;border-radius:8px;padding:7px 10px;font-weight:900}.drawer-body{padding:16px;display:grid;gap:12px}.box{background:#fff;border:1px solid #dce8f0;border-radius:11px;padding:13px}.box h3{margin:0 0 8px;color:#10365f}.box p,.box li{font-size:.93rem;line-height:1.5}.term{background:#eef6fa;border-radius:8px;padding:8px;margin:6px 0}.fun{border-left:5px solid #ff9e18;background:#fff7e6}.practice{border-left:5px solid #1383d7}.quizq{border:1px solid #dce8f0;border-radius:10px;padding:11px;margin:9px 0;background:#fff}.quizq label{display:block;margin:7px 0}.feedback{margin-top:8px;padding:8px;border-radius:8px;display:none}.feedback.ok{display:block;background:#e7f7ec;color:#236c3d}.feedback.bad{display:block;background:#fff0ed;color:#9e3d2d}.flash{min-height:130px;border:2px dashed #9cc7e3;border-radius:12px;display:grid;place-items:center;text-align:center;padding:16px;background:#fff;cursor:pointer}.match-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;align-items:center;margin:7px 0}select{width:100%;padding:8px;border:1px solid #cddce7;border-radius:7px}.hotspot-scene{position:relative;height:250px;border-radius:12px;background:linear-gradient(#e9f7ff 0 42%,#d9edf3 42% 45%,#eef3f5 45%);overflow:hidden;border:1px solid #cfe0ea}.pipe{position:absolute;background:#70879a;border-radius:8px}.pipe.p1{left:18%;top:45%;width:62%;height:18px}.pipe.p2{left:38%;top:27%;width:18px;height:48%}.pipe.p3{left:65%;top:44%;width:18px;height:34%}.spot{position:absolute;width:34px;height:34px;border:0;border-radius:50%;background:#e81736;color:#fff;font-weight:900;box-shadow:0 0 0 5px rgba(232,23,54,.16)}.spot.s1{left:17%;top:40%}.spot.s2{left:36%;top:22%}.spot.s3{left:63%;top:69%}.spot.s4{left:77%;top:40%}@media(max-width:1200px){.topic-grid{grid-template-columns:repeat(3,1fr)}.insights{grid-template-columns:repeat(2,1fr)}.activities{grid-template-columns:repeat(2,1fr)}.bottom{grid-template-columns:1fr}}@media(max-width:760px){.app{grid-template-columns:1fr}.sidebar{position:relative;height:auto;display:flex;gap:5px;overflow:auto;padding:8px}.logo{min-width:170px;margin:0 8px}.sidebtn{min-width:max-content;width:auto}.hero{padding:15px}.goal-row{grid-template-columns:1fr}.wrap{padding:8px}.topic-grid{grid-template-columns:1fr 1fr}.insights{grid-template-columns:1fr}}
+
+/* ===== LEHRKRAFT-ZUSATZINHALTE ===== */
+.teacher-extra figure{margin:0}
+.teacher-extra img{display:block;width:100%;height:auto;border-radius:10px;border:1px solid #dce8f0}
+.teacher-extra figcaption{margin-top:6px;color:#647c91;font-size:.85rem}
+.teacher-gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.teacher-gallery img{width:100%;border-radius:10px;border:1px solid #dce8f0}
+.teacher-note{border-left:5px solid #1473e6;background:#f7fbff}
+.teacher-remember{border-left:5px solid #7a31ca;background:#faf6ff}
+.teacher-tip{border-left:5px solid #ff8518;background:#fff8ec}
+.teacher-html{overflow:auto}
+@media(max-width:700px){.teacher-gallery{grid-template-columns:1fr}}
+
+
+/* SAISON-MODI */
+.theme-switcher{position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:6px;padding:7px;border-radius:999px;background:rgba(255,255,255,.94);border:1px solid rgba(20,50,75,.16);box-shadow:0 8px 24px rgba(0,0,0,.14);backdrop-filter:blur(8px)}
+.theme-switcher button{border:0;border-radius:999px;padding:8px 11px;cursor:pointer;font:700 13px/1 system-ui,-apple-system,"Segoe UI",Arial,sans-serif;background:#edf4f8;color:#17364e}
+.theme-switcher button.active{outline:2px solid currentColor}
+.theme-switcher .halloween{background:#2a1d33;color:#ff9d2f}
+.theme-switcher .christmas{background:#edf7f1;color:#0f6c3b}
+html[data-theme="halloween"] body{background:radial-gradient(circle at 15% 10%,rgba(106,41,139,.28),transparent 25%),radial-gradient(circle at 85% 20%,rgba(255,112,0,.18),transparent 20%),linear-gradient(180deg,#17131e,#221927 60%,#151219);color:#f4eee8}
+html[data-theme="halloween"] header,html[data-theme="halloween"] .hero,html[data-theme="halloween"] .sidebar{background:linear-gradient(135deg,#18111f,#29172e 55%,#3a1a20)!important;color:#fff!important}
+html[data-theme="halloween"] .card,html[data-theme="halloween"] .topic-card,html[data-theme="halloween"] .panel,html[data-theme="halloween"] .box,html[data-theme="halloween"] .poster,html[data-theme="halloween"] .material-panel,html[data-theme="halloween"] .materials,html[data-theme="halloween"] .progress,html[data-theme="halloween"] .testbox,html[data-theme="halloween"] .insight{background:#241d29!important;color:#f6efe9!important;border-color:#5c3b63!important}
+html[data-theme="halloween"] .muted,html[data-theme="halloween"] p,html[data-theme="halloween"] small{color:#d7c8d8!important}
+html[data-theme="halloween"] h1,html[data-theme="halloween"] h2,html[data-theme="halloween"] h3,html[data-theme="halloween"] strong{color:#fff6ec!important}
+html[data-theme="halloween"] .btn.primary{background:#e46f1f!important;color:#fff!important;border-color:#e46f1f!important}
+html[data-theme="halloween"] .badge{background:#3a2943!important;color:#ffb15d!important}
+html[data-theme="christmas"] body{background:radial-gradient(circle at 10% 20%,rgba(255,255,255,.65),transparent 24%),radial-gradient(circle at 90% 10%,rgba(255,255,255,.55),transparent 22%),linear-gradient(180deg,#eef7f2,#f9fbfa 55%,#e6f1ea);color:#173d2e}
+html[data-theme="christmas"] header,html[data-theme="christmas"] .hero,html[data-theme="christmas"] .sidebar{background:linear-gradient(135deg,#0e5b3d,#0a6d47 55%,#8b1f2e)!important;color:#fff!important}
+html[data-theme="christmas"] .card,html[data-theme="christmas"] .topic-card,html[data-theme="christmas"] .panel,html[data-theme="christmas"] .box,html[data-theme="christmas"] .poster,html[data-theme="christmas"] .material-panel,html[data-theme="christmas"] .materials,html[data-theme="christmas"] .progress,html[data-theme="christmas"] .testbox,html[data-theme="christmas"] .insight{background:#fff!important;color:#173d2e!important;border-color:#bfd9c7!important}
+html[data-theme="christmas"] .btn.primary{background:#9f2433!important;color:#fff!important;border-color:#9f2433!important}
+html[data-theme="christmas"] .badge{background:#e8f4ec!important;color:#0e6a43!important}
+
+
+/* ============================================================
+   SAISONMODI DELUXE – DEKORATIONEN & ANIMATIONEN
+   ============================================================ */
+.season-decor{
+  position:fixed;
+  inset:0;
+  z-index:9000;
+  pointer-events:none;
+  overflow:hidden;
+  display:none;
+}
+html[data-theme="halloween"] .season-decor.halloween-decor,
+html[data-theme="christmas"] .season-decor.christmas-decor{display:block}
+
+/* Halloween */
+.halloween-decor .web{
+  position:absolute;
+  top:-8px;
+  width:115px;
+  height:115px;
+  opacity:.42;
+  font-size:96px;
+  line-height:1;
+  filter:grayscale(.2);
+}
+.halloween-decor .web.left{left:-12px;transform:rotate(-20deg)}
+.halloween-decor .web.right{right:-12px;transform:scaleX(-1) rotate(-20deg)}
+.halloween-decor .pumpkin{
+  position:absolute;
+  bottom:10px;
+  font-size:48px;
+  filter:drop-shadow(0 6px 8px rgba(0,0,0,.35));
+  animation:pumpkinBob 3.4s ease-in-out infinite;
+}
+.halloween-decor .pumpkin.p1{left:3%}
+.halloween-decor .pumpkin.p2{right:4%;font-size:58px;animation-delay:.8s}
+.halloween-decor .pumpkin.p3{left:47%;font-size:38px;animation-delay:1.5s}
+.halloween-decor .zombie{
+  position:absolute;
+  bottom:4px;
+  left:12%;
+  font-size:54px;
+  animation:zombieSway 4.2s ease-in-out infinite;
+  filter:drop-shadow(0 5px 7px rgba(0,0,0,.38));
+}
+.halloween-decor .ghost{
+  position:absolute;
+  top:24%;
+  right:3%;
+  font-size:47px;
+  opacity:.72;
+  animation:ghostFloat 5.5s ease-in-out infinite;
+}
+.halloween-decor .witch{
+  position:absolute;
+  top:74px;
+  left:-140px;
+  font-size:62px;
+  animation:witchFly 18s linear infinite;
+  filter:drop-shadow(0 8px 8px rgba(0,0,0,.4));
+}
+.halloween-decor .bats{
+  position:absolute;
+  top:18px;
+  left:34%;
+  font-size:25px;
+  letter-spacing:15px;
+  opacity:.72;
+  animation:batsDrift 8s ease-in-out infinite;
+}
+.halloween-decor .fog{
+  position:absolute;
+  left:-10%;
+  right:-10%;
+  bottom:-30px;
+  height:135px;
+  background:
+    radial-gradient(ellipse at 15% 70%,rgba(220,215,235,.18),transparent 45%),
+    radial-gradient(ellipse at 55% 65%,rgba(210,200,230,.16),transparent 43%),
+    radial-gradient(ellipse at 85% 72%,rgba(220,215,235,.14),transparent 46%);
+  filter:blur(12px);
+  animation:fogMove 10s ease-in-out infinite alternate;
+}
+
+/* Christmas */
+.christmas-decor .lights{
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:38px;
+  display:flex;
+  justify-content:space-around;
+  align-items:flex-start;
+  padding:3px 12px 0;
+  background:linear-gradient(180deg,rgba(11,76,48,.35),transparent);
+}
+.christmas-decor .bulb{
+  width:11px;height:16px;border-radius:50% 50% 45% 45%;
+  box-shadow:0 0 12px currentColor;
+  animation:twinkle 1.8s ease-in-out infinite alternate;
+}
+.christmas-decor .bulb:nth-child(4n+1){color:#e92d3f;background:#e92d3f}
+.christmas-decor .bulb:nth-child(4n+2){color:#ffd65c;background:#ffd65c;animation-delay:.35s}
+.christmas-decor .bulb:nth-child(4n+3){color:#4cc4ff;background:#4cc4ff;animation-delay:.7s}
+.christmas-decor .bulb:nth-child(4n){color:#59d27c;background:#59d27c;animation-delay:1s}
+.christmas-decor .snowman{
+  position:absolute;
+  bottom:10px;
+  left:3%;
+  font-size:58px;
+  animation:snowmanBob 4s ease-in-out infinite;
+}
+.christmas-decor .reindeer{
+  position:absolute;
+  bottom:10px;
+  right:4%;
+  font-size:58px;
+  animation:reindeerBob 3.8s ease-in-out infinite;
+}
+.christmas-decor .santa{
+  position:absolute;
+  top:64px;
+  left:-180px;
+  font-size:60px;
+  animation:santaFly 20s linear infinite;
+  filter:drop-shadow(0 7px 7px rgba(0,0,0,.22));
+}
+.christmas-decor .tree{
+  position:absolute;
+  bottom:5px;
+  right:13%;
+  font-size:49px;
+  filter:drop-shadow(0 5px 6px rgba(0,0,0,.16));
+}
+.christmas-decor .gift{
+  position:absolute;
+  bottom:5px;
+  right:18%;
+  font-size:34px;
+}
+.snowflake{
+  position:absolute;
+  top:-30px;
+  color:#fff;
+  opacity:.82;
+  text-shadow:0 0 5px rgba(255,255,255,.9);
+  animation:snowFall linear infinite;
+}
+
+/* kleine saisonale Beschriftung */
+.theme-season-label{
+  display:none;
+  position:fixed;
+  left:14px;
+  bottom:14px;
+  z-index:8999;
+  padding:8px 12px;
+  border-radius:999px;
+  font:800 12px/1 system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  pointer-events:none;
+  box-shadow:0 6px 20px rgba(0,0,0,.12);
+}
+html[data-theme="halloween"] .theme-season-label.halloween-label{
+  display:block;background:#2b1b31;color:#ffad4e;border:1px solid #6e466f;
+}
+html[data-theme="christmas"] .theme-season-label.christmas-label{
+  display:block;background:#f8fff9;color:#0f6a3c;border:1px solid #b9d8c3;
+}
+
+@keyframes pumpkinBob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-7px) rotate(2deg)}}
+@keyframes zombieSway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg) translateY(-3px)}}
+@keyframes ghostFloat{0%,100%{transform:translateY(0) translateX(0)}50%{transform:translateY(-18px) translateX(-12px)}}
+@keyframes witchFly{0%{transform:translateX(0) translateY(0) rotate(-4deg)}45%{transform:translateX(58vw) translateY(25px) rotate(3deg)}100%{transform:translateX(125vw) translateY(-10px) rotate(-2deg)}}
+@keyframes batsDrift{0%,100%{transform:translateX(0) translateY(0)}50%{transform:translateX(45px) translateY(13px)}}
+@keyframes fogMove{from{transform:translateX(-2%)}to{transform:translateX(4%)}}
+@keyframes twinkle{from{opacity:.45;transform:scale(.85)}to{opacity:1;transform:scale(1.12)}}
+@keyframes snowmanBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes reindeerBob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-7px) rotate(2deg)}}
+@keyframes santaFly{0%{transform:translateX(0) translateY(0)}50%{transform:translateX(62vw) translateY(18px)}100%{transform:translateX(128vw) translateY(-5px)}}
+@keyframes snowFall{0%{transform:translateY(-30px) rotate(0deg)}100%{transform:translateY(110vh) rotate(360deg)}}
+
+@media(max-width:700px){
+  .halloween-decor .zombie{font-size:42px;left:8%}
+  .halloween-decor .pumpkin.p3{display:none}
+  .christmas-decor .tree,.christmas-decor .gift{display:none}
+  .halloween-decor .witch,.christmas-decor .santa{font-size:48px}
+}
+@media(prefers-reduced-motion:reduce){
+  .season-decor *{animation:none!important}
+  .halloween-decor .witch,.christmas-decor .santa{display:none}
+  .snowflake{display:none}
+}
+
+</style></head><body><div class="app"><aside class="sidebar"><div class="logo"><span class="drop">💧</span><span>Sanitär-<br>Lernportal</span></div><button class="sidebtn active" data-nav="start">🏠 <span>Start</span></button><button class="sidebtn" data-nav="week">🗓️ <span>Wochenplan</span></button><button class="sidebtn" data-nav="modules">📖 <span>Lernmodule</span></button><button class="sidebtn" data-nav="materials">📁 <span>Materialien</span></button><button class="sidebtn" data-nav="activities">🧩 <span>Interaktive Übungen</span></button><button class="sidebtn" data-nav="quiz">🏆 <span>Quiz</span></button><button class="sidebtn" data-nav="progress">📊 <span>Fortschritt</span></button></aside><div class="content"><section class="hero" id="start"><h1>Virtuelles Klassenzimmer –<br>Blockwoche 8: Abwasser – Grundlagen &amp; Dimensionierung II</h1><div class="sub">Lernen, entdecken, üben.</div><div class="goal-row"><div class="goal"><div class="goal-icon">🌊</div><div><strong>Abwasser – Grundlagen vertiefen</strong><small>Wie wirken Gefälle, Füllungsgrad und Geschwindigkeit zusammen?</small></div></div><div class="goal"><div class="goal-icon">🔗</div><div><strong>Anschlussleitungen</strong><small>Wie werden Anschlussleitungen funktional geplant?</small></div></div><div class="goal"><div class="goal-icon">🧰</div><div><strong>Sammelleitungen</strong><small>Welche Aufgabe haben Sammelleitungen?</small></div></div></div></section><div class="wrap"><h2 class="section-title" id="week">Unsere Themen in Blockwoche 8</h2><div class="topic-grid"><button class="topic-card" style="--c:#1473e6" data-module="0"><div class="topic-top"><span class="num">1</span><strong>Abwasser – Grundlagen vertiefen</strong></div><div class="topic-visual"><span>🌊</span></div><p>Wie wirken Gefälle, Füllungsgrad und Geschwindigkeit zusammen?</p><span class="arrow">→</span></button><button class="topic-card" style="--c:#1a9b55" data-module="1"><div class="topic-top"><span class="num">2</span><strong>Anschlussleitungen</strong></div><div class="topic-visual"><span>🔗</span></div><p>Wie werden Anschlussleitungen funktional geplant?</p><span class="arrow">→</span></button><button class="topic-card" style="--c:#ff8518" data-module="2"><div class="topic-top"><span class="num">3</span><strong>Sammelleitungen</strong></div><div class="topic-visual"><span>🧰</span></div><p>Welche Aufgabe haben Sammelleitungen?</p><span class="arrow">→</span></button><button class="topic-card" style="--c:#7a31ca" data-module="3"><div class="topic-top"><span class="num">4</span><strong>Dimensionierung – Übung</strong></div><div class="topic-visual"><span>🧮</span></div><p>Wie wird eine einfache Bemessung nachvollziehbar durchgeführt?</p><span class="arrow">→</span></button><button class="topic-card" style="--c:#058ca8" data-module="4"><div class="topic-top"><span class="num">5</span><strong>Praxis-Transfer</strong></div><div class="topic-visual"><span>🔍</span></div><p>Wie wird aus einzelnen Regeln ein funktionierendes Entwässerungskonzept?</p><span class="arrow">→</span></button><button class="topic-card" style="--c:#e51634" data-action="quiz"><div class="topic-top"><span class="num">6</span><strong>Übungen & Wissenstest</strong></div><div class="topic-visual"><span>✅</span></div><p>Mitmachen, Wissen festigen und deinen Lernstand überprüfen.</p><span class="arrow">→</span></button></div><section class="panel" id="modules"><h2 class="section-title">Lerninhalte – Einblicke in die Themen</h2><div class="insights"><article class="insight"><div class="insight-text"><h3><span style="color:#1473e6">🌊</span> Abwasser – Grundlagen vertiefen</h3><p>Abwasserleitungen werden im Normalbetrieb nicht vollständig gefüllt betrieben. Gefälle beeinflusst Geschwindigkeit und Transportvermögen. Die Auslegung soll sicheren Abtransport u…</p><button class="small-btn" data-module="0">Mehr erfahren →</button></div><div class="mini-visual" style="--c:#1473e6"><span>🌊</span></div></article><article class="insight"><div class="insight-text"><h3><span style="color:#1a9b55">🔗</span> Anschlussleitungen</h3><p>Anschlussleitungen sollen kurz, zugänglich und mit geeignetem Gefälle geführt werden. Richtungsänderungen erhöhen den Widerstand und können Reinigbarkeit verschlechtern. Lange ode…</p><button class="small-btn" data-module="1">Mehr erfahren →</button></div><div class="mini-visual" style="--c:#1a9b55"><span>🔗</span></div></article><article class="insight"><div class="insight-text"><h3><span style="color:#ff8518">🧰</span> Sammelleitungen</h3><p>Sammelleitungen nehmen Abwasser aus mehreren Teilsträngen auf. Ihre Belastung ist höher als die einzelner Anschlussleitungen. Reinigungszugang und geeignete Leitungsführung sind f…</p><button class="small-btn" data-module="2">Mehr erfahren →</button></div><div class="mini-visual" style="--c:#ff8518"><span>🧰</span></div></article><article class="insight"><div class="insight-text"><h3><span style="color:#7a31ca">🧮</span> Dimensionierung – Übung</h3><p>Zuerst werden angeschlossene Entwässerungsgegenstände erfasst. Danach wird die maßgebende Belastung bestimmt. Nennweite und Gefälle werden abschließend auf Plausibilität geprüft.</p><button class="small-btn" data-module="3">Mehr erfahren →</button></div><div class="mini-visual" style="--c:#7a31ca"><span>🧮</span></div></article><article class="insight"><div class="insight-text"><h3><span style="color:#058ca8">🔍</span> Praxis-Transfer</h3><p>Verfolge den Abwasserweg vom Entwässerungsgegenstand bis zur weiterführenden Leitung. Gefälle, Dimension, Lüftung, Geruchsschutz und Reinigbarkeit müssen zusammenpassen. Bei Störu…</p><button class="small-btn" data-module="4">Mehr erfahren →</button></div><div class="mini-visual" style="--c:#058ca8"><span>🔍</span></div></article></div></section><section class="panel" id="activities"><h2 class="section-title">Interaktive Lerneinheiten</h2><div class="activities"><button class="activity" data-activity="match"><span>🧩</span><div>Zuordnungsaufgabe<small>Begriffe richtig zuordnen und Zusammenhänge erkennen.</small></div></button><button class="activity" data-activity="cards"><span>📖</span><div>Wissenskarten aufklappen<small>Fachbegriffe Schritt für Schritt entdecken.</small></div></button><button class="activity" data-activity="mini"><span>💡</span><div>Mini-Quiz<small>Teste dein Wissen in kurzen Fragen.</small></div></button><button class="activity" data-activity="check"><span>☑️</span><div>Selbstcheck<small>Überprüfe, was du schon sicher kannst.</small></div></button><button class="activity" data-activity="hot"><span>🖼️</span><div>Bild-Hotspots<small>Klicke auf die richtigen Stellen und erfahre mehr.</small></div></button></div></section><div class="bottom"><section class="materials" id="materials"><h2 class="section-title">📁 Materialien & Mebis</h2><div class="material-grid"><button class="mat" data-mat="mebis">🎓 Mebis · Blockwoche 8</button><button class="mat" data-mat="drive">☁️ Drive / Dateien</button><button class="mat" data-mat="arbeitsblatt">📄 Arbeitsblatt</button><button class="mat" data-mat="glossar">📖 Glossar / Merkkarte</button></div></section><section class="progress" id="progress"><h2 class="section-title">📊 Dein Fortschritt</h2><div class="progress-bars"><div class="level"><strong>🌱 Leicht</strong><small> Grundwissen</small><div class="bar"><i id="bar1"></i></div><small id="p1">0 / 2</small></div><div class="level"><strong>⚙️ Mittel</strong><small> Zusammenhänge</small><div class="bar"><i id="bar2"></i></div><small id="p2">0 / 2</small></div><div class="level"><strong>🎯 Profi</strong><small> Anwenden</small><div class="bar"><i id="bar3"></i></div><small id="p3">0 / 2</small></div></div></section><section class="testbox"><h2 class="section-title">🏆 Bereit für den Wissenstest?</h2><small>Zeige, was du gelernt hast, und sammle sechs abgeschlossene Einheiten.</small><button class="btn" data-action="quiz">Wissenstest starten →</button></section></div></div></div></div><div class="drawer-bg" id="drawerBg"></div><aside class="drawer" id="drawer"><div class="drawer-head"><h2 id="drawerTitle">Lernfenster</h2><button class="close" id="close">✕</button></div><div class="drawer-body" id="drawerBody"></div></aside>
+<script>
+const DATA={"bw": 8, "title": "Abwasser – Grundlagen & Dimensionierung II", "problem": "Grundlagen und Dimensionierung von Abwasseranlagen.", "modules": [{"title": "Abwasser – Grundlagen vertiefen", "question": "Wie wirken Gefälle, Füllungsgrad und Geschwindigkeit zusammen?", "infos": ["Abwasserleitungen werden im Normalbetrieb nicht vollständig gefüllt betrieben.", "Gefälle beeinflusst Geschwindigkeit und Transportvermögen.", "Die Auslegung soll sicheren Abtransport und Belüftung des Rohrquerschnitts ermöglichen."], "terms": [["Füllungsgrad", "Anteil des Rohrquerschnitts, der mit Wasser gefüllt ist."], ["Fließgeschwindigkeit", "Geschwindigkeit des Abwassers in der Leitung."]], "practice": "Bearbeite einen einfachen Grundriss und markiere den Fließweg vom Sanitärobjekt bis zur Grundleitung.", "funfact": "Abwasserleitungen sind im Normalbetrieb meist nur teilweise gefüllt – der freie Querschnitt ist auch für Luftbewegung wichtig.", "tasks": [{"type": "mc", "question": "Welche Aussage passt am besten?", "options": ["Abwasserleitungen werden im Normalbetrieb nicht vollständig gefüllt betrieben.", "Dimension und Leitungsart spielen keine Rolle.", "Lüftung ist immer überflüssig."], "answer": 0, "explain": "Der erste Satz beschreibt den zentralen Zusammenhang korrekt."}, {"type": "open", "question": "Formuliere eine praktische Prüffrage zu diesem Thema.", "sample": "Beispiel: Welche Randbedingungen muss ich bei 'Abwasser – Grundlagen vertiefen' prüfen, bevor ich eine technische Entscheidung treffe?"}]}, {"title": "Anschlussleitungen", "question": "Wie werden Anschlussleitungen funktional geplant?", "infos": ["Anschlussleitungen sollen kurz, zugänglich und mit geeignetem Gefälle geführt werden.", "Richtungsänderungen erhöhen den Widerstand und können Reinigbarkeit verschlechtern.", "Lange oder ungünstige Anschlussleitungen können zusätzliche Lüftungsmaßnahmen benötigen."], "terms": [["Einzelanschlussleitung", "Leitung für einen einzelnen Entwässerungsgegenstand."], ["Sammelanschlussleitung", "Leitung, die mehrere Anschlussleitungen zusammenführt."]], "practice": "Vergleiche zwei Leitungsführungen und begründe, welche hydraulisch und wartungstechnisch günstiger ist.", "funfact": "Viele Entwässerungsprobleme lassen sich akustisch hören: Gluckern ist oft ein Hinweis auf Druckschwankungen.", "tasks": [{"type": "mc", "question": "Welche Aussage passt am besten?", "options": ["Anschlussleitungen sollen kurz, zugänglich und mit geeignetem Gefälle geführt werden.", "Dimension und Leitungsart spielen keine Rolle.", "Lüftung ist immer überflüssig."], "answer": 0, "explain": "Der erste Satz beschreibt den zentralen Zusammenhang korrekt."}, {"type": "open", "question": "Formuliere eine praktische Prüffrage zu diesem Thema.", "sample": "Beispiel: Welche Randbedingungen muss ich bei 'Anschlussleitungen' prüfen, bevor ich eine technische Entscheidung treffe?"}]}, {"title": "Sammelleitungen", "question": "Welche Aufgabe haben Sammelleitungen?", "infos": ["Sammelleitungen nehmen Abwasser aus mehreren Teilsträngen auf.", "Ihre Belastung ist höher als die einzelner Anschlussleitungen.", "Reinigungszugang und geeignete Leitungsführung sind für den Betrieb wichtig."], "terms": [["Sammelleitung", "Liegende Leitung zur Aufnahme mehrerer Abwasserströme."], ["Reinigungsöffnung", "Zugängliche Öffnung für Inspektion und Reinigung."]], "practice": "Analysiere einen Fehlerfall mit Gluckern, Geruch oder schlechtem Ablauf und leite Prüfschritte ab.", "funfact": "Ein sauber geplanter Reinigungszugang spart im Störungsfall oft mehr Zeit als jede theoretisch 'perfekte' Rohrführung.", "tasks": [{"type": "mc", "question": "Welche Aussage passt am besten?", "options": ["Sammelleitungen nehmen Abwasser aus mehreren Teilsträngen auf.", "Dimension und Leitungsart spielen keine Rolle.", "Lüftung ist immer überflüssig."], "answer": 0, "explain": "Der erste Satz beschreibt den zentralen Zusammenhang korrekt."}, {"type": "open", "question": "Formuliere eine praktische Prüffrage zu diesem Thema.", "sample": "Beispiel: Welche Randbedingungen muss ich bei 'Sammelleitungen' prüfen, bevor ich eine technische Entscheidung treffe?"}]}, {"title": "Dimensionierung – Übung", "question": "Wie wird eine einfache Bemessung nachvollziehbar durchgeführt?", "infos": ["Zuerst werden angeschlossene Entwässerungsgegenstände erfasst.", "Danach wird die maßgebende Belastung bestimmt.", "Nennweite und Gefälle werden abschließend auf Plausibilität geprüft."], "terms": [["Belastung", "Für die Bemessung relevante Abwassermenge bzw. Anschlussgröße."], ["Plausibilitätsprüfung", "Kontrolle, ob ein Rechenergebnis technisch sinnvoll ist."]], "practice": "Übertrage die Regeln auf einen kleinen Kundenauftrag und begründe Dimension, Leitungsweg und Schutzmaßnahmen.", "funfact": "In der Praxis ist die beste Dimensionierung die, die rechnerisch passt und zugleich montage- und wartungsfreundlich ist.", "tasks": [{"type": "mc", "question": "Welche Aussage passt am besten?", "options": ["Zuerst werden angeschlossene Entwässerungsgegenstände erfasst.", "Dimension und Leitungsart spielen keine Rolle.", "Lüftung ist immer überflüssig."], "answer": 0, "explain": "Der erste Satz beschreibt den zentralen Zusammenhang korrekt."}, {"type": "open", "question": "Formuliere eine praktische Prüffrage zu diesem Thema.", "sample": "Beispiel: Welche Randbedingungen muss ich bei 'Dimensionierung – Übung' prüfen, bevor ich eine technische Entscheidung treffe?"}]}, {"title": "Praxis-Transfer", "question": "Wie wird aus einzelnen Regeln ein funktionierendes Entwässerungskonzept?", "infos": ["Verfolge den Abwasserweg vom Entwässerungsgegenstand bis zur weiterführenden Leitung.", "Gefälle, Dimension, Lüftung, Geruchsschutz und Reinigbarkeit müssen zusammenpassen.", "Bei Störungen helfen Symptome wie Gluckern, Geruch oder langsamer Ablauf."], "terms": [["Systemdenken", "Bauteile und Funktionen als zusammenhängendes System betrachten."], ["Reinigbarkeit", "Zugänglichkeit für Wartung und Störungsbeseitigung."], ["Druckausgleich", "Vermeidung schädlicher Über- und Unterdrücke."]], "practice": "Du erhältst einen Badgrundriss. Lege Leitungsweg, Gefälle, Lüftung und Prüfpunkte fest und begründe deine Planung.", "funfact": "Bei Entwässerungsanlagen ist Luft fast genauso wichtig wie Wasser: Ohne Druckausgleich können selbst korrekt dimensionierte Leitungen Probleme verursachen.", "tasks": [{"type": "open", "question": "Welche Punkte gehören in deine Planung?", "sample": "Entwässerungsgegenstände, Leitungsweg, Gefälle, Nennweiten, Lüftung, Geruchsschutz, Reinigungszugänge und Rückstauschutz."}]}], "quiz": [{"q": "Welche Aussage passt am besten?", "opts": ["Abwasserleitungen werden im Normalbetrieb nicht vollständig gefüllt betrieben.", "Dimension und Leitungsart spielen keine Rolle.", "Lüftung ist immer überflüssig."], "a": 0, "exp": "Der erste Satz beschreibt den zentralen Zusammenhang korrekt."}, {"q": "Welche Aussage passt am besten?", "opts": ["Anschlussleitungen sollen kurz, zugänglich und mit geeignetem Gefälle geführt werden.", "Dimension und Leitungsart spielen keine Rolle.", "Lüftung ist immer überflüssig."], "a": 0, "exp": "Der erste Satz beschreibt den zentralen Zusammenhang korrekt."}, {"q": "Welche Aussage passt am besten?", "opts": ["Sammelleitungen nehmen Abwasser aus mehreren Teilsträngen auf.", "Dimension und Leitungsart spielen keine Rolle.", "Lüftung ist immer überflüssig."], "a": 0, "exp": "Der erste Satz beschreibt den zentralen Zusammenhang korrekt."}, {"q": "Welche Aussage passt am besten?", "opts": ["Zuerst werden angeschlossene Entwässerungsgegenstände erfasst.", "Dimension und Leitungsart spielen keine Rolle.", "Lüftung ist immer überflüssig."], "a": 0, "exp": "Der erste Satz beschreibt den zentralen Zusammenhang korrekt."}, {"q": "Welche Aussage passt zu „Praxis-Transfer“?", "opts": ["Verfolge den Abwasserweg vom Entwässerungsgegenstand bis zur weiterführenden Leitung.", "Das Thema beeinflusst Planung und Betrieb nicht.", "Hier zählt ausschließlich die Optik."], "a": 0, "exp": "Die erste Aussage beschreibt den fachlichen Zusammenhang."}], "terms": [["Füllungsgrad", "Anteil des Rohrquerschnitts, der mit Wasser gefüllt ist."], ["Fließgeschwindigkeit", "Geschwindigkeit des Abwassers in der Leitung."], ["Einzelanschlussleitung", "Leitung für einen einzelnen Entwässerungsgegenstand."], ["Sammelanschlussleitung", "Leitung, die mehrere Anschlussleitungen zusammenführt."], ["Sammelleitung", "Liegende Leitung zur Aufnahme mehrerer Abwasserströme."], ["Reinigungsöffnung", "Zugängliche Öffnung für Inspektion und Reinigung."]], "cards": [{"front": "Füllungsgrad", "back": "Anteil des Rohrquerschnitts, der mit Wasser gefüllt ist."}, {"front": "Fließgeschwindigkeit", "back": "Geschwindigkeit des Abwassers in der Leitung."}, {"front": "Einzelanschlussleitung", "back": "Leitung für einen einzelnen Entwässerungsgegenstand."}, {"front": "Sammelanschlussleitung", "back": "Leitung, die mehrere Anschlussleitungen zusammenführt."}, {"front": "Sammelleitung", "back": "Liegende Leitung zur Aufnahme mehrerer Abwasserströme."}], "icons": ["🌊", "🔗", "🧰", "🧮", "🔍"]};
+const MATERIAL_LINKS={mebis:'',drive:'',arbeitsblatt:'',glossar:''};
+
+// ============================================================
+// ============================================================
+// 👩‍🏫 LEHRKRAFT-BEREICH – EIGENE ERGÄNZUNGEN
+// ============================================================
+// HIER kannst du jede Blockwoche ergänzen, OHNE im DATA-Bereich
+// suchen zu müssen.
+//
+// Für jedes Modul gibt es:
+// text            = eigener Zusatztext
+// bild            = einzelnes Bild, z.B. 'bilder/meinbild.jpg'
+// bildunterschrift= Text unter dem Bild
+// bilder           = mehrere Bilder als Galerie
+// hinweis          = Merksatz
+// tipp             = Praxistipp
+// html             = optional eigene Tabelle / Formel / HTML
+//
+// Beispiel:
+// 0:{
+//   text:'Hier steht mein eigener fachlicher Zusatz.',
+//   bild:'bilder/wasserhaerte.jpg',
+//   bildunterschrift:'Kalkablagerung im Wärmetauscher',
+//   bilder:['bilder/a.jpg','bilder/b.jpg'],
+//   hinweis:'Merke: ...',
+//   tipp:'Praxistipp: ...',
+//   html:''
+// }
+//
+// Die Nummern 0 bis 4 entsprechen den fünf Lernmodulen oben.
+// ============================================================
+const LEHRKRAFT_INHALTE = {
+  0:{text:'',bild:'',bildunterschrift:'',bilder:[],hinweis:'',tipp:'',html:''},
+  1:{text:'',bild:'',bildunterschrift:'',bilder:[],hinweis:'',tipp:'',html:''},
+  2:{text:'',bild:'',bildunterschrift:'',bilder:[],hinweis:'',tipp:'',html:''},
+  3:{text:'',bild:'',bildunterschrift:'',bilder:[],hinweis:'',tipp:'',html:''},
+  4:{text:'',bild:'',bildunterschrift:'',bilder:[],hinweis:'',tipp:'',html:''}
+};
+// ============================================================
+// ENDE LEHRKRAFT-BEREICH
+// ============================================================
+
+function teacherExtraHtml(i){
+  const x=LEHRKRAFT_INHALTE[i]||{};
+  const parts=[];
+  if((x.text||'').trim()) parts.push('<div class="box teacher-note"><h3>📝 Ergänzung der Lehrkraft</h3><p>'+esc(x.text)+'</p></div>');
+  if((x.bild||'').trim()) parts.push('<div class="box teacher-extra"><figure><img src="'+esc(x.bild)+'" alt="Zusatzbild"><figcaption>'+esc(x.bildunterschrift||'')+'</figcaption></figure></div>');
+  if(Array.isArray(x.bilder)&&x.bilder.length) parts.push('<div class="box teacher-extra"><h3>🖼️ Bilder & Grafiken</h3><div class="teacher-gallery">'+x.bilder.map((src,j)=>'<img src="'+esc(src)+'" alt="Zusatzbild '+(j+1)+'">').join('')+'</div></div>');
+  if((x.hinweis||'').trim()) parts.push('<div class="box teacher-remember"><h3>📌 Merke</h3><p>'+esc(x.hinweis)+'</p></div>');
+  if((x.tipp||'').trim()) parts.push('<div class="box teacher-tip"><h3>🔧 Praxistipp</h3><p>'+esc(x.tipp)+'</p></div>');
+  if((x.html||'').trim()) parts.push('<div class="box teacher-html"><h3>📊 Zusatzmaterial</h3>'+x.html+'</div>');
+  return parts.join('');
+}
+
+const key='sani11_vk_bw8_progress_v1';let state=JSON.parse(localStorage.getItem(key)||'{"done":[]}');const bg=document.getElementById('drawerBg'),drawer=document.getElementById('drawer'),body=document.getElementById('drawerBody'),title=document.getElementById('drawerTitle');
+function esc(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));}function openDrawer(t,h){title.textContent=t;body.innerHTML=h;drawer.classList.add('open');bg.classList.add('open')}function closeDrawer(){drawer.classList.remove('open');bg.classList.remove('open')}document.getElementById('close').onclick=closeDrawer;bg.onclick=closeDrawer;
+function markDone(i){if(!state.done.includes(i))state.done.push(i);localStorage.setItem(key,JSON.stringify(state));updateProgress()}function updateProgress(){const n=state.done.length,vals=[Math.min(n,2),Math.max(0,Math.min(n-2,2)),Math.max(0,Math.min(n-4,2))];vals.forEach((v,i)=>{document.getElementById('bar'+(i+1)).style.width=(v/2*100)+'%';document.getElementById('p'+(i+1)).textContent=v+' / 2 Einheiten'})}updateProgress();
+function tasksHtml(tasks,mi){return tasks.map((t,ti)=>{let h='<div class="quizq" data-task="'+ti+'"><strong>Aufgabe '+(ti+1)+'</strong><p>'+esc(t.question)+'</p>';if(t.type==='mc')h+=t.options.map((o,j)=>'<label><input type="radio" name="m'+mi+'q'+ti+'" value="'+j+'"> '+esc(o)+'</label>').join('');if(t.type==='multi')h+=t.options.map((o,j)=>'<label><input type="checkbox" value="'+j+'"> '+esc(o)+'</label>').join('');if(t.type==='tf')h+=t.statements.map((x,j)=>'<label>'+esc(x.text)+' <select data-tf="'+j+'"><option value="">wählen</option><option value="true">richtig</option><option value="false">falsch</option></select></label>').join('');if(t.type==='open')h+='<textarea style="width:100%;min-height:80px;border:1px solid #cadbe7;border-radius:8px;padding:8px" placeholder="Deine Antwort …"></textarea>';h+='<button class="btn alt taskcheck" type="button">Antwort prüfen</button>'+(t.type==='open'?'<button class="btn alt sampleBtn" type="button">Musterlösung</button>':'')+'<div class="feedback"></div><div class="sample" style="display:none;margin-top:8px;background:#eef6fa;padding:8px;border-radius:8px">'+esc(t.sample||'')+'</div></div>';return h}).join('')}
+function moduleHtml(i){const m=DATA.modules[i];return '<div class="box"><h3>🎯 Leitfrage</h3><p>'+esc(m.question)+'</p></div><div class="box"><h3>🧠 Fachwissen kompakt</h3><ul>'+m.infos.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul></div><div class="box"><h3>📘 Begrifflichkeiten</h3>'+m.terms.map(x=>'<div class="term"><strong>'+esc(x[0])+'</strong><br>'+esc(x[1])+'</div>').join('')+'</div><div class="box practice"><h3>🔧 Praxisbeispiel</h3><p>'+esc(m.practice)+'</p></div><div class="box fun"><h3>💡 Nice to know</h3><p>'+esc(m.funfact)+'</p></div>'+teacherExtraHtml(i)+'<div class="box"><h3>🧩 Lerncheck</h3>'+tasksHtml(m.tasks,i)+'</div><button class="btn" id="doneModule">✓ Modul als erledigt markieren</button>'}
+function wireTasks(mi){const m=DATA.modules[mi];body.querySelectorAll('.quizq').forEach((qbox,ti)=>{const t=m.tasks[ti],fb=qbox.querySelector('.feedback');qbox.querySelector('.taskcheck').onclick=()=>{let ok=true,msg='';if(t.type==='mc'){const c=qbox.querySelector('input[type=radio]:checked');ok=!!c&&Number(c.value)===t.answer;msg=!c?'Bitte zuerst auswählen.':(ok?'Richtig! ':'Noch nicht. ')+(t.explain||'')}else if(t.type==='multi'){const got=[...qbox.querySelectorAll('input[type=checkbox]')].map((x,i)=>x.checked?i:null).filter(x=>x!==null).join(','),exp=(t.answers||[]).join(',');ok=got===exp;msg=(ok?'Richtig! ':'Prüfe noch einmal. ')+(t.explain||'')}else if(t.type==='tf'){t.statements.forEach((x,i)=>{const e=qbox.querySelector('[data-tf="'+i+'"]');if(!e||e.value!==String(x.answer))ok=false});msg=(ok?'Richtig! ':'Mindestens eine Aussage passt noch nicht. ')+(t.explain||'')}else{msg='Vergleiche deine Formulierung mit der Musterlösung.'}fb.className='feedback '+(ok?'ok':'bad');fb.textContent=msg};const sb=qbox.querySelector('.sampleBtn');if(sb)sb.onclick=()=>{const e=qbox.querySelector('.sample');e.style.display=e.style.display==='block'?'none':'block'}})}
+document.querySelectorAll('[data-module]').forEach(b=>b.onclick=()=>{const i=Number(b.dataset.module);openDrawer(DATA.modules[i].title,moduleHtml(i));wireTasks(i);setTimeout(()=>{const d=document.getElementById('doneModule');if(d)d.onclick=()=>{markDone(i);closeDrawer()}},0)})
+function quizHtml(){return '<div class="box"><h3>🏆 Wissenstest Blockwoche '+DATA.bw+'</h3><p>Beantworte fünf kurze Fragen.</p></div>'+DATA.quiz.map((q,i)=>'<div class="quizq"><strong>Frage '+(i+1)+'</strong><p>'+esc(q.q)+'</p>'+q.opts.map((o,j)=>'<label><input type="radio" name="quiz'+i+'" value="'+j+'"> '+esc(o)+'</label>').join('')+'</div>').join('')+'<button class="btn" id="evalQuiz">Auswerten</button><div class="box" id="quizResult" style="display:none"></div>'}
+function openQuiz(){openDrawer('Wissenstest',quizHtml());document.getElementById('evalQuiz').onclick=()=>{let pts=0;DATA.quiz.forEach((q,i)=>{const c=body.querySelector('input[name="quiz'+i+'"]:checked');if(c&&Number(c.value)===q.a)pts++});const r=document.getElementById('quizResult');r.style.display='block';r.innerHTML='<h3>'+pts+' / '+DATA.quiz.length+' richtig</h3><p>'+(pts===DATA.quiz.length?'Stark – alles richtig!':pts>=3?'Gute Basis. Schau dir unsichere Module noch einmal an.':'Nutze die Lernmodule und versuche es erneut.')+'</p>';if(pts>=4)markDone(5)}}document.querySelectorAll('[data-action="quiz"]').forEach(b=>b.onclick=openQuiz);
+document.querySelectorAll('[data-activity]').forEach(b=>b.onclick=()=>{const a=b.dataset.activity;if(a==='match'){const opts=DATA.terms.map(x=>x[1]);openDrawer('Zuordnungsaufgabe','<div class="box"><h3>🧩 Begriffe zuordnen</h3>'+DATA.terms.map((x,i)=>'<div class="match-row"><strong>'+esc(x[0])+'</strong><select data-match="'+i+'"><option value="">Erklärung wählen …</option>'+opts.map(o=>'<option>'+esc(o)+'</option>').join('')+'</select></div>').join('')+'<button class="btn" id="matchCheck">Prüfen</button><div class="feedback" id="matchFb"></div></div>');document.getElementById('matchCheck').onclick=()=>{let ok=true;DATA.terms.forEach((x,i)=>{if(body.querySelector('[data-match="'+i+'"]').value!==x[1])ok=false});let f=document.getElementById('matchFb');f.className='feedback '+(ok?'ok':'bad');f.textContent=ok?'Alles richtig zugeordnet!':'Noch nicht ganz – prüfe die Zuordnungen.';if(ok)markDone(0)}}if(a==='cards'){let i=0,front=true;openDrawer('Wissenskarten','<div class="box"><h3>📖 Wissenskarten</h3><p>Klicke die Karte an, um die Rückseite zu sehen.</p><div class="flash" id="flash"></div><div style="display:flex;gap:8px;margin-top:10px"><button class="btn alt" id="prev">←</button><button class="btn alt" id="next">→</button></div></div>');const f=document.getElementById('flash');function r(){f.innerHTML=front?'<strong>'+esc(DATA.cards[i].front)+'</strong>':'<span>'+esc(DATA.cards[i].back)+'</span>'}r();f.onclick=()=>{front=!front;r()};document.getElementById('prev').onclick=()=>{i=(i-1+DATA.cards.length)%DATA.cards.length;front=true;r()};document.getElementById('next').onclick=()=>{i=(i+1)%DATA.cards.length;front=true;r();if(i===DATA.cards.length-1)markDone(1)}}if(a==='mini')openQuiz();if(a==='check'){openDrawer('Selbstcheck','<div class="box"><h3>☑️ Das kann ich schon</h3>'+DATA.modules.slice(0,5).map((m,i)=>'<label style="display:block;margin:10px 0"><input type="checkbox" class="self"> Ich kann '+esc(m.question.charAt(0).toLowerCase()+m.question.slice(1))+'</label>').join('')+'<button class="btn" id="selfDone">Selbstcheck speichern</button></div>');document.getElementById('selfDone').onclick=()=>{const n=body.querySelectorAll('.self:checked').length;if(n>=4)markDone(4);closeDrawer()}}if(a==='hot'){openDrawer('Bild-Hotspots','<div class="box"><h3>🖼️ Anlagen-Hotspots</h3><p>Klicke die roten Punkte.</p><div class="hotspot-scene"><div class="pipe p1"></div><div class="pipe p2"></div><div class="pipe p3"></div><button class="spot s1" data-s="0">1</button><button class="spot s2" data-s="1">2</button><button class="spot s3" data-s="2">3</button><button class="spot s4" data-s="3">4</button></div><div class="box" id="spotInfo">Noch keinen Punkt gewählt.</div></div>');const msgs=DATA.modules.slice(0,4).map(m=>m.practice);body.querySelectorAll('.spot').forEach(x=>x.onclick=()=>{document.getElementById('spotInfo').innerHTML='<strong>Praxis-Hinweis '+(Number(x.dataset.s)+1)+'</strong><p>'+esc(msgs[Number(x.dataset.s)])+'</p>';markDone(3)})}})
+document.querySelectorAll('[data-mat]').forEach(b=>{const k=b.dataset.mat,u=(MATERIAL_LINKS[k]||'').trim();if(!u)b.classList.add('disabled');b.onclick=()=>{if(u)window.open(u,'_blank','noopener');else openDrawer('Material noch nicht verlinkt','<div class="box"><h3>📁 Link eintragen</h3><p>In der HTML-Datei nach <strong>MATERIAL_LINKS</strong> suchen und den Mebis-/Drive-Link zwischen die Hochkommas kopieren.</p></div>')}})
+document.querySelectorAll('[data-nav]').forEach(b=>b.onclick=()=>{const id=b.dataset.nav==='start'?'start':b.dataset.nav==='week'?'week':b.dataset.nav==='modules'?'modules':b.dataset.nav==='materials'?'materials':b.dataset.nav==='activities'?'activities':b.dataset.nav==='progress'?'progress':null;if(b.dataset.nav==='quiz')openQuiz();else if(id)document.getElementById(id).scrollIntoView({behavior:'smooth'})})
+</script>
+<div class="theme-switcher" aria-label="Saisonmodus">
+  <button type="button" data-theme-choice="normal">☀️ Normal</button>
+  <button type="button" class="halloween" data-theme-choice="halloween">🎃 Halloween</button>
+  <button type="button" class="christmas" data-theme-choice="christmas">🎄 Weihnachten</button>
+</div>
+
+<script>
+(function(){
+  const KEY='sani11_theme';
+  const root=document.documentElement;
+  function applyTheme(t){
+    if(t==='normal') root.removeAttribute('data-theme');
+    else root.setAttribute('data-theme',t);
+    localStorage.setItem(KEY,t);
+    document.querySelectorAll('[data-theme-choice]').forEach(b=>b.classList.toggle('active', b.dataset.themeChoice===t));
+  }
+  applyTheme(localStorage.getItem(KEY)||'normal');
+  document.addEventListener('click',e=>{
+    const b=e.target.closest('[data-theme-choice]');
+    if(b) applyTheme(b.dataset.themeChoice);
+  });
+})();
+</script>
+</body></html>
