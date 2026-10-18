@@ -10,6 +10,18 @@
 
    ÄNDERE NUR DIESE ZEILE:
    ============================================================ */
+/* ============================================================
+   SANITÄRTECHNIK 11 – SAISONSTEUERUNG · STABIL
+   ============================================================
+   Diese Version ist bewusst LEICHTGEWICHTIG:
+   - keine GIFs
+   - keine Schneeflocken/Fledermäuse/Partikel
+   - keine zusätzlichen DOM-Ebenen
+   - kein backdrop-filter
+   - keine z-index-Eingriffe in deine Kursfunktionen
+
+   ÄNDERE NUR DIESE ZEILE:
+   ============================================================ */
 
 const SAISON = 'halloween';
 
@@ -330,8 +342,6 @@ Mögliche Werte:
       -webkit-backdrop-filter:none !important;
     }
 
-
-
     /* ==========================================================
        LESBARKEITS-SCHUTZ FÜR HELLE INNENFLÄCHEN
        Wichtig besonders in Halloween:
@@ -424,9 +434,18 @@ Mögliche Werte:
       color:#10365f !important;
     }
 
-    @media(max-width:760px){
+    /* ==========================================================
+       TABLET / HANDY
+       Saison-Hintergrund wird nicht mehr seitlich abgeschnitten.
+       Desktop bleibt unverändert.
+       ========================================================== */
+
+    @media(max-width:1024px){
       html[data-theme] body{
         background-attachment:scroll !important;
+        background-size:100% auto !important;
+        background-position:top center !important;
+        background-repeat:no-repeat !important;
       }
     }
   `;
