@@ -11,7 +11,7 @@
    ÄNDERE NUR DIESE ZEILE:
    ============================================================ */
 
-const SAISON = 'sommer';
+const SAISON = 'halloween';
 
 /*
 Mögliche Werte:
