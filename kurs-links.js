@@ -14,7 +14,7 @@
 
 const KURS_LINKS = {
   1: {
-    mebis: '',
+    mebis: 'https://lernplattform.bycs.de/course/section.php?id=26062615',
     drive: '',
     arbeitsblaetter: '',
     zusatzmaterial: '',
@@ -22,7 +22,7 @@ const KURS_LINKS = {
     weitereLinks: ''
   },
   2: {
-    mebis: '',
+    mebis: 'https://lernplattform.bycs.de/course/section.php?id=26062618',
     drive: '',
     arbeitsblaetter: '',
     zusatzmaterial: '',
@@ -30,7 +30,7 @@ const KURS_LINKS = {
     weitereLinks: ''
   },
   3: {
-    mebis: '',
+    mebis: 'https://lernplattform.bycs.de/course/section.php?id=26062621',
     drive: '',
     arbeitsblaetter: '',
     zusatzmaterial: '',
@@ -38,7 +38,7 @@ const KURS_LINKS = {
     weitereLinks: ''
   },
   4: {
-    mebis: '',
+    mebis: 'https://lernplattform.bycs.de/course/section.php?id=26062624',
     drive: '',
     arbeitsblaetter: '',
     zusatzmaterial: '',
@@ -46,7 +46,7 @@ const KURS_LINKS = {
     weitereLinks: ''
   },
   5: {
-    mebis: '',
+    mebis: 'https://lernplattform.bycs.de/course/section.php?id=26062627',
     drive: '',
     arbeitsblaetter: '',
     zusatzmaterial: '',
@@ -54,7 +54,7 @@ const KURS_LINKS = {
     weitereLinks: ''
   },
   6: {
-    mebis: '',
+    mebis: 'https://lernplattform.bycs.de/course/section.php?id=26062630',
     drive: '',
     arbeitsblaetter: '',
     zusatzmaterial: '',
@@ -62,7 +62,7 @@ const KURS_LINKS = {
     weitereLinks: ''
   },
   7: {
-    mebis: '',
+    mebis: 'https://lernplattform.bycs.de/course/section.php?id=26062633',
     drive: '',
     arbeitsblaetter: '',
     zusatzmaterial: '',
@@ -70,7 +70,7 @@ const KURS_LINKS = {
     weitereLinks: ''
   },
   8: {
-    mebis: '',
+    mebis: 'https://lernplattform.bycs.de/course/section.php?id=26062639',
     drive: '',
     arbeitsblaetter: '',
     zusatzmaterial: '',
@@ -78,7 +78,7 @@ const KURS_LINKS = {
     weitereLinks: ''
   },
   9: {
-    mebis: '',
+    mebis: 'https://lernplattform.bycs.de/course/section.php?id=26062642',
     drive: '',
     arbeitsblaetter: '',
     zusatzmaterial: '',
@@ -86,7 +86,7 @@ const KURS_LINKS = {
     weitereLinks: ''
   },
   10: {
-    mebis: '',
+    mebis: 'https://lernplattform.bycs.de/course/section.php?id=26062645',
     drive: '',
     arbeitsblaetter: '',
     zusatzmaterial: '',
@@ -94,7 +94,7 @@ const KURS_LINKS = {
     weitereLinks: ''
   },
   11: {
-    mebis: '',
+    mebis: 'https://lernplattform.bycs.de/course/section.php?id=26062648',
     drive: '',
     arbeitsblaetter: '',
     zusatzmaterial: '',
@@ -102,7 +102,7 @@ const KURS_LINKS = {
     weitereLinks: ''
   },
   12: {
-    mebis: '',
+    mebis: 'https://lernplattform.bycs.de/course/section.php?id=26062651',
     drive: '',
     arbeitsblaetter: '',
     zusatzmaterial: '',
