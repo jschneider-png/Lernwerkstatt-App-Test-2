@@ -17,7 +17,7 @@ const KURS_LINKS = {
     mebis: 'https://lernplattform.bycs.de/course/section.php?id=26062615',
     drive: '',
     arbeitsblaetter: '',
-    zusatzmaterial: '',
+    zusatzmaterial: 'https://lernplattform.bycs.de/mod/lightboxgallery/view.php?id=101473993',
     videos: '',
     weitereLinks: ''
   },
@@ -25,7 +25,7 @@ const KURS_LINKS = {
     mebis: 'https://lernplattform.bycs.de/course/section.php?id=26062618',
     drive: '',
     arbeitsblaetter: '',
-    zusatzmaterial: '',
+    zusatzmaterial: 'https://lernplattform.bycs.de/mod/folder/view.php?id=101474011',
     videos: '',
     weitereLinks: ''
   },
@@ -115,7 +115,7 @@ const KURS_LINKS = {
 const STUNDEN_MATERIAL = {
   1: {
     1: {
-      mebis: '',
+      mebis: 'https://lernplattform.bycs.de/mod/folder/view.php?id=101473966',
       arbeitsblatt: '',
       drive: '',
       zusatzmaterial: '',
@@ -123,7 +123,7 @@ const STUNDEN_MATERIAL = {
       weitereLinks: ''
     },
     2: {
-      mebis: '',
+      mebis: 'https://lernplattform.bycs.de/mod/folder/view.php?id=101473969',
       arbeitsblatt: '',
       drive: '',
       zusatzmaterial: '',
@@ -131,7 +131,7 @@ const STUNDEN_MATERIAL = {
       weitereLinks: ''
     },
     3: {
-      mebis: '',
+      mebis: 'https://lernplattform.bycs.de/mod/folder/view.php?id=101473975',
       arbeitsblatt: '',
       drive: '',
       zusatzmaterial: '',
@@ -139,7 +139,7 @@ const STUNDEN_MATERIAL = {
       weitereLinks: ''
     },
     4: {
-      mebis: '',
+      mebis: 'https://lernplattform.bycs.de/mod/resource/view.php?id=101473984',
       arbeitsblatt: '',
       drive: '',
       zusatzmaterial: '',
@@ -149,18 +149,18 @@ const STUNDEN_MATERIAL = {
   },
   2: {
     1: {
-      mebis: '',
+      mebis: 'https://lernplattform.bycs.de/mod/folder/view.php?id=101503969',
       arbeitsblatt: '',
       drive: '',
-      zusatzmaterial: '',
+      zusatzmaterial: 'https://lernplattform.bycs.de/mod/hvp/view.php?id=103025867',
       video: '',
       weitereLinks: ''
     },
     2: {
-      mebis: '',
+      mebis: 'https://lernplattform.bycs.de/mod/folder/view.php?id=103030946',
       arbeitsblatt: '',
       drive: '',
-      zusatzmaterial: '',
+      zusatzmaterial: 'https://lernplattform.bycs.de/mod/hvp/view.php?id=103030181',
       video: '',
       weitereLinks: ''
     },
