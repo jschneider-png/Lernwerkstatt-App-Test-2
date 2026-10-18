@@ -3,7 +3,7 @@
    ============================================================
    ÄNDERE NUR DIESE ZEILE:
 
-   const SAISON = 'normal';
+   const SAISON = 'halloween';
 
    Möglich:
    'normal'
