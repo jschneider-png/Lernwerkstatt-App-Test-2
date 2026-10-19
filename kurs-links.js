@@ -149,6 +149,14 @@ const STUNDEN_MATERIAL = {
   },
   2: {
     1: {
+      mebis: 'https://lernplattform.bycs.de/mod/folder/view.php?id=101473972',
+      arbeitsblatt: '',
+      drive: '',
+      zusatzmaterial: '',
+      video: '',
+      weitereLinks: ''
+    },
+    2: {
       mebis: 'https://lernplattform.bycs.de/mod/folder/view.php?id=101503969',
       arbeitsblatt: '',
       drive: '',
@@ -156,19 +164,11 @@ const STUNDEN_MATERIAL = {
       video: '',
       weitereLinks: ''
     },
-    2: {
+    3: {
       mebis: 'https://lernplattform.bycs.de/mod/folder/view.php?id=103030946',
       arbeitsblatt: '',
       drive: '',
       zusatzmaterial: 'https://lernplattform.bycs.de/mod/hvp/view.php?id=103030181',
-      video: '',
-      weitereLinks: ''
-    },
-    3: {
-      mebis: '',
-      arbeitsblatt: '',
-      drive: '',
-      zusatzmaterial: '',
       video: '',
       weitereLinks: ''
     },
