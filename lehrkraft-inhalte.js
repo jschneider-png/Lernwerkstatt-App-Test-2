@@ -16,9 +16,9 @@ window.LEHRKRAFT = {
     mebis: 'https://lernplattform.bycs.de/course/view.php?id=2719471',
     drive: '',
     arbeitsblaetter: '',
-    zusatzmaterial: 'https://lernplattform.bycs.de/mod/resource/view.php?id=103414730',
-    videos: '',
-    weitereLinks: ''
+    zusatzmaterial: 'https://lernplattform.bycs.de/mod/folder/view.php?id=101474014',
+    videos: 'https://www.youtube.com/watch?v=GS9-VtHWQfk&t=3s',
+    weitereLinks: 'https://www.infra-fuerth.de/energie-wasser/wasser/qualitaet'
   },
   3: {
     mebis: '',
