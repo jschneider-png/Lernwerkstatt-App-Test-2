@@ -1,21 +1,27 @@
-# Wassertechnik – Blockwoche 2 (gezielte Integration)
+# Einbau: Ausweichmodule & Zusatzinhalte
 
-Dieses Paket stellt die **ursprüngliche `index.html` aus deinem hochgeladenen Archiv** wieder her und erweitert **nur `lernpfad.html?bw=2`** um einen Kasten mit drei Lernmodulen. Alle übrigen Blockwochen bleiben unverändert.
+Dieses Paket stellt die **ursprüngliche Startseite** wieder her und ergänzt in `lernpfad.html` einen **separaten, gut sichtbaren Bereich** für die Wassertechnik-Module.
 
-## GitHub-Upload
+## Neu in dieser Version
+- eigener Abschnitt **„Ausweichmodule & Zusatzinhalte“**
+- **klarere Farben und höherer Kontrast**
+- nicht mehr im Materialblock versteckt
+- in **jeder Blockwoche sichtbar**
+- bei **Blockwoche 2** zusätzlich mit Hinweis **„Besonders passend für Blockwoche 2“**
 
-1. **Vorher Sicherung erstellen** (aktuelle `index.html`, `lernpfad.html`; etwa per GitHub Commit-Verlauf).
-2. ZIP entpacken. Im Hauptverzeichnis des bestehenden Repositories `index.html` und `lernpfad.html` durch die beiden Dateien aus diesem Paket ersetzen.
-3. Ordner `wassertechnik/` mit allen enthaltenen Dateien ins Hauptverzeichnis hochladen, neben die `index.html`.
-4. Übrige Projektdateien und Ordner **nicht löschen oder überschreiben**. Insbesondere `kurs-links.js`, `stundenmaterial.html`, Bilder und vorhandene Unterrichtsordner müssen bleiben.
-5. Änderungen committen und GitHub Pages öffnen; ggf. hart neu laden (Strg+F5).
+## So baust du das Paket ein
+1. ZIP-Datei entpacken.
+2. Im GitHub-Repository die vorhandenen Dateien sichern.
+3. `index.html` im Hauptverzeichnis durch die mitgelieferte Version ersetzen.
+4. `lernpfad.html` im Hauptverzeichnis durch die mitgelieferte Version ersetzen.
+5. Den kompletten Ordner `wassertechnik/` ins Hauptverzeichnis hochladen.
+6. Änderungen committen und GitHub Pages neu laden.
 
-## Testlinks
-
-- https://jschneider-png.github.io/Lernwerkstatt-Sanit-rtechnik-11/ (ursprüngliche Startseite)
-- https://jschneider-png.github.io/Lernwerkstatt-Sanit-rtechnik-11/lernpfad.html?bw=2 (drei Zusatzmodule)
-- https://jschneider-png.github.io/Lernwerkstatt-Sanit-rtechnik-11/wassertechnik/wasserhaerte.html
-- https://jschneider-png.github.io/Lernwerkstatt-Sanit-rtechnik-11/wassertechnik/ph-wert.html
-- https://jschneider-png.github.io/Lernwerkstatt-Sanit-rtechnik-11/wassertechnik/trinkwasserbehandlung.html
-
-**Hinweis:** Die Links funktionieren öffentlich erst nach dem Upload. Der BW2-Kasten erscheint ausschließlich bei `?bw=2`; auf anderen Wochen-Seiten bleibt die Anzeige unverändert. Der Abschnitt bezeichnet die Module als Zusatzangebot und nicht als aktuelle Störungsmeldung.
+## Erwartetes Ergebnis
+- Die Startseite bleibt wie ursprünglich.
+- Auf `lernpfad.html?bw=...` erscheint unterhalb des Wochenziels ein neuer Block:
+  **„Ausweichmodule & Zusatzinhalte“**.
+- Die drei Buttons führen zu:
+  - `wassertechnik/wasserhaerte.html`
+  - `wassertechnik/ph-wert.html`
+  - `wassertechnik/trinkwasserbehandlung.html`
