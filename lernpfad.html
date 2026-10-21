@@ -491,7 +491,7 @@ html[data-theme="christmas"] .material-page-btn{
 }
 
 
-/* Zusatzmodule sind ausschließlich in Blockwoche 2 sichtbar. */
+/* Lernwerkstatt PLUS: Ergänzung für alle Blockwochen. */
 .reserve-feature{margin-top:22px;border:1px solid #b6d4ea;border-radius:20px;padding:22px;background:linear-gradient(180deg,#ffffff 0%,#f6fbff 100%);box-shadow:0 12px 30px rgba(18,73,112,.08)}
 .reserve-topline{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
 .reserve-kicker{display:inline-flex;align-items:center;gap:8px;background:#0f5f96;color:#fff;border-radius:999px;padding:7px 14px;font-weight:800;font-size:.92rem;letter-spacing:.01em}
@@ -532,6 +532,53 @@ html[data-theme="christmas"] .material-page-btn{
 #reserveModules .reserve-link .sub{color:#31546a !important;-webkit-text-fill-color:#31546a !important;}
 #reserveModules .reserve-link .meta{color:#123d5e !important;-webkit-text-fill-color:#123d5e !important;}
 #reserveModules .reserve-feature h2{color:#103652 !important;-webkit-text-fill-color:#103652 !important;}
+
+/* Lernwerkstatt PLUS: beabsichtigter Hellbereich auch bei Halloween / Weihnachten.
+   Höhere Spezifität als die allgemeinen Saisonregeln für .card / strong / p. */
+html[data-theme="halloween"] #reserveModules .reserve-feature,
+html[data-theme="christmas"] #reserveModules .reserve-feature,
+html:not([data-theme]) #reserveModules .reserve-feature,
+#reserveModules .reserve-feature {
+  background:#f5faff !important;
+  border:2px solid #77add2 !important;
+  color:#143b55 !important;
+}
+html[data-theme="halloween"] #reserveModules .reserve-feature h2,
+html[data-theme="christmas"] #reserveModules .reserve-feature h2,
+#reserveModules .reserve-feature h2 {
+  color:#103652 !important;
+  -webkit-text-fill-color:#103652 !important;
+}
+html[data-theme="halloween"] #reserveModules .reserve-feature p,
+html[data-theme="christmas"] #reserveModules .reserve-feature p,
+#reserveModules .reserve-feature p {
+  color:#29485d !important;
+  -webkit-text-fill-color:#29485d !important;
+}
+html[data-theme="halloween"] #reserveModules .reserve-link,
+html[data-theme="christmas"] #reserveModules .reserve-link,
+#reserveModules .reserve-link {
+  background:#ffffff !important;
+  border:2px solid #aacde5 !important;
+  color:#15354c !important;
+}
+html[data-theme="halloween"] #reserveModules .reserve-link strong,
+html[data-theme="christmas"] #reserveModules .reserve-link strong,
+#reserveModules .reserve-link strong {
+  color:#0b3454 !important;
+  -webkit-text-fill-color:#0b3454 !important;
+  text-shadow:none !important;
+}
+html[data-theme="halloween"] #reserveModules .reserve-link .sub,
+html[data-theme="christmas"] #reserveModules .reserve-link .sub,
+#reserveModules .reserve-link .sub {color:#345368 !important;-webkit-text-fill-color:#345368 !important}
+html[data-theme="halloween"] #reserveModules .reserve-link .meta,
+html[data-theme="christmas"] #reserveModules .reserve-link .meta,
+#reserveModules .reserve-link .meta {background:#e8f3fb !important;color:#134366 !important;-webkit-text-fill-color:#134366 !important}
+html[data-theme="halloween"] #reserveModules .reserve-kicker,
+html[data-theme="christmas"] #reserveModules .reserve-kicker,
+#reserveModules .reserve-kicker {background:#104e7b !important;color:white !important;-webkit-text-fill-color:white !important}
+
 </style><script src="saison.js"></script>
 </head><body>
 <header><div class="container nav"><a class="brand" href="index.html">💧 Lernwerkstatt Sanitärtechnik · 11. Klasse</a><nav class="menu"><a href="index.html">Start</a><a href="lernorte.html">Links & Lernorte</a><a href="aktuelles.html">Aktuelles</a><a href="jahresreise-karte.html">Jahresreise</a></nav></div></header>
