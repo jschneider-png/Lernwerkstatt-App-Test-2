@@ -30,3 +30,33 @@
 
 /* Lernpostkarten: visuell getrennte Schwierigkeitsgrade */
 .postcard-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:16px 0}.postcard-grid article{padding:14px;border:1px solid #bed7e7;border-radius:12px;background:#f4faff}.postcard-grid h3{margin:6px 0;color:#173d60}.postcard-grid p{margin:0;color:#39576a}.postcard-grid .level{display:inline-block;background:#145b86;color:white;border-radius:8px;padding:3px 10px;font-weight:700}.postcard-choice{border:1px solid #bed7e7;border-radius:12px;padding:12px 16px}.postcard-choice label{display:inline-block;margin-right:24px}.postcard-choice input{margin-right:6px}.task-timer .timer-label{font-weight:750}@media(max-width:650px){.postcard-grid{grid-template-columns:1fr}}
+/* Lernwerkstatt Wasserhärte – anklickbarer Lernweg und laufende Phasenuhr */
+.guided-water-hardness .flow-overview{border:2px solid #b6d6e8;background:#f7fbff;color:#183d56}
+.guided-water-hardness .flow-overview h2,.guided-water-hardness .flow-overview strong{color:#123955 !important}
+.flow-overview-head{display:flex;align-items:center;gap:16px;justify-content:space-between;margin-bottom:20px}
+.flow-overview-head img{width:min(35%,190px);max-height:135px;object-fit:contain;background:#e6f4fd;border-radius:14px;padding:8px}
+.flow-kicker{font-weight:850;letter-spacing:.09em;color:#145781;font-size:.8rem}
+.flow-overview-head p{color:#36576d}
+.flow-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.flow-start{display:flex;gap:12px;align-items:center;width:100%;min-height:98px;text-align:left;padding:14px;border:2px solid #d0e0ea;border-radius:13px;background:#fff;color:#123955 !important;cursor:pointer;box-shadow:0 3px 10px rgba(0,40,75,.04)}
+.flow-start:hover,.flow-start:focus-visible{border-color:#1478ab;box-shadow:0 6px 18px rgba(0,60,100,.13)}
+.flow-start.is-active{border-color:#1478ab;background:#ecf8ff}
+.flow-start.flow-teacher{border-left:6px solid #dc8525}
+.flow-start span:nth-child(2){min-width:0;flex:1}
+.flow-start strong,.flow-start small{display:block;color:#123955 !important}
+.flow-start small{margin-top:4px;font-size:.8rem;color:#45657b !important}
+.flow-num{display:grid;place-items:center;background:#146998;color:white;min-width:34px;height:34px;border-radius:10px;font-weight:800}
+.flow-teacher .flow-num{background:#a95808}
+.flow-duration{font-weight:750;color:#145781;white-space:nowrap;font-size:.83rem}
+.flow-duration b{display:block;font-size:1.3rem;text-align:right}
+.floating-timer{position:fixed;top:12px;right:12px;z-index:9999;width:238px;background:#113c59;color:#fff;padding:13px 14px 11px;border:2px solid #9dd8f6;border-radius:16px;box-shadow:0 10px 32px rgba(0,0,0,.26)}
+.float-header{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:.78rem;font-weight:750;color:#fff}
+.floating-timer button{font:inherit;cursor:pointer;border-radius:8px;padding:6px 8px;border:1px solid #abd6ef;background:#fff;color:#113c59;font-weight:800}
+.floating-timer button:disabled{opacity:.5;cursor:default}
+.float-time{font-size:2.3rem;font-weight:900;letter-spacing:.05em;line-height:1.2;font-variant-numeric:tabular-nums;text-align:center;margin:7px 0;color:#fff}
+.float-controls{display:flex;gap:7px}.float-controls button{flex:1}
+.float-status{margin-top:7px;font-size:.72rem;line-height:1.4;color:#d1eafa}
+.floating-timer.time-up{border-color:#ffb56a;background:#733b0b}
+.guided-water-hardness main{padding-top:3px}
+.guided-water-hardness section[id^="lernphase-"]{scroll-margin-top:125px}
+@media(max-width:700px){.flow-grid{grid-template-columns:1fr}.flow-overview-head img{width:95px}.floating-timer{top:auto;bottom:10px;right:10px;width:208px;padding:9px 11px}.float-time{font-size:1.65rem}.guided-water-hardness section[id^="lernphase-"]{scroll-margin-top:16px}.guided-water-hardness main{padding-bottom:180px}}

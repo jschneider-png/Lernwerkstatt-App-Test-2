@@ -23,6 +23,7 @@ window.addEventListener('DOMContentLoaded',()=>{initProgress();restoreTexts()});
   }
   function update(t){if(t.running){const now=performance.now();t.left=Math.max(0,t.left-(now-t.last)/1000);t.last=now;if(t.left<=0)t.running=false;}refresh(t)}
   document.addEventListener('DOMContentLoaded',()=>{
+    if(document.body.classList.contains('guided-water-hardness'))return;
     document.querySelectorAll('section.phase, section.teacher-check').forEach(section=>{
       const teacher=section.classList.contains('teacher-check');
       const secs=Math.max(1,Number(section.dataset.minutes)||5)*60;
