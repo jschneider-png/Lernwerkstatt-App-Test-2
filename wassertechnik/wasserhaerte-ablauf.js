@@ -2,17 +2,17 @@
 (() => {
   'use strict';
   const phases = [
-    {label:'1 · Digitaler Einstieg',seconds:300},
+    {label:'1 · Digitaler Einstieg',seconds:180},
     {label:'2 · Gemeinsame Sicherung',seconds:120},
-    {label:'3 · Lernpostkarten',seconds:360},
-    {label:'4 · Kartenauswertung',seconds:300},
-    {label:'5 · Praxisfall',seconds:300},
-    {label:'6 · Kompetenzcheck',seconds:300},
+    {label:'3 · Lernpostkarten',seconds:600},
+    {label:'4 · Kartenauswertung',seconds:360},
+    {label:'5 · Praxisfall',seconds:180},
+    {label:'6 · Kompetenzcheck',seconds:240},
     {label:'7 · Abschluss',seconds:120}
   ];
   const $id = id => document.getElementById(id);
   document.addEventListener('DOMContentLoaded', () => {
-    let active = -1, left = 300, running = false, deadline = 0;
+    let active = -1, left = 180, running = false, deadline = 0;
     const widget = $id('floatingTimer'), time = $id('floatTime'), phaseLabel=$id('floatPhase'), status=$id('floatStatus');
     const toggle=$id('floatToggle'), restart=$id('floatRestart');
     const format = s => { const n=Math.max(0,Math.ceil(s)); return String(Math.floor(n/60)).padStart(2,'0')+':'+String(n%60).padStart(2,'0'); };
