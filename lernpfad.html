@@ -525,6 +525,13 @@ html[data-theme="christmas"] .material-page-btn{
 .reserve-link .sub{color:#345368 !important}
 .reserve-link .meta{color:#134366 !important;background:#e8f3fb !important;font-weight:700}
 .reserve-link:hover,.reserve-link:focus-visible{border-color:#0c6da6 !important;outline:3px solid #73b4e1;outline-offset:2px}
+
+/* Farbkontrast unabhängig vom saisonalen Design */
+#reserveModules .reserve-link,#reserveModules .reserve-link:visited{background:#fff !important;color:#0b3454 !important;}
+#reserveModules .reserve-link strong,#reserveModules .reserve-link:hover strong{color:#0b3454 !important;-webkit-text-fill-color:#0b3454 !important;text-shadow:none !important;opacity:1 !important;}
+#reserveModules .reserve-link .sub{color:#31546a !important;-webkit-text-fill-color:#31546a !important;}
+#reserveModules .reserve-link .meta{color:#123d5e !important;-webkit-text-fill-color:#123d5e !important;}
+#reserveModules .reserve-feature h2{color:#103652 !important;-webkit-text-fill-color:#103652 !important;}
 </style><script src="saison.js"></script>
 </head><body>
 <header><div class="container nav"><a class="brand" href="index.html">💧 Lernwerkstatt Sanitärtechnik · 11. Klasse</a><nav class="menu"><a href="index.html">Start</a><a href="lernorte.html">Links & Lernorte</a><a href="aktuelles.html">Aktuelles</a><a href="jahresreise-karte.html">Jahresreise</a></nav></div></header>
@@ -564,35 +571,33 @@ html[data-theme="christmas"] .material-page-btn{
   <div class="card reserve-feature">
     <div class="reserve-topline">
       <span class="reserve-kicker">✨ Lernwerkstatt PLUS</span>
-      <span class="reserve-match" id="reserveMatch">Passend zur Blockwoche 2</span>
     </div>
     <h2>Entdecken, Üben, Verstehen</h2>
-    <p>Entdecke spannende Zusammenhänge der Wassertechnik! Lies kurze Erklärungen, bearbeite dein digitales Arbeitsblatt und überprüfe dein Wissen mit interaktiven Aufgaben. Die Lernmodule helfen dir auch beim Wiederholen und Üben.</p>
-    <div class="reserve-helper" id="reserveHelper">Wähle ein Thema und starte dein Lernmodul. Jedes Modul dauert etwa 30 Minuten – zusammen sind es etwa 90 Minuten.</div>
+    <p>Wähle ein Thema. Entdecke die Grundlagen, bearbeite Aufgaben und überprüfe anschließend dein Wissen.</p>
     <div class="reserve-grid">
       <a class="reserve-link" href="wassertechnik/wasserhaerte.html">
         <div>
           <span class="mod-no">01</span>
-          <strong>Wasserhärte</strong>
+          <strong style="color:#0b3454 !important;-webkit-text-fill-color:#0b3454 !important">Wasserhärte</strong>
           <div class="sub">Härtebildner, °dH, Umrechnung und Kalk im Alltag</div>
         </div>
-        <div class="meta">ca. 30 Min. · gut für Einstieg und Praxisbezug →</div>
+        <div class="meta">30 Minuten · Modul öffnen →</div>
       </a>
       <a class="reserve-link" href="wassertechnik/ph-wert.html">
         <div>
           <span class="mod-no">02</span>
-          <strong>pH-Wert</strong>
+          <strong style="color:#0b3454 !important;-webkit-text-fill-color:#0b3454 !important">pH-Wert</strong>
           <div class="sub">pH-Skala, Messwerte, sauer · neutral · basisch</div>
         </div>
-        <div class="meta">ca. 30 Min. · mit Messwerten und Verständnissicherung →</div>
+        <div class="meta">30 Minuten · Modul öffnen →</div>
       </a>
       <a class="reserve-link" href="wassertechnik/trinkwasserbehandlung.html">
         <div>
           <span class="mod-no">03</span>
-          <strong>Trinkwasserbehandlung</strong>
+          <strong style="color:#0b3454 !important;-webkit-text-fill-color:#0b3454 !important">Trinkwasserbehandlung</strong>
           <div class="sub">Filtration, Dosierung, Ionentausch und Fehlersuche</div>
         </div>
-        <div class="meta">ca. 30 Min. · Vertiefung für Technik und Anwendung →</div>
+        <div class="meta">30 Minuten · Modul öffnen →</div>
       </a>
     </div>
   </div>
@@ -704,7 +709,7 @@ document.getElementById('mapClose').onclick=closeMap;
 
 function render(){
  const w=WEEKS[active-1];
- const reserveMatch=document.getElementById('reserveMatch');const reserveHelper=document.getElementById('reserveHelper');if(w.nr===2){reserveMatch.classList.add('show');reserveHelper.textContent='In dieser Blockwoche passen die drei Themen besonders gut zusammen. Starte mit Wasserhärte und arbeite dich über den pH-Wert zur Trinkwasserbehandlung vor.';}else{reserveMatch.classList.remove('show');reserveHelper.textContent='Wähle ein Thema und starte dein Lernmodul. Jedes Modul dauert etwa 30 Minuten – zusammen sind es etwa 90 Minuten.';}
+
  document.getElementById('bwNav').innerHTML=WEEKS.map(x=>'<button data-bw="'+x.nr+'" class="'+(x.nr===active?'active':'')+'">BW '+x.nr+'</button>').join('');
  document.querySelectorAll('[data-bw]').forEach(b=>b.onclick=()=>{active=Number(b.dataset.bw);history.replaceState(null,'','?bw='+active);render();});
  document.getElementById('bwBadge').textContent='Blockwoche '+w.nr;
