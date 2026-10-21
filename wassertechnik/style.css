@@ -21,3 +21,12 @@
 .module-nav a.nav-home:hover,.module-nav a.nav-logbook:hover{background:#dff3ff}
 .return-bar{max-width:1050px;margin:0 auto 36px;padding:18px;background:#e7f4fc;color:#143c5b;border:1px solid #a5d0e9;border-radius:14px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
 .return-bar strong{font-size:1.1rem}.return-bar span{color:#375e76}.return-actions{display:flex;gap:9px;flex-wrap:wrap;margin-left:auto}.return-actions a{background:#0b5f93;color:#fff;border-radius:9px;padding:10px 13px;text-decoration:none;font-weight:750}.return-actions a:hover{background:#08486f}
+
+/* Timer-Erweiterung: Lehrphasen klar unterscheidbar */
+.teacher-check{border:2px solid #e1a04b!important;background:#fff9ef!important;color:#173751!important;margin:20px 0!important}
+.teacher-check h2{color:#77420e!important}
+.teacher-timer{background:#fff0d4!important;border:1px solid #dfad63!important}
+.teacher-timer .timer-label{color:#77420e!important;font-weight:800}
+
+/* Lernpostkarten: visuell getrennte Schwierigkeitsgrade */
+.postcard-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:16px 0}.postcard-grid article{padding:14px;border:1px solid #bed7e7;border-radius:12px;background:#f4faff}.postcard-grid h3{margin:6px 0;color:#173d60}.postcard-grid p{margin:0;color:#39576a}.postcard-grid .level{display:inline-block;background:#145b86;color:white;border-radius:8px;padding:3px 10px;font-weight:700}.postcard-choice{border:1px solid #bed7e7;border-radius:12px;padding:12px 16px}.postcard-choice label{display:inline-block;margin-right:24px}.postcard-choice input{margin-right:6px}.task-timer .timer-label{font-weight:750}@media(max-width:650px){.postcard-grid{grid-template-columns:1fr}}
