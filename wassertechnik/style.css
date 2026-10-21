@@ -12,3 +12,12 @@
 @media(max-width:600px){.task-timer{align-items:flex-start}.task-timer .clock{font-size:1.6rem}}
 
 .hero-figure{margin:20px 0 26px;background:white;border-radius:18px;overflow:hidden;border:1px solid #cde2ee;box-shadow:0 9px 20px rgba(11,48,79,.08)}.hero-figure img{width:100%;height:auto;display:block}.hero-figure figcaption{padding:10px 16px;font-size:.9rem;color:#35586d}.worksheet-label{display:block;font-size:.83rem;font-weight:700;letter-spacing:.03em;color:#155d88;background:#eaf5ff;padding:10px 12px;border-radius:10px}.module-buttons{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.module-buttons a{display:block;padding:15px 12px;border-radius:13px;background:#12669c;color:white!important;text-align:center;font-weight:700;text-decoration:none}.module-buttons a:nth-child(2){background:#24815d}.module-buttons a:nth-child(3){background:#cf6d27}@media(max-width:750px){.module-buttons{grid-template-columns:1fr}}
+
+/* Deutlich sichtbare Rücknavigation, unabhängig von Seitenthemes */
+.module-nav{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.module-nav a{color:#fff;text-decoration:none;padding:7px 9px;border-radius:8px}
+.module-nav a:hover,.module-nav a:focus-visible{background:rgba(255,255,255,.22)}
+.module-nav a.nav-home,.module-nav a.nav-logbook{background:#fff;color:#123c5c;font-weight:800;border:2px solid #fff;padding:8px 13px}
+.module-nav a.nav-home:hover,.module-nav a.nav-logbook:hover{background:#dff3ff}
+.return-bar{max-width:1050px;margin:0 auto 36px;padding:18px;background:#e7f4fc;color:#143c5b;border:1px solid #a5d0e9;border-radius:14px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.return-bar strong{font-size:1.1rem}.return-bar span{color:#375e76}.return-actions{display:flex;gap:9px;flex-wrap:wrap;margin-left:auto}.return-actions a{background:#0b5f93;color:#fff;border-radius:9px;padding:10px 13px;text-decoration:none;font-weight:750}.return-actions a:hover{background:#08486f}
