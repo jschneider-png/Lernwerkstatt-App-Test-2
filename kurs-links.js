@@ -24,10 +24,10 @@ const KURS_LINKS = {
   2: {
     mebis: 'https://lernplattform.bycs.de/course/section.php?id=26062618',
     drive: '',
-    arbeitsblaetter: '',
+    arbeitsblaetter: 'https://lernplattform.bycs.de/mod/folder/view.php?id=101474014'',
     zusatzmaterial: 'https://lernplattform.bycs.de/mod/folder/view.php?id=101474011',
-    videos: '',
-    weitereLinks: ''
+    videos: 'https://www.youtube.com/watch?v=GS9-VtHWQfk&t=3s',
+    weitereLinks: 'https://www.infra-fuerth.de/energie-wasser/wasser/qualitaet'
   },
   3: {
     mebis: 'https://lernplattform.bycs.de/course/section.php?id=26062621',
