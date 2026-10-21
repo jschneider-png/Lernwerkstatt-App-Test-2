@@ -1,27 +1,19 @@
-# Einbau: Ausweichmodule & Zusatzinhalte
+# Einbau: Lernwerkstatt PLUS
 
-Dieses Paket stellt die **ursprüngliche Startseite** wieder her und ergänzt in `lernpfad.html` einen **separaten, gut sichtbaren Bereich** für die Wassertechnik-Module.
+Dieses Paket erhält die ursprüngliche Startseite und ersetzt den bisherigen Wassertechnik-Ausweichkasten durch einen eigenständigen schülergerechten Bereich **„Lernwerkstatt PLUS – Entdecken, Üben, Verstehen“**.
 
-## Neu in dieser Version
-- eigener Abschnitt **„Ausweichmodule & Zusatzinhalte“**
-- **klarere Farben und höherer Kontrast**
-- nicht mehr im Materialblock versteckt
-- in **jeder Blockwoche sichtbar**
-- bei **Blockwoche 2** zusätzlich mit Hinweis **„Besonders passend für Blockwoche 2“**
+- Keine organisatorischen Hinweise auf mebis-Ausfall oder Vertretungsstunden in der Schüleransicht.
+- Überschriften, Infotexte und Modulkarten mit verbessertem Farbkontrast.
+- Die drei Lernmodule sind auf allen Blockwochenseiten aufrufbar.
+- In Blockwoche 2 erscheint ein kurzer Hinweis zur fachlichen Passung.
 
-## So baust du das Paket ein
-1. ZIP-Datei entpacken.
-2. Im GitHub-Repository die vorhandenen Dateien sichern.
-3. `index.html` im Hauptverzeichnis durch die mitgelieferte Version ersetzen.
-4. `lernpfad.html` im Hauptverzeichnis durch die mitgelieferte Version ersetzen.
-5. Den kompletten Ordner `wassertechnik/` ins Hauptverzeichnis hochladen.
-6. Änderungen committen und GitHub Pages neu laden.
+## Hochladen
 
-## Erwartetes Ergebnis
-- Die Startseite bleibt wie ursprünglich.
-- Auf `lernpfad.html?bw=...` erscheint unterhalb des Wochenziels ein neuer Block:
-  **„Ausweichmodule & Zusatzinhalte“**.
-- Die drei Buttons führen zu:
-  - `wassertechnik/wasserhaerte.html`
-  - `wassertechnik/ph-wert.html`
-  - `wassertechnik/trinkwasserbehandlung.html`
+1. Zur Sicherheit die derzeitigen `index.html` und `lernpfad.html` sichern.
+2. Die beigelegte `lernpfad.html` ins Hauptverzeichnis des GitHub-Repositories hochladen und die vorhandene Datei ersetzen.
+3. Wenn die ursprüngliche Startseite noch nicht zurückgestellt ist, auch `index.html` aus diesem Paket hochladen. Falls deine ursprüngliche Startseite bereits stimmt, `index.html` bitte **nicht** erneut ersetzen.
+4. Den Ordner `wassertechnik/` nur hochladen, falls er fehlt bzw. Dateien fehlen.
+5. Änderungen committen; den Lernpfad mit einer Cache-Aktualisierung neu laden.
+
+## Link
+`https://jschneider-png.github.io/Lernwerkstatt-Sanit-rtechnik-11/lernpfad.html?bw=2`
