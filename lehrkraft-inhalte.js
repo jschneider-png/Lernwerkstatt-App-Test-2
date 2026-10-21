@@ -16,7 +16,7 @@ window.LEHRKRAFT = {
     mebis: 'https://lernplattform.bycs.de/course/view.php?id=2719471',
     drive: '',
     arbeitsblaetter: '',
-    zusatzmaterial: '',
+    zusatzmaterial: 'https://lernplattform.bycs.de/mod/resource/view.php?id=103414730',
     videos: '',
     weitereLinks: ''
   },
