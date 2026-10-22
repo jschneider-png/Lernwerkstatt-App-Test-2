@@ -125,6 +125,15 @@ let activePhaseLabel = saved.activePhaseLabel || 'Noch keine Phase gewählt';
 let activePhaseMin = Number(saved.activePhaseMin || 0);
 // Each phase has its own persisted countdown. Browsing other phases cannot reset an elapsed timer.
 let phaseTimers = saved.phaseTimers && typeof saved.phaseTimers === 'object' ? saved.phaseTimers : {};
+if (root === 'behandlung-v2') {
+ const maxSeconds = {"ziele":300,"anforderungen":300,"wasserqualitaet":420,"verfahren":660,"desinfektion":360,"beispiele":360,"lernergebnisse":300};
+ for(const [phase, max] of Object.entries(maxSeconds)){
+   if(phaseTimers[phase] !== undefined) phaseTimers[phase]=Math.min(max,Math.max(0,Number(phaseTimers[phase])||0));
+ }
+ if(activePhase && maxSeconds[activePhase] !== undefined) activePhaseMin=maxSeconds[activePhase]/60;
+ savePhaseTimerCompatibility();
+}
+function savePhaseTimerCompatibility(){put('phaseTimers',phaseTimers);}
 let runningPhase = null;
 let run = false;
 let interval = null;
@@ -214,7 +223,7 @@ initButtons();
 // Der Countdown beginnt beim Aufruf der Trinkwasserbehandlung automatisch.
 // Bestehende Restzeiten werden respektiert; die Startseite bleibt der Wegweiser.
 if (root === 'behandlung-v2') {
-  if (!activePhase) loadPhase('ziele', '1 · Ziele', 8);
+  if (!activePhase) loadPhase('ziele', '1 · Ziele', 5);
   if (currentSeconds() > 0) startTimer();
 }
 initExports();
