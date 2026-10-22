@@ -45,3 +45,11 @@ section.card{background:white;border:1px solid var(--line);box-shadow:0 10px 30p
 @media print{header{background:white;color:black;padding:0}.toolbar,.btn,.nav-fallback,.phase-timeline{display:none!important}section.card{break-inside:avoid;box-shadow:none}.printonly{display:block}body{background:white}}
 
 .filter-roadmap{background:linear-gradient(155deg,#e4edf2,#f4f8fa);border:1px solid #d0e2e9;padding:clamp(1rem,3vw,2rem);border-radius:18px;max-width:920px;margin:1.2rem auto}.roadmap-center{display:flex;flex-direction:column;align-items:center;gap:.3rem;padding:.75rem 0 1.2rem;text-align:center}.roadmap-center strong{font-size:clamp(1.1rem,2.2vw,1.6rem)}.roadmap-eyebrow{letter-spacing:.14em;color:#567386;font-size:.75rem;font-weight:800}.roadmap-arrows{display:grid;grid-template-columns:1fr 1fr;gap:12px}.road-arrow{min-height:95px;padding:16px 24px;background:linear-gradient(95deg,#234e67,#376d80);color:white;border:0;cursor:pointer;clip-path:polygon(0 0,calc(100% - 24px) 0,100% 50%,calc(100% - 24px) 100%,0 100%,18px 50%);text-align:center;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:2px}.road-arrow:nth-child(even){background:linear-gradient(95deg,#24677c,#34889a)}.road-arrow:nth-child(3n){background:linear-gradient(95deg,#58697d,#6d8291)}.road-arrow .road-num{font-size:.8rem;opacity:.9;letter-spacing:.08em}.road-arrow strong{font-size:1.1rem}.road-arrow small{font-size:.75rem;opacity:.85}.road-arrow:focus-visible{outline-offset:5px;outline:4px solid #e7a93f}.road-arrow:hover{filter:brightness(1.14)}.filter-machine svg{max-height:325px}.timer.done{color:#a04430}@media(max-width:680px){.roadmap-arrows{grid-template-columns:1fr}.road-arrow{min-height:68px}.toolbar-inner{gap:7px}.toolbar-inner .btn{font-size:.82rem;padding:.45rem}}
+
+/* Wegweiser: SVG-Polygone liegen im gleichen Koordinatensystem wie die Grafik. */
+.wegweiser-map{position:relative;line-height:0}
+.wegweiser-map>img{width:100%;height:auto;display:block}
+.wegweiser-hitzones{position:absolute;inset:0;width:100%;height:100%;overflow:visible;z-index:3}
+.sign-hit{fill:rgba(255,255,255,0);stroke:transparent;stroke-width:3;cursor:pointer;pointer-events:all}
+.sign-hit:hover,.sign-hit:focus{fill:rgba(255,255,255,.14);stroke:#fff;stroke-width:4;outline:none}
+@media(max-width:900px){.wegweiser-hitzones{display:block}}
