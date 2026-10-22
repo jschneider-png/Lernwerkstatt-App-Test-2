@@ -150,19 +150,19 @@ const STUNDEN_BUTTONS = {
 
     /* Stunde 4: Trinkwasserbehandlung */
     4: {
-      buttons: [
-        {
-          titel: '📁 Unterrichtsmaterial',
-          beschreibung: 'Arbeitsblätter, Präsentationen, Aufgaben oder Unterrichtsunterlagen.',
-          link: ''
-        },
-        {
-          titel: '➕ Zusatzmaterial',
-          beschreibung: 'Vertiefungen, Hilfen, Videos oder ergänzende Materialien.',
-          link: ''
-        }
-      ]
+       buttons: [
+    {
+      titel: '📁 Unterrichtsmaterial',
+      beschreibung: 'Interaktive Lernwerkstatt zur Trinkwasserbehandlung mit Wegweiser, Aufgaben und Timer.',
+      link: 'https://jschneider-png.github.io/Lernwerkstatt-Sanit-rtechnik-11/lernlabor/trinkwasserbehandlung.html'
+    },
+    {
+      titel: '➕ Zusatzmaterial',
+      beschreibung: 'Interaktive Vertiefung: Filterarten, Aufbau, Rückspülung und Instandhaltung.',
+      link: 'https://jschneider-png.github.io/Lernwerkstatt-Sanit-rtechnik-11/lernlabor/filter.html'
     }
+  ]
+}
 
   },
 
