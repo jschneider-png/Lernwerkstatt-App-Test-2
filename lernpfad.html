@@ -784,7 +784,7 @@ function render(){
      '<h3>'+esc(t)+'</h3>'+
      '<p>'+esc(LERNEINHEITEN[w.nr][i].question)+'</p>'+
      '<div class="hour-actions">'+
-       '<button class="btn secondary unit" data-i="'+i+'">📘 Lerneinheit öffnen →</button>'+
+       (w.nr===2 && i===3 ? '<a class="btn secondary" href="lernlabor/trinkwasserbehandlung.html?v=3">📘 Lerneinheit öffnen →</a>' : '<button class="btn secondary unit" data-i="'+i+'">📘 Lerneinheit öffnen →</button>')+
        '<a class="btn material-page-btn" href="'+materialUrl+'">🎓 Mebis & Materialien →</a>'+
      '</div>'+
    '</article>';
