@@ -24,9 +24,11 @@ if (/^https:\/\/docs\.google\.com\/forms\//.test(configuredFormUrl)) {
 }
 </script>
 <script>
+if (!/^https:\/\/docs\.google\.com\/forms\//.test(configuredFormUrl)) {
 const qs=[['verstaendlichkeit','Ich habe verstanden, was ich tun sollte.'],['tempo','Das Tempo der Stunde war passend.'],['aufgaben','Die Aufgaben haben mir beim Lernen geholfen.'],['wegweiser','Die Navigation und der Wegweiser waren übersichtlich.'],['lernzimmer','Das virtuelle Lernzimmer ist hilfreich.'],['gesamt','Insgesamt hat mir das Lernen heute gefallen.']];
 const host=document.querySelector('#ratings');for(const [id,q] of qs){const f=document.createElement('fieldset');let h='<legend>'+q+'</legend><div class="scale">';for(let n=1;n<=5;n++)h+='<label><input type="radio" name="'+id+'" value="'+n+'" required>'+n+'</label>';f.innerHTML=h+'</div><div class="rating-note">1 = trifft gar nicht zu · 5 = trifft voll zu</div>';host.append(f)}
 function csvCell(v){return '"'+String(v??'').replaceAll('"','""').replace(/[\r\n]+/g,' ').trim()+'"'}
 document.querySelector('#feedback').addEventListener('submit',e=>{e.preventDefault();const data={datum:new Date().toISOString().slice(0,10),stunde:document.querySelector('#lesson').value};for(const [id] of qs)data[id]=document.querySelector('input[name="'+id+'"]:checked').value;data.gut=document.querySelector('#positive').value;data.verbesserung=document.querySelector('#improve').value;const keys=Object.keys(data),csv='\ufeff'+keys.map(csvCell).join(';')+'\r\n'+keys.map(k=>csvCell(data[k])).join(';')+'\r\n';const blob=new Blob([csv],{type:'text/csv;charset=utf-8'});const u=URL.createObjectURL(blob);const a=document.createElement('a');a.href=u;a.download='feedback-'+new Date().toISOString().slice(0,10)+'-'+Math.random().toString(36).slice(2,7)+'.csv';a.click();setTimeout(()=>URL.revokeObjectURL(u),2000);document.querySelector('#status').textContent='Die Datei wurde vorbereitet. Bitte gib sie deiner Lehrkraft auf dem vereinbarten Weg.'});
 const p=new URLSearchParams(location.search).get('stunde');if(p==='filter')document.querySelector('#lesson').value='Filter';
+}
 </script></body></html>
