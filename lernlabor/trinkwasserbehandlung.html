@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Trinkwasserbehandlung – Interaktive Wegweiser-Einheit</title>
-  <link rel="stylesheet" href="style.css?v=svg6">
+  <link rel="stylesheet" href="style.css?v=map7">
 </head>
 <body data-unit="behandlung-v2">
   <header>
@@ -58,16 +58,16 @@
       </div>
 
       <div class="wegweiser-map">
-        <img src="wegweiser-trinkwasser.png?v=svg6" alt="Wegweiser Trinkwasserbehandlung: Ziele, Anforderungen, Wasserqualität, Verfahren, Desinfektion, Beispiele und Lernergebnisse.">
-        <svg class="wegweiser-hitzones" viewBox="0 0 1672 941" preserveAspectRatio="xMidYMid meet" aria-label="Klickbare Wegweiser-Pfeile">
-          <polygon points="425,185 794,218 794,309 425,306 355,251" class="sign-hit" role="button" tabindex="0" data-nav-target="ziele" data-phase-name="1 · Ziele" data-phase-min="8" aria-label="Ziele öffnen"><title>Ziele</title></polygon>
-          <polygon points="850,223 1264,208 1325,271 1264,331 850,338" class="sign-hit" role="button" tabindex="0" data-nav-target="anforderungen" data-phase-name="2 · Anforderungen" data-phase-min="8" aria-label="Anforderungen öffnen"><title>Anforderungen</title></polygon>
-          <polygon points="425,329 794,362 794,454 425,450 355,389" class="sign-hit" role="button" tabindex="0" data-nav-target="wasserqualitaet" data-phase-name="3 · Wasserqualität" data-phase-min="10" aria-label="Wasserqualität öffnen"><title>Wasserqualität</title></polygon>
-          <polygon points="850,359 1240,347 1300,411 1240,472 850,472" class="sign-hit" role="button" tabindex="0" data-nav-target="verfahren" data-phase-name="4 · Verfahren" data-phase-min="14" aria-label="Verfahren öffnen"><title>Verfahren</title></polygon>
-          <polygon points="427,473 795,502 795,601 425,597 355,540" class="sign-hit" role="button" tabindex="0" data-nav-target="desinfektion" data-phase-name="5 · Desinfektion" data-phase-min="8" aria-label="Desinfektion öffnen"><title>Desinfektion</title></polygon>
-          <polygon points="852,501 1230,491 1290,554 1230,614 852,614" class="sign-hit" role="button" tabindex="0" data-nav-target="beispiele" data-phase-name="6 · Beispiele" data-phase-min="7" aria-label="Beispiele öffnen"><title>Beispiele</title></polygon>
-          <polygon points="568,630 968,627 968,746 567,752 507,691" class="sign-hit" role="button" tabindex="0" data-nav-target="lernergebnisse" data-phase-name="7 · Lernergebnisse" data-phase-min="5" aria-label="Lernergebnisse öffnen"><title>Lernergebnisse</title></polygon>
-        </svg>
+        <img src="wegweiser-trinkwasser.png?v=map7" usemap="#wegweiser-clickmap" alt="Wegweiser Trinkwasserbehandlung: Ziele, Anforderungen, Wasserqualität, Verfahren, Desinfektion, Beispiele und Lernergebnisse.">
+        <map name="wegweiser-clickmap" id="wegweiser-clickmap">
+          <area shape="poly" coords="425,185,794,218,794,309,425,306,355,251" data-original-coords="425,185,794,218,794,309,425,306,355,251" href="#panel-ziele" data-nav-target="ziele" data-phase-name="1 · Ziele" data-phase-min="8" alt="1 · Ziele öffnen" aria-label="1 · Ziele öffnen">
+          <area shape="poly" coords="850,223,1264,208,1325,271,1264,331,850,338" data-original-coords="850,223,1264,208,1325,271,1264,331,850,338" href="#panel-anforderungen" data-nav-target="anforderungen" data-phase-name="2 · Anforderungen" data-phase-min="8" alt="2 · Anforderungen öffnen" aria-label="2 · Anforderungen öffnen">
+          <area shape="poly" coords="425,329,794,362,794,454,425,450,355,389" data-original-coords="425,329,794,362,794,454,425,450,355,389" href="#panel-wasserqualitaet" data-nav-target="wasserqualitaet" data-phase-name="3 · Wasserqualität" data-phase-min="10" alt="3 · Wasserqualität öffnen" aria-label="3 · Wasserqualität öffnen">
+          <area shape="poly" coords="850,359,1240,347,1300,411,1240,472,850,472" data-original-coords="850,359,1240,347,1300,411,1240,472,850,472" href="#panel-verfahren" data-nav-target="verfahren" data-phase-name="4 · Verfahren" data-phase-min="14" alt="4 · Verfahren öffnen" aria-label="4 · Verfahren öffnen">
+          <area shape="poly" coords="427,473,795,502,795,601,425,597,355,540" data-original-coords="427,473,795,502,795,601,425,597,355,540" href="#panel-desinfektion" data-nav-target="desinfektion" data-phase-name="5 · Desinfektion" data-phase-min="8" alt="5 · Desinfektion öffnen" aria-label="5 · Desinfektion öffnen">
+          <area shape="poly" coords="852,501,1230,491,1290,554,1230,614,852,614" data-original-coords="852,501,1230,491,1290,554,1230,614,852,614" href="#panel-beispiele" data-nav-target="beispiele" data-phase-name="6 · Beispiele" data-phase-min="7" alt="6 · Beispiele öffnen" aria-label="6 · Beispiele öffnen">
+          <area shape="poly" coords="568,630,968,627,968,746,567,752,507,691" data-original-coords="568,630,968,627,968,746,567,752,507,691" href="#panel-lernergebnisse" data-nav-target="lernergebnisse" data-phase-name="7 · Lernergebnisse" data-phase-min="5" alt="7 · Lernergebnisse öffnen" aria-label="7 · Lernergebnisse öffnen">
+        </map>
       </div>
 
       <div class="nav-fallback">
@@ -375,6 +375,6 @@
   </main>
 
   <footer>Konzipiert für selbstständiges Arbeiten, Austauschen und Sichern von Lernergebnissen · GitHub-Pages-fähig</footer>
-  <script src="app.js?v=svg6" defer></script>
+  <script src="app.js?v=map7" defer></script>
 </body>
 </html>
