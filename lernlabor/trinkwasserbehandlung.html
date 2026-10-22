@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Trinkwasserbehandlung – Interaktive Wegweiser-Einheit</title>
-  <link rel="stylesheet" href="style.css?v=map7">
+  <link rel="stylesheet" href="style.css?v=gallery11">
 </head>
 <body data-unit="behandlung-v2">
   <header>
@@ -28,12 +28,7 @@
   </div>
 
   <main class="wrap">
-    <button class="btn secondary hidden" id="backToWayfinder" type="button">← Zurück zum Wegweiser</button>
-    <section class="card hero-card">
-      <div class="stage">Einstieg · Orientierung</div>
-      <h2>Wegweiser durch die Stunde</h2>
-      <p>Starte oben mit dem Wegweiser. Jeder Pfeil führt zu einer eigenen Sequenz. Die vorgeschlagenen Zeiten sind bereits didaktisch getaktet. <strong>Der Timer lässt sich nicht zurücksetzen. Nach Ablauf kann zur nächsten Lernphase gewechselt werden.</strong></p>
-
+    <nav class="persistent-phases" aria-label="Alle sieben Lernphasen"><div class="phase-nav-label">Lernphasen · direkt anwählen</div>
       <div class="phase-timeline" aria-label="Timeline der Kursphasen">
         <button class="timeline-item" type="button" data-nav-target="ziele" data-phase-name="1 · Ziele" data-phase-min="8">
           <span class="time">8 min</span><span class="title">Ziele</span>
@@ -57,6 +52,14 @@
           <span class="time">5 min</span><span class="title">Lernergebnisse</span>
         </button>
       </div>
+    </nav>
+    <button class="btn secondary hidden" id="backToWayfinder" type="button">← Zurück zum Wegweiser</button>
+    <section class="card hero-card">
+      <div class="stage">Einstieg · Orientierung</div>
+      <h2>Wegweiser durch die Stunde</h2>
+      <p>Starte oben mit dem Wegweiser. Jeder Pfeil führt zu einer eigenen Sequenz. Die vorgeschlagenen Zeiten sind bereits didaktisch getaktet. <strong>Der Timer lässt sich nicht zurücksetzen. Nach Ablauf kann zur nächsten Lernphase gewechselt werden.</strong></p>
+
+
 
       <div class="wegweiser-map">
         <img src="wegweiser-trinkwasser.png?v=map7" usemap="#wegweiser-clickmap" alt="Wegweiser Trinkwasserbehandlung: Ziele, Anforderungen, Wasserqualität, Verfahren, Desinfektion, Beispiele und Lernergebnisse.">
@@ -201,6 +204,11 @@
     <section class="card content-panel hidden" id="panel-verfahren">
       <div class="stage">Phase 4 · 14 Minuten</div>
       <h2>Verfahren der Trinkwasserbehandlung</h2>
+<div class="equipment-gallery" aria-label="Praxisbilder zu Wasseraufbereitungsverfahren">
+<figure><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Water_softener.jpg?width=700" alt="Installierte Wasserenthärtungsanlage"><figcaption><strong>Enthärtungsanlage</strong> – Anlage zur Verringerung der Wasserhärte. <a href="https://commons.wikimedia.org/wiki/File:Water_softener.jpg" target="_blank" rel="noopener">Bild und Lizenz</a></figcaption></figure>
+<figure><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Haushalts-Wasserfilter.jpg?width=700" alt="Haushaltswasserfilter mit austauschbarer Filterpatrone"><figcaption><strong>Filterpatrone</strong> – typischer auswechselbarer Filtereinsatz. <a href="https://commons.wikimedia.org/wiki/File:Haushalts-Wasserfilter.jpg" target="_blank" rel="noopener">Foto: Rainer Knäpper, Lizenzhinweise</a></figcaption></figure>
+<figure><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Backwashing_in_a_water_filtration_plant.JPG?width=700" alt="Rückspülung an einer Filteranlage im Wasserwerk"><figcaption><strong>Rückspülung</strong> – Beispiel aus einem Wasserwerk (nicht identisch mit einem Hausanschlussfilter). <a href="https://commons.wikimedia.org/wiki/File:Backwashing_in_a_water_filtration_plant.JPG" target="_blank" rel="noopener">Bild: CC BY-SA 4.0</a></figcaption></figure>
+</div>
       <div class="info"><strong>Wissensbox</strong><p>Man kann Aufbereitungsverfahren grob nach ihrem Wirkprinzip ordnen: <strong>mechanisch</strong> (z. B. Sedimentation, Filtration), <strong>chemisch</strong> (z. B. Fällung/Flockung, Desinfektion) und <strong>physikalisch</strong> bzw. physikalisch-chemisch (z. B. Adsorption, Membranverfahren). Zusätzlich sind <strong>Ionenaustausch</strong>, Belüftung und Oxidation bedeutsam. Die Einteilung ist eine didaktische Vereinfachung; Verfahren kombinieren häufig mehrere Wirkprinzipien.</p></div>
       <div class="moderation"><strong>Moderationsimpuls:</strong> Betone, dass Einteilungen in Schulmaterialien vereinfacht sind. Wichtiger als das Auswendiglernen der Schublade ist das passende Wirkprinzip.</div>
 
