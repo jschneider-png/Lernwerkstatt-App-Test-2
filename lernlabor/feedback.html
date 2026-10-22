@@ -12,6 +12,17 @@
 <button type="submit">Feedback-Datei für die Abgabe herunterladen</button>
 <p id="status" role="status"></p>
 </form><p><a href="trinkwasserbehandlung.html">← Zurück zur Trinkwasserbehandlung</a></p></main>
+<script src="feedback-config.js"></script>
+<script>
+const configuredFormUrl = window.LERNWERKSTATT_FEEDBACK_FORM_URL || '';
+if (/^https:\/\/docs\.google\.com\/forms\//.test(configuredFormUrl)) {
+  const main = document.querySelector('main');
+  main.innerHTML = '<div class="card"><h2>Feedback über Google Forms abgeben</h2><p>Deine Antworten werden zentral gesammelt und anschließend zusammengefasst mit der Klasse ausgewertet. Die Teilnahme erfolgt ohne Namensfeld; bitte keine persönlichen Informationen eintragen.</p><p><a class="btn" id="googleFormLink">Zum Feedbackformular →</a></p><p class="hint">Die Antworten werden im Google-Konto der Schule bzw. Lehrkraft gespeichert. Beachte die Datenschutzhinweise deiner Schule.</p></div>';
+  const link = document.querySelector('#googleFormLink');
+  link.href = configuredFormUrl;
+  link.rel = 'noopener noreferrer';
+}
+</script>
 <script>
 const qs=[['verstaendlichkeit','Ich habe verstanden, was ich tun sollte.'],['tempo','Das Tempo der Stunde war passend.'],['aufgaben','Die Aufgaben haben mir beim Lernen geholfen.'],['wegweiser','Die Navigation und der Wegweiser waren übersichtlich.'],['lernzimmer','Das virtuelle Lernzimmer ist hilfreich.'],['gesamt','Insgesamt hat mir das Lernen heute gefallen.']];
 const host=document.querySelector('#ratings');for(const [id,q] of qs){const f=document.createElement('fieldset');let h='<legend>'+q+'</legend><div class="scale">';for(let n=1;n<=5;n++)h+='<label><input type="radio" name="'+id+'" value="'+n+'" required>'+n+'</label>';f.innerHTML=h+'</div><div class="rating-note">1 = trifft gar nicht zu · 5 = trifft voll zu</div>';host.append(f)}
