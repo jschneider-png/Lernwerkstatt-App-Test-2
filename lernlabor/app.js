@@ -154,7 +154,28 @@ function highlightNav(name){$$('.timeline-item').forEach(btn=>btn.classList.togg
 function openPanel(name){$$('.content-panel').forEach(p=>p.classList.add('hidden'));const hero=$('.hero-card');if(hero)hero.classList.add('hidden');const back=$('#backToWayfinder');if(back)back.classList.remove('hidden');const panel=document.getElementById('panel-'+name);if(panel){panel.classList.remove('hidden');panel.scrollIntoView({behavior:'smooth',block:'start'});}}
 function handleNavClick(btn){loadPhase(btn.dataset.navTarget,btn.dataset.phaseName||btn.dataset.navTarget,btn.dataset.phaseMin||0);openPanel(btn.dataset.navTarget);}
 function initImageMap(){const img=$('.wegweiser-map img[usemap]');if(!img)return;const areas=$$('#wegweiser-clickmap area');const scale=()=>{const sx=img.clientWidth/1672,sy=img.clientHeight/941;if(!sx||!sy)return;areas.forEach(area=>{const original=(area.dataset.originalCoords||area.coords).split(',').map(Number);area.coords=original.map((n,i)=>Math.round(n*(i%2?sy:sx))).join(',');});};if(img.complete)scale();else img.addEventListener('load',scale);window.addEventListener('resize',scale);}
-function initNav(){$$('[data-nav-target]').forEach(btn=>btn.addEventListener('click',e=>{if(btn.tagName==='AREA')e.preventDefault();handleNavClick(btn)}));$$('.content-panel').forEach(p=>p.classList.add('hidden'));const back=$('#backToWayfinder');if(back)back.addEventListener('click',()=>{$$('.content-panel').forEach(p=>p.classList.add('hidden'));$('.hero-card')?.classList.remove('hidden');back.classList.add('hidden');window.scrollTo({top:0,behavior:'smooth'});});const headerBack=$('#headerBackToWayfinder');if(headerBack)headerBack.addEventListener('click',e=>{e.preventDefault();if(back)back.click();else window.scrollTo({top:0,behavior:'smooth'});});initImageMap();}
+function showWayfinder(){
+  $$('.content-panel').forEach(panel => panel.classList.add('hidden'));
+  const hero = $('#wegweiser') || $('.hero-card');
+  if(hero) hero.classList.remove('hidden');
+  const back = $('#backToWayfinder');
+  if(back) back.classList.add('hidden');
+  if(hero) hero.scrollIntoView({behavior:'smooth',block:'start'});
+}
+function initNav(){
+  $$('[data-nav-target]').forEach(btn => btn.addEventListener('click', e => {
+    if(btn.tagName === 'AREA') e.preventDefault();
+    handleNavClick(btn);
+  }));
+  $$('.content-panel').forEach(panel => panel.classList.add('hidden'));
+  document.addEventListener('click', e => {
+    const back = e.target.closest('#backToWayfinder, #headerBackToWayfinder');
+    if(!back) return;
+    e.preventDefault();
+    showWayfinder();
+  });
+  initImageMap();
+}
 function tick(){
  if(!run||!runningPhase)return;
  const now=Date.now();const elapsed=Math.floor((now-lastTick)/1000);if(elapsed<1)return;lastTick+=elapsed*1000;
