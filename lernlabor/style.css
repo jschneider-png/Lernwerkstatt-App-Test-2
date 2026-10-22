@@ -53,3 +53,16 @@ section.card{background:white;border:1px solid var(--line);box-shadow:0 10px 30p
 .sign-hit{fill:rgba(255,255,255,0);stroke:transparent;stroke-width:3;cursor:pointer;pointer-events:all}
 .sign-hit:hover,.sign-hit:focus{fill:rgba(255,255,255,.14);stroke:#fff;stroke-width:4;outline:none}
 @media(max-width:900px){.wegweiser-hitzones{display:block}}
+
+/* Durchgehend sichtbare Lernphasen und anschauliche Praxisfotos */
+.persistent-phases{position:sticky;top:0;z-index:22;background:#f5fafdeF;border:1px solid #c4dce8;border-radius:16px;padding:.7rem .85rem;margin-bottom:1rem;box-shadow:0 5px 17px #173b5420;backdrop-filter:blur(9px)}
+.phase-nav-label{font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;font-weight:800;color:#32647c;margin-bottom:.35rem}
+.persistent-phases .phase-timeline{margin:0}
+.content-panel{scroll-margin-top:185px}
+.equipment-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin:1.1rem 0 1.5rem}
+.equipment-gallery--two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.equipment-gallery figure{margin:0;overflow:hidden;background:#f5f9fc;border:1px solid #ccdfe8;border-radius:14px}
+.equipment-gallery img{display:block;width:100%;height:240px;object-fit:contain;background:white}
+.equipment-gallery figcaption{font-size:.9rem;line-height:1.45;padding:.75rem .9rem}
+.equipment-gallery figcaption a{display:inline-block;margin-top:.3rem}
+@media(max-width:700px){.persistent-phases{position:relative;top:auto}.equipment-gallery,.equipment-gallery--two{grid-template-columns:1fr}.equipment-gallery img{height:220px}}
