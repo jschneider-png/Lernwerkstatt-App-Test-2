@@ -213,7 +213,7 @@ initNav();
 initButtons();
 // Der Countdown beginnt beim Aufruf der Trinkwasserbehandlung automatisch.
 // Bestehende Restzeiten werden respektiert; die Startseite bleibt der Wegweiser.
-if (root === 'trinkwasser') {
+if (root === 'behandlung-v2') {
   if (!activePhase) loadPhase('ziele', '1 · Ziele', 8);
   if (currentSeconds() > 0) startTimer();
 }
