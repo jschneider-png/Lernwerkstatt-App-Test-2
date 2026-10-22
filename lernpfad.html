@@ -647,8 +647,9 @@ html[data-theme="christmas"] #reserveModules .reserve-kicker,
     </div>
   </div>
 </section>
-<div class="card" style="margin:18px 0"><h3>💬 Dein Feedback zur Lernwerkstatt</h3><p class="muted">Bewerte die Unterrichtsstunde und das virtuelle Lernzimmer. Ohne Namen, mit freiwilligen Verbesserungsvorschlägen.</p><a class="btn primary" href="lernlabor/feedback.html">Feedback geben →</a></div>
+
 <div class="topic-grid" id="topicGrid"></div>
+<div class="card" id="weekFeedback" style="margin:18px 0"><h3>💬 Feedback zu dieser Blockwoche</h3><p>Wie hilfreich waren die Stunden und das virtuelle Lernzimmer? Bewerte den Unterricht und gib freiwillig Verbesserungsvorschläge.</p><a class="btn primary" href="lernlabor/feedback.html">💬 Feedback geben →</a></div>
 </div></main>
 <footer><div class="container">Lernwerkstatt Sanitärtechnik · 11. Klasse</div></footer>
 
@@ -760,6 +761,9 @@ document.getElementById('mapClose').onclick=closeMap;
 
 function render(){
  const w=WEEKS[active-1];
+ const reserve=document.getElementById('reserveModules');
+ if(reserve) reserve.hidden=(w.nr!==2);
+
 
  document.getElementById('bwNav').innerHTML=WEEKS.map(x=>'<button data-bw="'+x.nr+'" class="'+(x.nr===active?'active':'')+'">BW '+x.nr+'</button>').join('');
  document.querySelectorAll('[data-bw]').forEach(b=>b.onclick=()=>{active=Number(b.dataset.bw);history.replaceState(null,'','?bw='+active);render();});
