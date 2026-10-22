@@ -12,6 +12,8 @@ function erstelleLernwerkstattFeedback() {
   form.addListItem().setTitle('Welche Stunde bewertest du?').setChoiceValues([
     'Trinkwasserbehandlung (45 Min.)',
     'Filter',
+    'Wasserhärte',
+    'pH-Wert',
     'Andere Stunde / Lernwerkstatt allgemein'
   ]).setRequired(true);
   const questions = [
