@@ -1,0 +1,16 @@
+Zielseite: https://jschneider-png.github.io/Lernwerkstatt-Sanit-rtechnik-11/stundenmaterial.html?bw=2&stunde=4
+
+Dort werden Buttons laut Website in stunden-buttons.js gepflegt.
+
+Vorgeschlagene Beschriftung und Ziel-URL für die Stunde:
+
+Trinkwasserbehandlung – Lernweg öffnen
+https://jschneider-png.github.io/Lernwerkstatt-Sanit-rtechnik-11/lernlabor/trinkwasserbehandlung.html
+
+Filter – Lernwerkstatt öffnen
+https://jschneider-png.github.io/Lernwerkstatt-Sanit-rtechnik-11/lernlabor/filter.html
+
+Alternativ EIN „Öffnen“-Button für beide Einheiten:
+https://jschneider-png.github.io/Lernwerkstatt-Sanit-rtechnik-11/lernlabor/index.html
+
+Wichtig: Die verlinkten URLs funktionieren erst nach dem Upload des Ordners lernlabor in das bestehende GitHub-Repository und Veröffentlichung über GitHub Pages.

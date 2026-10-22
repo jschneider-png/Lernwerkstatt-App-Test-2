@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Trinkwasserbehandlung – Interaktive Wegweiser-Einheit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-unit="behandlung-v2">
+  <header>
+    <div class="eyebrow">Lernwerkstatt Sanitärtechnik · Interaktive Unterrichtseinheit</div>
+    <h1>Trinkwasserbehandlung</h1>
+    <p class="lead">Bearbeite den Wegweiser in der Reihenfolge der Timeline. Klicke auf die Pfeile und bearbeite die Lernsequenzen. Du arbeitest mit Wissensboxen, Lückentexten, freien Aufgaben, Zuordnungen und Bildaufgaben. Am Ende sicherst du deine Lernergebnisse.</p>
+    <a href="index.html">← Zur Übersicht</a>
+  </header>
+
+  <div class="toolbar">
+    <div class="toolbar-inner">
+      <strong>⏱ Phasen-Timer</strong>
+      <span class="timer" id="timer">00:00</span>
+      <span class="pill" id="currentPhaseLabel">Noch keine Phase gewählt</span>
+      <button class="btn" id="start">Start</button>
+      <button class="btn secondary" id="pause">Pause</button>
+      <button class="btn secondary" id="nextPhase">Nächste Phase laden</button>
+      <span class="pill" id="progText">0/7 Phasen abgeschlossen</span>
+      <div class="progress"><div id="prog"></div></div>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <section class="card hero-card">
+      <div class="stage">Einstieg · Orientierung</div>
+      <h2>Wegweiser durch die Stunde</h2>
+      <p>Starte oben mit dem Wegweiser. Jeder Pfeil führt zu einer eigenen Sequenz. Die vorgeschlagenen Zeiten sind bereits didaktisch getaktet. <strong>Der Timer lässt sich nicht zurücksetzen. Nach Ablauf kann zur nächsten Lernphase gewechselt werden.</strong></p>
+
+      <div class="phase-timeline" aria-label="Timeline der Kursphasen">
+        <button class="timeline-item" type="button" data-nav-target="ziele" data-phase-name="1 · Ziele" data-phase-min="8">
+          <span class="time">8 min</span><span class="title">Ziele</span>
+        </button>
+        <button class="timeline-item" type="button" data-nav-target="anforderungen" data-phase-name="2 · Anforderungen" data-phase-min="8">
+          <span class="time">8 min</span><span class="title">Anforderungen</span>
+        </button>
+        <button class="timeline-item" type="button" data-nav-target="wasserqualitaet" data-phase-name="3 · Wasserqualität" data-phase-min="10">
+          <span class="time">10 min</span><span class="title">Wasserqualität</span>
+        </button>
+        <button class="timeline-item" type="button" data-nav-target="verfahren" data-phase-name="4 · Verfahren" data-phase-min="14">
+          <span class="time">14 min</span><span class="title">Verfahren</span>
+        </button>
+        <button class="timeline-item" type="button" data-nav-target="desinfektion" data-phase-name="5 · Desinfektion" data-phase-min="8">
+          <span class="time">8 min</span><span class="title">Desinfektion</span>
+        </button>
+        <button class="timeline-item" type="button" data-nav-target="beispiele" data-phase-name="6 · Beispiele" data-phase-min="7">
+          <span class="time">7 min</span><span class="title">Beispiele</span>
+        </button>
+        <button class="timeline-item" type="button" data-nav-target="lernergebnisse" data-phase-name="7 · Lernergebnisse" data-phase-min="5">
+          <span class="time">5 min</span><span class="title">Lernergebnisse</span>
+        </button>
+      </div>
+
+      <div class="wegweiser-map">
+        <img src="wegweiser-trinkwasser.png" alt="Wegweiser zur Unterrichtseinheit Trinkwasserbehandlung mit den Pfeilen Ziele, Anforderungen, Wasserqualität, Verfahren, Desinfektion, Beispiele und Lernergebnisse.">
+        <button class="hotspot-btn left1" type="button" data-nav-target="ziele" data-phase-name="1 · Ziele" data-phase-min="8" aria-label="Zur Sequenz Ziele"></button>
+        <button class="hotspot-btn right1" type="button" data-nav-target="anforderungen" data-phase-name="2 · Anforderungen" data-phase-min="8" aria-label="Zur Sequenz Anforderungen"></button>
+        <button class="hotspot-btn left2" type="button" data-nav-target="wasserqualitaet" data-phase-name="3 · Wasserqualität" data-phase-min="10" aria-label="Zur Sequenz Wasserqualität"></button>
+        <button class="hotspot-btn right2" type="button" data-nav-target="verfahren" data-phase-name="4 · Verfahren" data-phase-min="14" aria-label="Zur Sequenz Verfahren"></button>
+        <button class="hotspot-btn left3" type="button" data-nav-target="desinfektion" data-phase-name="5 · Desinfektion" data-phase-min="8" aria-label="Zur Sequenz Desinfektion"></button>
+        <button class="hotspot-btn right3" type="button" data-nav-target="beispiele" data-phase-name="6 · Beispiele" data-phase-min="7" aria-label="Zur Sequenz Beispiele"></button>
+        <button class="hotspot-btn bottom1" type="button" data-nav-target="lernergebnisse" data-phase-name="7 · Lernergebnisse" data-phase-min="5" aria-label="Zur Sequenz Lernergebnisse"></button>
+      </div>
+
+      <div class="nav-fallback">
+        <button class="btn" type="button" data-nav-target="ziele" data-phase-name="1 · Ziele" data-phase-min="8">Ziele öffnen</button>
+        <button class="btn secondary" type="button" data-nav-target="anforderungen" data-phase-name="2 · Anforderungen" data-phase-min="8">Anforderungen öffnen</button>
+        <button class="btn secondary" type="button" data-nav-target="wasserqualitaet" data-phase-name="3 · Wasserqualität" data-phase-min="10">Wasserqualität öffnen</button>
+        <button class="btn secondary" type="button" data-nav-target="verfahren" data-phase-name="4 · Verfahren" data-phase-min="14">Verfahren öffnen</button>
+        <button class="btn secondary" type="button" data-nav-target="desinfektion" data-phase-name="5 · Desinfektion" data-phase-min="8">Desinfektion öffnen</button>
+        <button class="btn secondary" type="button" data-nav-target="beispiele" data-phase-name="6 · Beispiele" data-phase-min="7">Beispiele öffnen</button>
+        <button class="btn secondary" type="button" data-nav-target="lernergebnisse" data-phase-name="7 · Lernergebnisse" data-phase-min="5">Lernergebnisse öffnen</button>
+      </div>
+    </section>
+
+    <section class="card content-panel hidden" id="panel-ziele">
+      <div class="stage">Phase 1 · 8 Minuten</div>
+      <h2>Ziele der Trinkwasserbehandlung</h2>
+      <div class="info"><strong>Wissensbox</strong><p>Trinkwasserbehandlung verfolgt mehrere Ziele: Partikel sollen entfernt, technische Probleme wie Korrosion oder Steinablagerungen vermindert und die geforderte Wasserqualität eingehalten werden. Ob eine Behandlung notwendig ist, hängt vom Rohwasser und vom Versorgungsziel ab.</p></div>
+      <div class="moderation"><strong>Moderationsimpuls:</strong> Lass die SuS zuerst alltagsnah sammeln: „Was darf im Trinkwasser auf keinen Fall stören?“ Erst danach wird fachlich präzisiert.</div>
+
+      <div class="task fill-task">
+        <h3>Lückentext</h3>
+        <p>Ergänze die vier typischen Ziele:</p>
+        <p class="gapline">Entfernung von <input class="field gap" data-gap="ziele-0" data-answer="schwebstoffen" aria-label="Lücke 1"> · Hemmung von <input class="field gap" data-gap="ziele-1" data-answer="korrosion" aria-label="Lücke 2"> · Hemmung von <input class="field gap" data-gap="ziele-2" data-answer="steinablagerungen" aria-label="Lücke 3"> · <input class="field gap" data-gap="ziele-3" data-answer="enthärtung" aria-label="Lücke 4"></p>
+        <button class="btn verify-gaps" type="button">Lückentext prüfen</button>
+        <div class="feedback hidden" role="status"></div>
+      </div>
+
+      <div class="task" data-check="z-mcq" data-correct="1" data-why="Trinkwasserbehandlung orientiert sich immer an der Rohwasserbeschaffenheit und am Ziel der Versorgung.">
+        <h3>Verständnisfrage</h3>
+        <p>Welche Aussage ist fachlich richtig?</p>
+        <button class="choice" type="button">Jede Trinkwasseranlage braucht grundsätzlich dieselbe Behandlungskette.</button>
+        <button class="choice" type="button">Die Auswahl der Behandlung hängt vom Rohwasser und vom Behandlungsziel ab.</button>
+        <button class="choice" type="button">Enthärtung ist immer Pflicht.</button>
+        <div class="feedback hidden" role="status"></div>
+      </div>
+
+      <div class="task">
+        <h3>Freie Aufgabe</h3>
+        <p>Formuliere in 2–3 Sätzen: Warum kann eine Trinkwasserbehandlung aus technischen Gründen sinnvoll sein?</p>
+        <textarea class="field" data-save="ziele-note" aria-label="Notiz zu den Zielen" placeholder="Schreibe deine Begründung hier …"></textarea>
+      </div>
+      <label class="phase"><span>☐ Phase abgeschlossen</span><input type="checkbox" data-tick="phase1"></label>
+    </section>
+
+    <section class="card content-panel hidden" id="panel-anforderungen">
+      <div class="stage">Phase 2 · 8 Minuten</div>
+      <h2>Anforderungen an Trinkwasser</h2>
+      <div class="info"><strong>Wissensbox</strong><p>Im Unterricht werden häufig vier leicht merkbare Anforderungen genannt: <strong>klar</strong>, <strong>keimarm bzw. hygienisch unauffällig</strong>, <strong>geruchs- und geschmacklich unauffällig</strong> sowie <strong>kühl</strong>. Fachlich entscheidend ist aber: Die Qualität muss anhand mehrerer Kriterien beurteilt werden – nicht nur am Aussehen. Das Trinkwasser muss die Vorgaben der Trinkwasserverordnung erfüllen.</p></div>
+      <div class="moderation"><strong>Moderationsimpuls:</strong> Frage nach, warum „klar“ allein nicht reicht. So wird der Unterschied zwischen Sinneseindruck und hygienischer Qualität deutlich.</div>
+
+      <div class="task" data-pair="anforderungen-sort">
+        <h3>Zuordnungsaufgabe</h3>
+        <p>Ordne zu: Gehört der Begriff eher zur direkten Trinkwasseranforderung oder eher zu einem technischen Betriebsziel?</p>
+        <div class="answer-row"><label style="min-width:220px">klar</label><select class="field" data-pair="anforderungen-sort-0" data-answer="Anforderung"><option value="">Bitte auswählen …</option><option>Anforderung</option><option>Betriebsziel</option></select></div>
+        <div class="answer-row"><label style="min-width:220px">keimarm / hygienisch sicher</label><select class="field" data-pair="anforderungen-sort-1" data-answer="Anforderung"><option value="">Bitte auswählen …</option><option>Anforderung</option><option>Betriebsziel</option></select></div>
+        <div class="answer-row"><label style="min-width:220px">Enthärtung</label><select class="field" data-pair="anforderungen-sort-2" data-answer="Betriebsziel"><option value="">Bitte auswählen …</option><option>Anforderung</option><option>Betriebsziel</option></select></div>
+        <div class="answer-row"><label style="min-width:220px">Hemmung von Steinablagerungen</label><select class="field" data-pair="anforderungen-sort-3" data-answer="Betriebsziel"><option value="">Bitte auswählen …</option><option>Anforderung</option><option>Betriebsziel</option></select></div>
+        <button class="btn verify" type="button">Zuordnung prüfen</button>
+        <div class="feedback hidden"></div>
+      </div>
+
+      <div class="task" data-check="a-mcq" data-correct="2" data-why="Klares Wasser kann trotz unauffälligem Aussehen mikrobiologisch belastet sein.">
+        <h3>Knackpunkt</h3>
+        <p>Welche Aussage ist die beste?</p>
+        <button class="choice" type="button">Wenn Wasser klar aussieht, ist es automatisch hygienisch sicher.</button>
+        <button class="choice" type="button">Geruch und Geschmack sind die einzigen wichtigen Kriterien.</button>
+        <button class="choice" type="button">Sinneseindruck ist hilfreich, ersetzt aber keine fachliche Beurteilung.</button>
+        <div class="feedback hidden" role="status"></div>
+      </div>
+
+      <div class="task">
+        <h3>Zusammenfassung</h3>
+        <p>Notiere vier Anforderungen an Trinkwasser in Stichworten und ergänze je ein kurzes Beispiel, wie man sie beurteilen könnte.</p>
+        <textarea class="field" data-save="anforderungen-note" placeholder="z. B. klar → keine sichtbaren Schwebstoffe …"></textarea>
+      </div>
+      <label class="phase"><span>☐ Phase abgeschlossen</span><input type="checkbox" data-tick="phase2"></label>
+    </section>
+
+    <section class="card content-panel hidden" id="panel-wasserqualitaet">
+      <div class="stage">Phase 3 · 10 Minuten</div>
+      <h2>Wasserqualität</h2>
+      <div class="info"><strong>Wissensbox</strong><p>Zur Beurteilung der Wasserqualität betrachtet man <strong>physikalische</strong>, <strong>chemische</strong> und <strong>biologische bzw. mikrobiologische</strong> Parameter. Beispiele sind Trübung und Temperatur, pH-Wert und Nitrat oder Bakterien und Viren.</p></div>
+      <div class="moderation"><strong>Moderationsimpuls:</strong> Lasse die SuS zunächst vermuten, welche Parameter man sehen oder riechen könnte – und welche eben nicht.</div>
+
+      <div class="task" data-pair="parametergruppen">
+        <h3>Parameter-Detektiv</h3>
+        <p>Ordne die Beispiele zu.</p>
+        <div class="answer-row"><label style="min-width:180px">Temperatur</label><select class="field" data-pair="parametergruppen-0" data-answer="Physikalisch"><option value="">Bitte auswählen …</option><option>Physikalisch</option><option>Chemisch</option><option>Biologisch</option></select></div>
+        <div class="answer-row"><label style="min-width:180px">Härte</label><select class="field" data-pair="parametergruppen-1" data-answer="Chemisch"><option value="">Bitte auswählen …</option><option>Physikalisch</option><option>Chemisch</option><option>Biologisch</option></select></div>
+        <div class="answer-row"><label style="min-width:180px">Bakterien</label><select class="field" data-pair="parametergruppen-2" data-answer="Biologisch"><option value="">Bitte auswählen …</option><option>Physikalisch</option><option>Chemisch</option><option>Biologisch</option></select></div>
+        <div class="answer-row"><label style="min-width:180px">Nitrat</label><select class="field" data-pair="parametergruppen-3" data-answer="Chemisch"><option value="">Bitte auswählen …</option><option>Physikalisch</option><option>Chemisch</option><option>Biologisch</option></select></div>
+        <button class="btn verify" type="button">Zuordnung prüfen</button>
+        <div class="feedback hidden"></div>
+      </div>
+
+      <div class="task">
+        <h3>Zuordnung am Bild</h3>
+        <p>Klicke auf die Prüfstationen und lies die Hinweise. Anschließend ordnest du jedem Symbol die passende Parametergruppe zu.</p>
+        <div class="diagram hotspot-diagram">
+          <svg viewBox="0 0 820 240" role="img" aria-label="Drei Prüfstationen für Wasserqualität">
+            <rect x="20" y="58" width="230" height="120" rx="20" fill="#dfeffc"/>
+            <rect x="295" y="58" width="230" height="120" rx="20" fill="#e6f6ef"/>
+            <rect x="570" y="58" width="230" height="120" rx="20" fill="#fff1d9"/>
+            <text x="135" y="110" text-anchor="middle" font-size="28" fill="#16334b" font-weight="700">1</text>
+            <text x="135" y="145" text-anchor="middle" font-size="18" fill="#16334b">Temperatur · Trübung</text>
+            <text x="410" y="110" text-anchor="middle" font-size="28" fill="#16334b" font-weight="700">2</text>
+            <text x="410" y="145" text-anchor="middle" font-size="18" fill="#16334b">pH-Wert · Nitrat</text>
+            <text x="685" y="110" text-anchor="middle" font-size="28" fill="#16334b" font-weight="700">3</text>
+            <text x="685" y="145" text-anchor="middle" font-size="18" fill="#16334b">Bakterien · Viren</text>
+          </svg>
+          <div class="hotspot-mini-controls">
+            <button class="btn secondary hotspot-toggle" type="button" data-hotspot="phys">Station 1</button>
+            <button class="btn secondary hotspot-toggle" type="button" data-hotspot="chem">Station 2</button>
+            <button class="btn secondary hotspot-toggle" type="button" data-hotspot="bio">Station 3</button>
+          </div>
+          <div class="info hidden hotspot-box" data-hotspot-box="phys"><strong>Station 1</strong><p>Physikalische Parameter beschreiben z. B. Temperatur, Trübung, Farbe, Geruch oder Geschmack.</p></div>
+          <div class="info hidden hotspot-box" data-hotspot-box="chem"><strong>Station 2</strong><p>Chemische Parameter umfassen z. B. pH-Wert, Härte, Sauerstoff, Nitrat- oder Phosphatgehalte sowie Schwermetalle.</p></div>
+          <div class="info hidden hotspot-box" data-hotspot-box="bio"><strong>Station 3</strong><p>Biologische Parameter betreffen Organismen wie Bakterien, Viren, Parasiten oder Algen.</p></div>
+        </div>
+      </div>
+
+      <div class="task">
+        <h3>Freie Übung</h3>
+        <p>Erstelle eine Mini-Merkliste mit je zwei Beispielen für physikalische, chemische und biologische Parameter.</p>
+        <textarea class="field" data-save="wasserqualitaet-note" placeholder="Physikalisch: … | Chemisch: … | Biologisch: …"></textarea>
+      </div>
+      <label class="phase"><span>☐ Phase abgeschlossen</span><input type="checkbox" data-tick="phase3"></label>
+    </section>
+
+    <section class="card content-panel hidden" id="panel-verfahren">
+      <div class="stage">Phase 4 · 14 Minuten</div>
+      <h2>Verfahren der Trinkwasserbehandlung</h2>
+      <div class="info"><strong>Wissensbox</strong><p>Man kann Aufbereitungsverfahren grob nach ihrem Wirkprinzip ordnen: <strong>mechanisch</strong> (z. B. Sedimentation, Filtration), <strong>chemisch</strong> (z. B. Fällung/Flockung, Desinfektion) und <strong>physikalisch</strong> bzw. physikalisch-chemisch (z. B. Adsorption, Membranverfahren). Zusätzlich sind <strong>Ionenaustausch</strong>, Belüftung und Oxidation bedeutsam. Die Einteilung ist eine didaktische Vereinfachung; Verfahren kombinieren häufig mehrere Wirkprinzipien.</p></div>
+      <div class="moderation"><strong>Moderationsimpuls:</strong> Betone, dass Einteilungen in Schulmaterialien vereinfacht sind. Wichtiger als das Auswendiglernen der Schublade ist das passende Wirkprinzip.</div>
+
+      <div class="grid">
+        <div class="mini"><h3>Mechanisch</h3><p>Sedimentation, Filtration</p></div>
+        <div class="mini"><h3>Chemisch</h3><p>Fällung, Flockung, Desinfektion</p></div>
+        <div class="mini"><h3>Physikalisch</h3><p>Adsorption, UV, Membranverfahren</p></div>
+        <div class="mini"><h3>Ionenaustausch</h3><p>Gezielte Entfernung gelöster Ionen, etwa bei der Enthärtung.</p></div>
+      </div>
+
+      <div class="task" data-pair="verfahren-funktionen">
+        <h3>Verfahren und Wirkung</h3>
+        <p>Ordne zu.</p>
+        <div class="answer-row"><label style="min-width:220px">Sedimentation</label><select class="field" data-pair="verfahren-funktionen-0" data-answer="Partikel setzen sich ab"><option value="">Bitte auswählen …</option><option>Partikel setzen sich ab</option><option>Kleine Teilchen werden zu Flocken</option><option>Gelöste organische Stoffe adsorbieren</option><option>Ionen werden ausgetauscht</option><option>Gelöste Salze werden weitgehend zurückgehalten</option></select></div>
+        <div class="answer-row"><label style="min-width:220px">Fällung / Flockung</label><select class="field" data-pair="verfahren-funktionen-1" data-answer="Kleine Teilchen werden zu Flocken"><option value="">Bitte auswählen …</option><option>Partikel setzen sich ab</option><option>Kleine Teilchen werden zu Flocken</option><option>Gelöste organische Stoffe adsorbieren</option><option>Ionen werden ausgetauscht</option><option>Gelöste Salze werden weitgehend zurückgehalten</option></select></div>
+        <div class="answer-row"><label style="min-width:220px">Aktivkohle</label><select class="field" data-pair="verfahren-funktionen-2" data-answer="Gelöste organische Stoffe adsorbieren"><option value="">Bitte auswählen …</option><option>Partikel setzen sich ab</option><option>Kleine Teilchen werden zu Flocken</option><option>Gelöste organische Stoffe adsorbieren</option><option>Ionen werden ausgetauscht</option><option>Gelöste Salze werden weitgehend zurückgehalten</option></select></div>
+        <div class="answer-row"><label style="min-width:220px">Ionenaustausch</label><select class="field" data-pair="verfahren-funktionen-3" data-answer="Ionen werden ausgetauscht"><option value="">Bitte auswählen …</option><option>Partikel setzen sich ab</option><option>Kleine Teilchen werden zu Flocken</option><option>Gelöste organische Stoffe adsorbieren</option><option>Ionen werden ausgetauscht</option><option>Gelöste Salze werden weitgehend zurückgehalten</option></select></div>
+        <div class="answer-row"><label style="min-width:220px">Umkehrosmose</label><select class="field" data-pair="verfahren-funktionen-4" data-answer="Gelöste Salze werden weitgehend zurückgehalten"><option value="">Bitte auswählen …</option><option>Partikel setzen sich ab</option><option>Kleine Teilchen werden zu Flocken</option><option>Gelöste organische Stoffe adsorbieren</option><option>Ionen werden ausgetauscht</option><option>Gelöste Salze werden weitgehend zurückgehalten</option></select></div>
+        <button class="btn verify" type="button">Zuordnung prüfen</button>
+        <div class="feedback hidden"></div>
+      </div>
+
+      <div class="task fill-task">
+        <h3>Lückentext</h3>
+        <p>Ergänze die Kernaussagen:</p>
+        <p class="gapline">Ein <input class="field gap" data-gap="verfahren-0" data-answer="aktivkohlefilter"> kann bestimmte organische Stoffe adsorbieren. Beim <input class="field gap" data-gap="verfahren-1" data-answer="ionenaustausch"> werden gelöste Ionen gegen andere Ionen ausgetauscht. Die <input class="field gap" data-gap="verfahren-2" data-answer="umkehrosmose"> hält viele gelöste Salze durch eine Membran zurück.</p>
+        <button class="btn verify-gaps" type="button">Lückentext prüfen</button>
+        <div class="feedback hidden"></div>
+      </div>
+
+      <div class="task">
+        <h3>Zuordnung auf dem Bild</h3>
+        <p>Im vereinfachten Schema einer Aufbereitungskette sind vier Stufen markiert. Ordne den Stufen den passenden Aufbereitungsschritt zu.</p>
+        <div class="diagram">
+          <svg viewBox="0 0 900 220" role="img" aria-label="Schema mit vier nummerierten Behandlungsstufen">
+            <defs><marker id="arr2" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#087b98" stroke-width="2"/></marker></defs>
+            <rect x="20" y="60" width="140" height="95" rx="16" fill="#d9eef7"/>
+            <rect x="220" y="60" width="140" height="95" rx="16" fill="#e5f4e9"/>
+            <rect x="420" y="60" width="140" height="95" rx="16" fill="#f8efd9"/>
+            <rect x="620" y="60" width="140" height="95" rx="16" fill="#ece6fb"/>
+            <g font-size="28" font-weight="700" fill="#16334b" text-anchor="middle">
+              <text x="90" y="115">1</text><text x="290" y="115">2</text><text x="490" y="115">3</text><text x="690" y="115">4</text>
+            </g>
+            <g stroke="#087b98" stroke-width="4" marker-end="url(#arr2)"><path d="M160 108 H208"/><path d="M360 108 H408"/><path d="M560 108 H608"/></g>
+          </svg>
+        </div>
+        <div class="answer-row"><label style="min-width:180px">Stufe 1</label><select class="field" data-save="bild-1"><option value="">Bitte auswählen …</option><option>Sedimentation</option><option>Filtration</option><option>Aktivkohle</option><option>Desinfektion</option></select></div>
+        <div class="answer-row"><label style="min-width:180px">Stufe 2</label><select class="field" data-save="bild-2"><option value="">Bitte auswählen …</option><option>Sedimentation</option><option>Filtration</option><option>Aktivkohle</option><option>Desinfektion</option></select></div>
+        <div class="answer-row"><label style="min-width:180px">Stufe 3</label><select class="field" data-save="bild-3"><option value="">Bitte auswählen …</option><option>Sedimentation</option><option>Filtration</option><option>Aktivkohle</option><option>Desinfektion</option></select></div>
+        <div class="answer-row"><label style="min-width:180px">Stufe 4</label><select class="field" data-save="bild-4"><option value="">Bitte auswählen …</option><option>Sedimentation</option><option>Filtration</option><option>Aktivkohle</option><option>Desinfektion</option></select></div>
+        <div class="meta">Dies ist ein vereinfachtes Planungsschema. Die Reihenfolge muss anhand der Rohwasserqualität begründet werden; es gibt nicht immer eine eindeutige Musterlösung.</div>
+      </div>
+
+      <div class="task dose-task"><h3>Rechenwerkstatt: Dosierung (Zusatzaufgabe)</h3><p>Ein fiktives Laborbeispiel verwendet 3 mg/l Wirkstoff bei einem Durchfluss von 12 m³/h. Berechne die Wirkstoffmasse in g/h. Hinweis: m [g/h] = Q [m³/h] × c [mg/l].</p><div class="answer-row"><label for="doseanswer">Ergebnis (g/h)</label><input class="field" style="max-width:200px" type="number" id="doseanswer" data-save="doseanswer" placeholder="Zahl"></div><button type="button" class="btn" id="dosecheck">Berechnung prüfen</button><div class="feedback hidden" id="dosefeedback" role="status"></div><p class="meta">Reines Rechenbeispiel, keine Dosierungsvorgabe für eine reale Anlage.</p></div>
+      <div class="task">
+        <h3>Arbeitsnotiz</h3>
+        <p>Notiere zwei Verfahren, die du bereits sicher unterscheiden kannst, und erkläre den Unterschied kurz.</p>
+        <textarea class="field" data-save="verfahren-note"></textarea>
+      </div>
+      <label class="phase"><span>☐ Phase abgeschlossen</span><input type="checkbox" data-tick="phase4"></label>
+    </section>
+
+    <section class="card content-panel hidden" id="panel-desinfektion">
+      <div class="stage">Phase 5 · 8 Minuten</div>
+      <h2>Desinfektion</h2>
+      <div class="info"><strong>Wissensbox</strong><p>Wichtige Desinfektionsverfahren im Trinkwasserbereich sind <strong>Chlorung</strong>, <strong>UV-Bestrahlung</strong> und <strong>Ozonung</strong>. Sie unterscheiden sich in Wirkprinzip, Restwirkung und möglichen Grenzen.</p></div>
+      <div class="warning"><strong>Wichtig:</strong> In realen Anlagen dürfen nur zugelassene Aufbereitungsstoffe und Verfahren nach den jeweils geltenden Vorgaben eingesetzt werden.</div>
+      <div class="moderation"><strong>Moderationsimpuls:</strong> Gib den SuS den Auftrag, nicht nur „Vorteile“ zu nennen, sondern immer auch eine Grenze oder Bedingung zu ergänzen.</div>
+
+      <div class="task" data-pair="desinfektionvergleich">
+        <h3>Vergleichen und zuordnen</h3>
+        <p>Ordne das typische Merkmal zu.</p>
+        <div class="answer-row"><label style="min-width:180px">Chlorung</label><select class="field" data-pair="desinfektionvergleich-0" data-answer="Mögliche Restwirkung"><option value="">Bitte auswählen …</option><option>Mögliche Restwirkung</option><option>Keine Depotwirkung</option><option>Starke Oxidationswirkung</option></select></div>
+        <div class="answer-row"><label style="min-width:180px">UV-Bestrahlung</label><select class="field" data-pair="desinfektionvergleich-1" data-answer="Keine Depotwirkung"><option value="">Bitte auswählen …</option><option>Mögliche Restwirkung</option><option>Keine Depotwirkung</option><option>Starke Oxidationswirkung</option></select></div>
+        <div class="answer-row"><label style="min-width:180px">Ozonung</label><select class="field" data-pair="desinfektionvergleich-2" data-answer="Starke Oxidationswirkung"><option value="">Bitte auswählen …</option><option>Mögliche Restwirkung</option><option>Keine Depotwirkung</option><option>Starke Oxidationswirkung</option></select></div>
+        <button class="btn verify" type="button">Zuordnung prüfen</button>
+        <div class="feedback hidden"></div>
+      </div>
+
+      <div class="task" data-check="d-mcq" data-correct="0" data-why="UV kann Mikroorganismen inaktivieren, hinterlässt aber keine Restdesinfektionswirkung im Netz.">
+        <h3>Prüffrage</h3>
+        <p>Welche Aussage trifft zu?</p>
+        <button class="choice" type="button">UV wirkt ohne zugesetztes Desinfektionsmittel, hat aber keine Depotwirkung im Leitungsnetz.</button>
+        <button class="choice" type="button">Ozon dient nur der Enthärtung.</button>
+        <button class="choice" type="button">Chlorung ist immer ohne mögliche Nebenprodukte.</button>
+        <div class="feedback hidden"></div>
+      </div>
+
+      <div class="task">
+        <h3>Freie Aufgabe</h3>
+        <p>Vergleiche Chlorung, UV und Ozon in drei Stichpunkten: Wirkungsweise, Vorteil, Grenze.</p>
+        <textarea class="field" data-save="desinfektion-note"></textarea>
+      </div>
+      <label class="phase"><span>☐ Phase abgeschlossen</span><input type="checkbox" data-tick="phase5"></label>
+    </section>
+
+    <section class="card content-panel hidden" id="panel-beispiele">
+      <div class="stage">Phase 6 · 7 Minuten</div>
+      <h2>Beispiele aus der Praxis</h2>
+      <div class="info"><strong>Wissensbox</strong><p>Für dasselbe Behandlungsziel gibt es oft mehrere denkbare Lösungswege. Entscheidend ist, die Auswahl fachlich zu begründen und Grenzen zu erkennen.</p></div>
+      <div class="moderation"><strong>Moderationsimpuls:</strong> Lass die SuS in Zweierteams argumentieren: „Welche Lösung ist plausibel – und welche Information fehlt noch?“</div>
+
+      <div class="task" data-check="bsp-1" data-correct="1" data-why="Trübung und Schwebstoffe sprechen zuerst für Partikelabtrennung, nicht für Enthärtung.">
+        <h3>Fall A</h3>
+        <p>Das Rohwasser ist stark getrübt und enthält viele Schwebstoffe. Welche Maßnahme ist naheliegend?</p>
+        <button class="choice" type="button">Enthärtung per Ionenaustausch</button>
+        <button class="choice" type="button">Sedimentation und/oder Filtration prüfen</button>
+        <button class="choice" type="button">Nur Ozonung reicht aus</button>
+        <div class="feedback hidden"></div>
+      </div>
+
+      <div class="task" data-check="bsp-2" data-correct="2" data-why="Bei hoher Härte ist eine Enthärtung bzw. ein passendes Verfahren zur Reduktion der Härte zu prüfen.">
+        <h3>Fall B</h3>
+        <p>Im Versorgungsgebiet stören starke Kalkablagerungen. Welcher Ansatz ist am ehesten passend?</p>
+        <button class="choice" type="button">UV-Bestrahlung</button>
+        <button class="choice" type="button">Nur Aktivkohle</button>
+        <button class="choice" type="button">Enthärtung bzw. Verfahren zur Reduktion der Härte prüfen</button>
+        <div class="feedback hidden"></div>
+      </div>
+
+      <div class="task" data-check="bsp-3" data-correct="0" data-why="Bei hygienischer Auffälligkeit ist die mikrobiologische Sicherheit zentral. Die Auswahl des Verfahrens hängt aber von weiteren Rahmenbedingungen ab.">
+        <h3>Fall C</h3>
+        <p>Bei einer Untersuchung gibt es einen mikrobiologischen Auffälligkeitsbefund. Was steht im Zentrum?</p>
+        <button class="choice" type="button">Mikrobiologische Sicherheit und geeignete Desinfektionsstrategie</button>
+        <button class="choice" type="button">Nur die Temperatur absenken</button>
+        <button class="choice" type="button">Nur die Farbe des Wassers ändern</button>
+        <div class="feedback hidden"></div>
+      </div>
+
+      <div class="task">
+        <h3>Mini-Fallanalyse</h3>
+        <p>Wähle einen Fall aus und begründe in 3–4 Sätzen, welche Information dir für eine sichere Entscheidung noch fehlen würde.</p>
+        <textarea class="field" data-save="beispiele-note"></textarea>
+      </div>
+      <label class="phase"><span>☐ Phase abgeschlossen</span><input type="checkbox" data-tick="phase6"></label>
+    </section>
+
+    <section class="card content-panel hidden" id="panel-lernergebnisse">
+      <div class="stage">Phase 7 · 5 Minuten</div>
+      <h2>Lernergebnisse sichern</h2>
+      <div class="info"><strong>Arbeitsauftrag</strong><p>Jetzt werden die wichtigsten Ergebnisse festgehalten. Ziel ist eine knappe, fachlich saubere Sicherung – keine ausführliche Präsentation.</p></div>
+      <div class="moderation"><strong>Moderationsimpuls:</strong> Nutze hier eine kurze Blitzsicherung: erst individuell notieren, dann 1–2 Punkte im Plenum sammeln.</div>
+
+      <div class="task fill-task">
+        <h3>Merksätze vervollständigen</h3>
+        <p class="gapline">Trinkwasserqualität wird über <input class="field gap" data-gap="lernergebnis-0" data-answer="mehrere parameter" aria-label="Lücke A"> beurteilt. Nicht jedes Rohwasser braucht dieselbe <input class="field gap" data-gap="lernergebnis-1" data-answer="behandlung">. Desinfektion ist nur ein <input class="field gap" data-gap="lernergebnis-2" data-answer="teil"> der gesamten Aufbereitung.</p>
+        <button class="btn verify-gaps" type="button">Merksätze prüfen</button>
+        <div class="feedback hidden"></div>
+      </div>
+
+      <div class="task">
+        <h3>3–2–1-Sicherung</h3>
+        <p>Notiere <strong>3 Erkenntnisse</strong>, <strong>2 wichtige Fachbegriffe</strong> und <strong>1 offene Frage</strong>.</p>
+        <textarea class="field" data-save="lernergebnisse-note"></textarea>
+      </div>
+
+      <div class="task">
+        <h3>Zusammenfassung für dein Heft / digitales Heft</h3>
+        <p>Formuliere einen kurzen Gesamtüberblick: Was sind Ziele, wichtige Anforderungen und typische Verfahren der Trinkwasserbehandlung?</p>
+        <textarea class="field" data-save="gesamtzusammenfassung"></textarea>
+      </div>
+      <label class="phase"><span>☐ Phase abgeschlossen</span><input type="checkbox" data-tick="phase7"></label>
+    </section>
+
+    <section class="card">
+      <h2>Ergebnisse sichern</h2>
+      <p>Du kannst dein Lernprotokoll als Textdatei herunterladen oder die Seite als PDF drucken. Alle Texteingaben bleiben zusätzlich auf diesem Gerät gespeichert.</p>
+      <button class="btn" id="export">⬇ Lernprotokoll herunterladen</button>
+      <button class="btn secondary" id="print">🖨 Drucken / PDF</button>
+      <div class="warning" style="margin-top:1rem">Hinweis: Diese Unterrichtsseite ist Lernmaterial und ersetzt keine technische Fachplanung oder den Betrieb realer Trinkwasseranlagen.</div>
+      <p class="source">Vertiefung: Umweltbundesamt zu Aufbereitungsstoffen und Desinfektionsverfahren · fachliche Grundlagen aus deinen Arbeitsblättern „Trinkwasserbehandlung/Allgemeines“ und „Filter".</p>
+    </section>
+  </main>
+
+  <footer>Konzipiert für selbstständiges Arbeiten, Austauschen und Sichern von Lernergebnissen · GitHub-Pages-fähig</footer>
+  <script src="app.js" defer></script>
+</body>
+</html>
