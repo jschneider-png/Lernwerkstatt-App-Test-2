@@ -728,6 +728,11 @@ function checkTask(t,b){
  return [true,'Vergleiche deine Antwort mit der Musterlösung.'];
 }
 function openUnit(bw,i){
+ // Blockwoche 2, Stunde 4: vollständige interaktive Wegweiser-Einheit statt Kurzdialog.
+ if(Number(bw)===2 && Number(i)===3){
+   window.location.href='lernlabor/trinkwasserbehandlung.html';
+   return;
+ }
  const u=LERNEINHEITEN[bw][i],body=document.getElementById('unitBody');
  document.getElementById('unitKicker').textContent='Blockwoche '+bw+' · Stunde '+(i+1);document.getElementById('unitTitle').textContent=WEEKS[bw-1].stunden[i];
  body.innerHTML='<div class="grid2"><div class="box"><h3>🎯 Leitfrage</h3><p>'+esc(u.question)+'</p></div><div class="box"><h3>🧠 Kurz erklärt</h3><ul>'+u.infos.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul></div></div>'+
