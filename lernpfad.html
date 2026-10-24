@@ -622,35 +622,6 @@ html,body{background:#f1f6f9!important;color:#183b51!important}html[data-theme] 
     </div></div>
 <div class="card"><h3 style="margin-top:0">Dein Wochenziel</h3><p class="muted">Bearbeite die vier Stunden in Reihenfolge. Markiere erledigte Stunden und nutze die Lernlandkarte als Einstieg oder Wiederholung.</p><div id="progress" class="badge">0 / 4 Stunden erledigt</div></div></section>
 
-<section class="reserve-modules" id="reserveModules">
-  <div class="card reserve-feature">
-    <div class="reserve-topline">
-      <span class="reserve-kicker">✨ Lernwerkstatt PLUS</span>
-    </div>
-    <h2>Entdecken, Üben, Verstehen</h2>
-    <p>Wähle ein Thema. Entdecke die Grundlagen, bearbeite Aufgaben und überprüfe anschließend dein Wissen.</p>
-    <div class="reserve-grid">
-      <a class="reserve-link" href="wassertechnik/wasserhaerte.html">
-        <div>
-          <span class="mod-no">01</span>
-          <strong style="color:#0b3454 !important;-webkit-text-fill-color:#0b3454 !important">Wasserhärte</strong>
-          <div class="sub">Härtebildner, °dH, Umrechnung und Kalk im Alltag</div>
-        </div>
-        <div class="meta">30 Minuten · Modul öffnen →</div>
-      </a>
-      <a class="reserve-link" href="wassertechnik/ph-wert.html">
-        <div>
-          <span class="mod-no">02</span>
-          <strong style="color:#0b3454 !important;-webkit-text-fill-color:#0b3454 !important">pH-Wert</strong>
-          <div class="sub">pH-Skala, Messwerte, sauer · neutral · basisch</div>
-        </div>
-        <div class="meta">30 Minuten · Modul öffnen →</div>
-      </a>
-
-    </div>
-  </div>
-</section>
-
 <div class="topic-grid" id="topicGrid"></div>
 <div class="card" id="weekFeedback" style="margin:18px 0"><h3>💬 Feedback zu dieser Blockwoche</h3><p>Wie hilfreich waren die Stunden und das virtuelle Lernzimmer? Bewerte den Unterricht und gib freiwillig Verbesserungsvorschläge.</p><a class="btn primary" href="lernlabor/feedback.html">💬 Feedback geben →</a></div>
 </div></main>
@@ -734,6 +705,8 @@ function checkTask(t,b){
  return [true,'Vergleiche deine Antwort mit der Musterlösung.'];
 }
 function openUnit(bw,i){
+ if(Number(bw)===2 && Number(i)===1){window.location.href='wassertechnik/wasserhaerte.html';return;}
+ if(Number(bw)===2 && Number(i)===2){window.location.href='wassertechnik/ph-wert.html';return;}
  // Blockwoche 2, Stunde 4: vollständige interaktive Wegweiser-Einheit statt Kurzdialog.
  if(Number(bw)===2 && Number(i)===3){
    window.location.href='lernlabor/trinkwasserbehandlung.html';
@@ -765,9 +738,6 @@ document.getElementById('mapClose').onclick=closeMap;
 
 function render(){
  const w=WEEKS[active-1];
- const reserve=document.getElementById('reserveModules');
- if(reserve) reserve.hidden=(w.nr!==2);
-
 
  document.getElementById('bwNav').innerHTML=WEEKS.map(x=>'<button data-bw="'+x.nr+'" class="'+(x.nr===active?'active':'')+'">BW '+x.nr+'</button>').join('');
  document.querySelectorAll('[data-bw]').forEach(b=>b.onclick=()=>{active=Number(b.dataset.bw);history.replaceState(null,'','?bw='+active);render();});
@@ -793,8 +763,8 @@ function render(){
      '<h3>'+esc(t)+'</h3>'+
      '<p>'+esc(LERNEINHEITEN[w.nr][i].question)+'</p>'+
      '<div class="hour-actions">'+
-       (w.nr===2 && i===3 ? '<a class="btn secondary" href="lernlabor/trinkwasserbehandlung.html?v=3">📘 Lerneinheit öffnen →</a>' : '<button class="btn secondary unit" data-i="'+i+'">📘 Lerneinheit öffnen →</button>')+
-       '<a class="btn material-page-btn" href="'+materialUrl+'">🎓 Mebis & Materialien →</a>'+
+       (w.nr===2 && i===3 ? '<a class="btn secondary" href="lernlabor/trinkwasserbehandlung.html?v=5">Lerneinheit öffnen →</a>' : w.nr===2 && i===1 ? '<a class="btn secondary" href="wassertechnik/wasserhaerte.html">Lerneinheit öffnen →</a>' : w.nr===2 && i===2 ? '<a class="btn secondary" href="wassertechnik/ph-wert.html">Lerneinheit öffnen →</a>' : '<button class="btn secondary unit" data-i="'+i+'">Lerneinheit öffnen →</button>')+
+       (!(w.nr===2 && (i===1 || i===2)) ? '<a class="btn material-page-btn" href="'+materialUrl+'">Mebis & Materialien →</a>' : '')+
      '</div>'+
    '</article>';
  }).join('');
