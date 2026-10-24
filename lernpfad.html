@@ -764,7 +764,7 @@ function render(){
      '<p>'+esc(LERNEINHEITEN[w.nr][i].question)+'</p>'+
      '<div class="hour-actions">'+
        (w.nr===2 && i===3 ? '<a class="btn secondary" href="lernlabor/trinkwasserbehandlung.html?v=5">Lerneinheit öffnen →</a>' : w.nr===2 && i===1 ? '<a class="btn secondary" href="wassertechnik/wasserhaerte.html">Lerneinheit öffnen →</a>' : w.nr===2 && i===2 ? '<a class="btn secondary" href="wassertechnik/ph-wert.html">Lerneinheit öffnen →</a>' : '<button class="btn secondary unit" data-i="'+i+'">Lerneinheit öffnen →</button>')+
-       (!(w.nr===2 && (i===1 || i===2)) ? '<a class="btn material-page-btn" href="'+materialUrl+'">Mebis & Materialien →</a>' : '')+
+       (!(w.nr===2 && (i===1 || i===2)) ? '<a class="btn material-page-btn" href="'+materialUrl+'">'+(w.nr===2 && i===3?'Materialien →':'Mebis & Materialien →')+'</a>' : '')+
      '</div>'+
    '</article>';
  }).join('');
