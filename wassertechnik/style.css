@@ -60,3 +60,13 @@
 .guided-water-hardness main{padding-top:3px}
 .guided-water-hardness section[id^="lernphase-"]{scroll-margin-top:125px}
 @media(max-width:700px){.flow-grid{grid-template-columns:1fr}.flow-overview-head img{width:95px}.floating-timer{top:auto;bottom:10px;right:10px;width:208px;padding:9px 11px}.float-time{font-size:1.65rem}.guided-water-hardness section[id^="lernphase-"]{scroll-margin-top:16px}.guided-water-hardness main{padding-bottom:180px}}
+
+/* Kompakter, zurückhaltender Phasentimer für Wasserhärte und pH */
+.floating-timer{top:10px;right:10px;width:166px;padding:8px 10px;border:1px solid #cadfe9;border-radius:11px;background:#f8fcfe;color:#244b62;box-shadow:0 3px 14px rgba(22,67,94,.11)}
+.float-header{color:#466a7d;font-size:.67rem;gap:4px}.float-header span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.floating-timer button{padding:5px 6px;border:1px solid #c6dae6;background:#fff;color:#215671;font-size:.68rem;border-radius:7px}
+.float-time{font-size:1.32rem;font-weight:800;letter-spacing:0;line-height:1.12;color:#174a69;margin:4px 0}
+.float-controls{gap:4px}.float-controls button{font-size:.67rem;min-width:0}
+.float-status{font-size:.61rem;line-height:1.2;margin-top:4px;color:#648092}
+.floating-timer.time-up{border-color:#e7be91;background:#fff8f0}.floating-timer.time-up .float-time{color:#8e5429}
+@media(max-width:700px){.floating-timer{top:auto;bottom:8px;right:8px;width:155px;padding:7px 8px}.float-time{font-size:1.22rem}.guided-water-hardness main{padding-bottom:100px}}
