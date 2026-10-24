@@ -11,7 +11,7 @@
   ];
   const $id = id => document.getElementById(id);
   document.addEventListener('DOMContentLoaded', () => {
-    let active = -1, left = 180, running = false, deadline = 0;
+    let active = -1, left = phases[0].seconds, running = false, deadline = 0;
     const widget = $id('floatingTimer'), time = $id('floatTime'), phaseLabel=$id('floatPhase'), status=$id('floatStatus');
     const toggle=$id('floatToggle'), restart=$id('floatRestart');
     const format = s => { const n=Math.max(0,Math.ceil(s)); return String(Math.floor(n/60)).padStart(2,'0')+':'+String(n%60).padStart(2,'0'); };
