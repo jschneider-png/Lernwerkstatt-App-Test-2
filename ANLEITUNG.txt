@@ -1,11 +1,7 @@
-BW01 – Interaktiver Lerncheck
-
-1. Beide HTML-Dateien in das Hauptverzeichnis deines GitHub-Repositories hochladen.
-2. Die vorhandene wiederholung.html ersetzen.
-3. Die vorhandene wiederholungen-inhalte.js NICHT ersetzen.
-4. BW01 öffnen: wiederholung.html?bw=1
-5. BW02 bis BW12 bleiben unverändert.
-
-BW01 enthält 16 automatisch geprüfte Aufgaben in 4 Stationen. 100 XP maximal.
-Die Aufgaben laufen direkt auf GitHub Pages und sind keine importierbaren H5P-Dateien.
-Es erfolgt keine automatische mebis-Notenübertragung.
+1. In GitHub zuerst eine Sicherheitskopie des aktuellen index.html speichern oder neuen Branch erstellen.
+2. Die vier Dateien manifest.webmanifest, apple-touch-icon.png, icon-192.png und icon-512.png in das Hauptverzeichnis des Repositories hochladen.
+3. index.html bearbeiten und die Zeilen aus HEAD-EINFUEGEN.txt direkt nach <head> einfügen. Bestehende Zeilen nicht löschen.
+4. Commit ausführen und GitHub Pages Veröffentlichung abwarten.
+5. Webseite im Safari auf iPhone öffnen und testen. Altes Homescreen-Symbol bei Bedarf entfernen und Webseite erneut Zum Home-Bildschirm hinzufügen, Option Als Web-App öffnen aktivieren.
+6. Bei Problemen Änderungen an index.html rückgängig machen; neue Dateien können vorerst bleiben.
+Hinweis: Kein Service Worker, keine Offline-Garantie. Unterseiten können gesonderte Anpassungen benötigen.
