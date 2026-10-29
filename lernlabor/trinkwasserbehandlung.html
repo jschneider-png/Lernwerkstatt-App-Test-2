@@ -24,6 +24,8 @@
 @keyframes methodAppear{from{opacity:.2;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 @media(max-width:600px){.method-media{grid-template-columns:1fr}.method-tabs .method-tab{flex:1 1 43%}.osm-tabs .osm-tab{flex:1 1 43%}}
 @media(prefers-reduced-motion:reduce){.method-view,.osm-view{animation:none}.method-tab,.osm-tab{transition:none}}
+</style><style id="softeningStyles">
+.soft-tabs{display:flex;flex-wrap:wrap;gap:.55rem;margin:1rem 0}.soft-tab{background:#ebf5fc;color:#145171;border:2px solid #accddf;border-radius:12px;padding:.75rem .9rem;font:700 1rem system-ui;cursor:pointer}.soft-tab.active{background:#176b90;color:#fff}.soft-panel.hidden{display:none!important}.soft-panel{animation:methodAppear .3s ease}.soft-diagram{margin:12px 0;border-radius:16px;overflow:hidden;border:1px solid #b6d5e4}.soft-ions-in{animation:softMoveIn 4s ease-in-out infinite alternate}.soft-ions-out{animation:softMoveOut 4s ease-in-out infinite alternate}@keyframes softMoveIn{to{transform:translateX(100px)}}@keyframes softMoveOut{to{transform:translateX(80px)}}.soft-form{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}.soft-form label{font-weight:700;display:grid;gap:6px}.soft-result{background:#e9f6ed;border:2px solid #b2d5c0;border-radius:14px;padding:16px;margin:14px 0;font-weight:700;line-height:1.5}.soft-flow{display:flex;gap:.4rem;flex-wrap:wrap;align-items:center;padding:12px;background:#edf7fb;border-radius:12px}.soft-flow span{padding:.45rem;background:#fff;border-radius:8px}@media(prefers-reduced-motion:reduce){.soft-ions-in,.soft-ions-out,.soft-panel{animation:none}}
 </style></head>
 <body data-unit="behandlung-v2">
   <header>
@@ -219,9 +221,10 @@
  <div class="stage">Phase 4 · 11 Minuten</div>
  <h2>Verfahren der Trinkwasserbehandlung</h2>
  <div class="student-step"><strong>Dein Auftrag:</strong> Wähle einen Themen-Button. Erkunde besonders die Filtration und vergleiche weitere Verfahren. Die Umkehrosmose ist ein <strong>separater freiwilliger Exkurs</strong>.<div class="student-step-note">Bearbeite die Aufgaben in deinem eigenen Tempo und markiere anschließend „Phase abgeschlossen“.</div></div>
- <div class="info"><strong>Überblick</strong><p>Welches Verfahren hilft, hängt von Wasserqualität, Verunreinigung und Behandlungsziel ab. Nicht jedes Trinkwasser benötigt alle Verfahren. <strong>Ionenaustausch</strong> wird hier nur kurz eingeordnet; die Vertiefung findet im weiterführenden Unterricht statt.</p></div>
+ <div class="info"><strong>Überblick</strong><p>Welches Verfahren hilft, hängt von Wasserqualität, Verunreinigung und Behandlungsziel ab. Nicht jedes Trinkwasser benötigt alle Verfahren. <strong>Ionenaustausch zur Enthärtung</strong> wird hier praxisnah behandelt: Funktion, Regeneration und Natriumberechnung.</p></div>
  <nav class="method-tabs" aria-label="Themen der Trinkwasserbehandlung">
  <button type="button" class="method-tab active" data-method-tab="filtration" aria-selected="true">💧 Filtration</button>
+ <button type="button" class="method-tab" data-method-tab="enthaertung" aria-selected="false">🔁 Wasserenthärtung</button>
  <button type="button" class="method-tab" data-method-tab="ueberblick" aria-selected="false">🧪 Weitere Verfahren</button>
  <button type="button" class="method-tab" data-method-tab="uebungen" aria-selected="false">✍️ Aufgaben</button>
  <button type="button" class="method-tab method-special" data-method-tab="osmose" aria-selected="false">🔬 Exkurs: Umkehrosmose</button>
@@ -232,6 +235,62 @@
  <div class="method-tiles"><article><h4>Partikelfilter</h4><p>Hält feste Schwebstoffe zurück; wichtig z. B. als Schutz nachgeschalteter Bauteile.</p></article><article><h4>Sand- und Mehrschichtfilter</h4><p>Nutzen ein Filterbett; größere Anlagen verwenden sie zur Reduktion von Trübung.</p></article><article><h4>Membranfiltration</h4><p>Je nach Membrantyp können auch sehr kleine Partikel und Mikroorganismen zurückgehalten werden.</p></article></div>
  <div class="task"><h4>Überlege selbst</h4><p>Welche Stoffe hält ein einfacher Partikelfilter zurück – und was kann er nicht leisten?</p><textarea class="field" data-save="filtration-reflexion" placeholder="Meine Erklärung …"></textarea></div>
  </div>
+ <div class="method-view hidden" data-method-view="enthaertung" id="enthaertung-lernblock">
+ <div class="stage">Schwerpunkt Wohngebäude · Filtration und Enthärtung</div>
+ <h3>Wasserenthärtung: weniger Härte, mehr Natrium</h3>
+ <p>In einer Wohnanlage entstehen starke Kalkablagerungen an Armaturen und Warmwasserbereitern. Eine mögliche technische Maßnahme ist die <strong>Enthärtung mit Natrium-Ionenaustausch</strong>. Sie reduziert Calcium- und Magnesiumionen, die die Wasserhärte verursachen – nicht aber Sand oder Rost.</p>
+ <nav class="soft-tabs" aria-label="Bereiche zur Wasserenthärtung">
+ <button class="soft-tab active" type="button" data-soft-tab="funktion" aria-pressed="true">1 · Funktion &amp; Animation</button>
+ <button class="soft-tab" type="button" data-soft-tab="salz" aria-pressed="false">2 · Salz &amp; Regeneration</button>
+ <button class="soft-tab" type="button" data-soft-tab="rechner" aria-pressed="false">3 · Natrium-Rechner</button>
+ <button class="soft-tab" type="button" data-soft-tab="grenzen" aria-pressed="false">4 · Härte &amp; Grenzwerte</button>
+ </nav>
+ <section class="soft-panel" data-soft-panel="funktion">
+ <div class="info"><strong>Was passiert?</strong><p>Hartes Wasser fließt durch Kunstharzkügelchen. <strong>Calcium (Ca²⁺) und Magnesium (Mg²⁺)</strong> bleiben am Harz hängen. Stattdessen gelangen <strong>Natriumionen (Na⁺)</strong> ins Wasser. Das Ergebnis: weniger Kalkbildung. Die Enthärtung ist kein mechanischer Schmutzfilter.</p></div>
+ <div class="soft-diagram" role="img" aria-label="Animiertes Schema: Calcium und Magnesium im Zulauf bleiben am Harz hängen. Natriumionen wandern in den Ablauf.">
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 280" style="width:100%;height:auto">
+ <rect width="820" height="280" rx="22" fill="#eaf6fc"/>
+ <g font-family="Arial,sans-serif" fill="#173e54"><text x="24" y="35" font-size="20" font-weight="bold">Hartes Wasser</text><text x="340" y="35" font-size="20" font-weight="bold">Ionenaustauscherharz</text><text x="630" y="35" font-size="20" font-weight="bold">Enthärtetes Wasser</text></g>
+ <path d="M30 145 H286" stroke="#2b8fb7" stroke-width="9" stroke-linecap="round"/>
+ <path d="M522 145 H785" stroke="#2b8fb7" stroke-width="9" stroke-linecap="round"/>
+ <rect x="290" y="52" width="232" height="190" rx="25" fill="#fff" stroke="#377998" stroke-width="4"/>
+ <g fill="#f7ca6f" stroke="#a97728" stroke-width="2"><circle cx="335" cy="95" r="23"/><circle cx="407" cy="95" r="23"/><circle cx="476" cy="95" r="23"/><circle cx="335" cy="159" r="23"/><circle cx="407" cy="159" r="23"/><circle cx="476" cy="159" r="23"/><circle cx="370" cy="216" r="18"/><circle cx="446" cy="216" r="18"/></g>
+ <g class="soft-ions-in"><circle cx="80" cy="112" r="22" fill="#cb7736"/><text x="80" y="118" text-anchor="middle" font-size="16" fill="white" font-weight="bold">Ca²⁺</text><circle cx="147" cy="172" r="22" fill="#8757c7"/><text x="147" y="178" text-anchor="middle" font-size="16" fill="white" font-weight="bold">Mg²⁺</text></g>
+ <g class="soft-ions-out"><circle cx="615" cy="112" r="23" fill="#167db4"/><text x="615" y="118" text-anchor="middle" font-size="17" fill="white" font-weight="bold">Na⁺</text><circle cx="699" cy="172" r="23" fill="#167db4"/><text x="699" y="178" text-anchor="middle" font-size="17" fill="white" font-weight="bold">Na⁺</text></g>
+ <g font-family="Arial,sans-serif" fill="#21475d" font-size="16"><text x="22" y="260">Ca²⁺ und Mg²⁺ im Zulauf</text><text x="310" y="260">Härtebildner bleiben am Harz</text><text x="617" y="260">Na⁺ im Ablauf</text></g>
+ </svg></div>
+ <p class="meta">Vereinfachte, schematische Animation – nicht maßstabsgetreu. Das Harz tauscht zwei einwertige Natriumionen gegen ein zweiwertiges Calcium- oder Magnesiumion aus.</p>
+ <div class="task"><strong>Praxisfrage:</strong> Warum hilft ein Hauswasser-Partikelfilter nicht gegen gelöste Härtebildner?<textarea class="field" data-save="enthaertung-vergleich" placeholder="Deine Erklärung ..."></textarea></div>
+ </section>
+ <section class="soft-panel hidden" data-soft-panel="salz">
+ <h4>Was macht das Regeneriersalz NaCl?</h4>
+ <div class="method-tiles"><article><h4>1 · Im Betrieb</h4><p>Das Harz nimmt Ca²⁺/Mg²⁺ auf und gibt Na⁺ an das Wasser ab. Das Harz erschöpft sich nach und nach.</p></article><article><h4>2 · Salzbehälter</h4><p>Regeneriersalz (<strong>Natriumchlorid, NaCl</strong>) wird mit Wasser zur Salzlösung, der <strong>Sole</strong>.</p></article><article><h4>3 · Regeneration</h4><p>Konzentrierte Sole durchströmt das Harz. Die vielen Na⁺ verdrängen Ca²⁺/Mg²⁺ vom Harz. Es wird anschließend gespült.</p></article><article><h4>4 · Abwasser</h4><p>Die verdrängten Härtebildner und überschüssige Sole gelangen ins Regenerationsabwasser – nicht in den normalen Trinkwasserablauf.</p></article></div>
+ <div class="soft-flow"><span>Härtebildner am Harz</span><span>→</span><span>NaCl-Sole</span><span>→</span><span>Harz wieder in Na-Form</span><span>→</span><span>Spülen / Abwasser</span></div>
+ <p><strong>Wichtig:</strong> Das Salz wird vor allem zur <strong>Regeneration</strong> gebraucht. Man gibt nicht einfach Kochsalz in das Trinkwasser. Die Natriumzunahme im enthärteten Wasser entsteht durch den Ionenaustausch am Harz.</p>
+ <p class="meta">Vereinfachte Reaktion im Betrieb: 2 R–Na + Ca²⁺ → R₂–Ca + 2 Na⁺ (entsprechend für Mg²⁺).</p>
+ </section>
+ <section class="soft-panel hidden" data-soft-panel="rechner">
+ <h4>Praxisbeispiel: Kunde möchte von 24 °dH auf 4 °dH</h4>
+ <p>Bei der Natrium-Ionenaustauscher-Enthärtung steigt der Natriumgehalt rechnerisch um ungefähr <strong>8,2 mg/l pro 1 °dH</strong> Härtereduktion.</p>
+ <div class="soft-form">
+ <label>Ausgangshärte (°dH)<input class="field" type="number" id="soft-hard-in" min="0" max="100" step="0.1" value="24"></label>
+ <label>Zielhärte (°dH)<input class="field" type="number" id="soft-hard-out" min="0" max="100" step="0.1" value="4"></label>
+ <label>Natrium im Zulauf (mg/l)<input class="field" type="number" id="soft-sodium-in" min="0" max="1000" step="1" value="30"></label>
+ </div>
+ <div class="soft-result" id="soft-result" role="status" aria-live="polite">24 − 4 = 20 °dH Härtereduktion · 20 × 8,2 = ca. 164 mg/l zusätzliches Natrium · 30 + 164 = ca. 194 mg/l Natrium im Ablauf.</div>
+ <p><strong>Natrium-Parameterwert: 200 mg/l.</strong> Die 164 mg/l sind <strong>zusätzlich</strong> zum bereits vorhandenen Natrium. Ob die Maßnahme zulässig und sinnvoll ist, hängt außerdem von Wasseranalyse, Installation und fachgerechter Planung ab.</p>
+ <div class="task"><strong>Schülerauftrag:</strong> Ändere den Ausgangsnatriumwert auf 45 mg/l. Was passiert mit dem Ergebnis? Begründe deine Empfehlung an den Kunden.<textarea class="field" data-save="enthaertung-rechenbeispiel" placeholder="Meine Rechnung und Entscheidung ..."></textarea></div>
+ </section>
+ <section class="soft-panel hidden" data-soft-panel="grenzen">
+ <h4>Wasserhärte richtig einordnen</h4>
+ <div class="method-tiles"><article><h4>Weich</h4><p>Weniger als <strong>8,4 °dH</strong></p></article><article><h4>Mittel</h4><p><strong>8,4 bis 14 °dH</strong></p></article><article><h4>Hart</h4><p>Mehr als <strong>14 °dH</strong></p></article></div>
+ <div class="info"><strong>Was ist erlaubt?</strong><p>Diese Härtebereiche dienen der Einordnung; die Trinkwasserverordnung legt <strong>keinen allgemeinen Höchstwert für die Wasserhärte</strong> fest. Auch 24 °dH sind daher nicht allein wegen der Härte verboten. Für <strong>Natrium</strong> beträgt der Parameterwert dagegen <strong>200 mg/l</strong>.</p></div>
+ <p><strong>Kundenbeispiel:</strong> Von 24 auf 4 °dH bedeutet 20 °dH weniger Härte und rechnerisch etwa <strong>164 mg/l mehr Natrium</strong>. Das vorhandene Natrium zählt mit. Maximal wären damit rein rechnerisch etwa <strong>36 mg/l Ausgangsnatrium</strong> möglich, um 200 mg/l nicht zu überschreiten.</p>
+ <p><strong>Für Wohnanlagen gilt:</strong> Enthärtung ist keine Pflicht allein wegen hartem Wasser. Eine Anlage muss zu Bedarf, Werkstoffen, Hygiene und Wartungsorganisation passen. Eine möglichst niedrige Zielhärte ist nicht automatisch die sinnvollste Einstellung.</p>
+ <p class="source">Fachliche Orientierung: <a href="https://www.gesetze-im-internet.de/trinkwv_2023/" target="_blank" rel="noopener noreferrer">Trinkwasserverordnung</a> · <a href="https://www.gesetze-im-internet.de/wmhg/" target="_blank" rel="noopener noreferrer">Wasch- und Reinigungsmittelgesetz (Härtebereiche)</a>.</p>
+ </section>
+ </div>
+ 
  <div class="method-view hidden" data-method-view="ueberblick">
  <h3>Weitere Möglichkeiten – anklicken und vergleichen</h3>
  <p>Die folgenden Verfahren sind bewusst als <strong>Kurzüberblick</strong> angelegt.</p>
@@ -439,5 +498,16 @@ document.addEventListener('click',function(ev){
  container.querySelectorAll('button['+attr+']').forEach(el=>{const active=el===btn;el.classList.toggle('active',active);el.setAttribute('aria-selected',String(active));});
  container.querySelectorAll('['+viewAttr+']').forEach(el=>el.classList.toggle('hidden',el.getAttribute(viewAttr)!==selected));
 });
+</script><script id="softeningScript">
+document.addEventListener('click',function(e){const btn=e.target.closest('[data-soft-tab]');if(!btn)return;const root=btn.closest('#enthaertung-lernblock');if(!root)return;const val=btn.dataset.softTab;root.querySelectorAll('[data-soft-tab]').forEach(b=>{const active=b===btn;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active))});root.querySelectorAll('[data-soft-panel]').forEach(p=>p.classList.toggle('hidden',p.dataset.softPanel!==val))});
+function updateSoftResult(){
+ const a=document.getElementById('soft-hard-in'),b=document.getElementById('soft-hard-out'),c=document.getElementById('soft-sodium-in'),out=document.getElementById('soft-result');if(!a||!b||!c||!out)return;
+ const start=Number(a.value),goal=Number(b.value),na=Number(c.value);
+ if([a,b,c].some(x=>x.value.trim()==='')||![start,goal,na].every(Number.isFinite)||start<0||goal<0||goal>start||na<0){out.textContent='Bitte gültige Werte eingeben: Zielhärte darf nicht höher als die Ausgangshärte sein.';return}
+ const delta=start-goal,add=delta*8.2,total=na+add;
+ const fmt=n=>n.toLocaleString('de-DE',{maximumFractionDigits:1});
+ out.textContent=fmt(start)+' − '+fmt(goal)+' = '+fmt(delta)+' °dH weniger Härte · '+fmt(delta)+' × 8,2 = '+fmt(add)+' mg/l zusätzliches Natrium · '+fmt(na)+' + '+fmt(add)+' = '+fmt(total)+' mg/l Natrium im Ablauf. '+(total>200?'Achtung: rechnerisch über dem Parameterwert von 200 mg/l.':'Rechnerisch nicht über dem Natrium-Parameterwert von 200 mg/l; weitere fachliche Prüfung bleibt nötig.');
+}
+document.addEventListener('input',function(e){if(e.target.matches('#soft-hard-in,#soft-hard-out,#soft-sodium-in'))updateSoftResult()});
 </script></body>
 </html>
