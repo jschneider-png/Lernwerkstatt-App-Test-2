@@ -517,7 +517,7 @@ document.addEventListener('click',function(ev){
  container.querySelectorAll('['+viewAttr+']').forEach(el=>el.classList.toggle('hidden',el.getAttribute(viewAttr)!==selected));
 });
 </script><script id="softeningScript">
-document.addEventListener('click',function(e){const btn=e.target.closest('[data-soft-tab]');if(!btn)return;const root=btn.closest('#enthaertung-lernblock');if(!root)return;const val=btn.dataset.softTab;root.querySelectorAll('[data-soft-tab]').forEach(b=>{const active=b===btn;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active))});root.querySelectorAll('[data-soft-panel]').forEach(p=>p.classList.toggle('hidden',p.dataset.softPanel!==val))});
+document.addEventListener('click',function(e){const btn=e.target.closest('[data-soft-tab]');if(!btn)return;const root=btn.closest('#enthaertung-lernblock')||btn.closest('.explore-full-dialog');if(!root)return;const val=btn.dataset.softTab;root.querySelectorAll('[data-soft-tab]').forEach(b=>{const active=b===btn;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active))});root.querySelectorAll('[data-soft-panel]').forEach(p=>p.classList.toggle('hidden',p.dataset.softPanel!==val))});
 function updateSoftResult(){
  const a=document.getElementById('soft-hard-in'),b=document.getElementById('soft-hard-out'),c=document.getElementById('soft-sodium-in'),out=document.getElementById('soft-result');if(!a||!b||!c||!out)return;
  const start=Number(a.value),goal=Number(b.value),na=Number(c.value);
