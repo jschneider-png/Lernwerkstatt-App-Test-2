@@ -415,7 +415,18 @@ html[data-theme="christmas"] .season-banner.christmas-banner{
 /* Neutraler Lernwerkstatt-Stil – dauerhaft, auch vor dem Laden von JS */
 html,body{background:#f1f6f9!important;color:#183b51!important}html[data-theme] body{background:#f1f6f9!important;color:#183b51!important}body:before,body:after{display:none!important}.season-decor,.halloween-decor,.christmas-decor,.theme-season-label,.theme-switcher{display:none!important}html[data-theme] .season-decor{display:none!important}header,.hero,.sidebar{background:#f7fbfd!important;color:#183b51!important}.card,.panel,.box,.topic-card,.term,.quizq,.sample,.flash,.task{background:#fff!important;color:#193b53!important;border-color:#d2e2eb!important}input,textarea,select,.field{background:#fff!important;color:#193b53!important;border-color:#a5c4d4!important}input::placeholder,textarea::placeholder{color:#688293!important}a{color:#146f9e}
 </style><script src="saison.js?v=neutral-20261024"></script>
-<style id="globalHomeStyle">#globalHomeLink{position:fixed;right:16px;bottom:18px;z-index:9999;display:inline-flex;align-items:center;gap:7px;padding:11px 16px;border-radius:999px;background:#0d5073;color:#fff!important;text-decoration:none;font:700 14px/1.3 system-ui,-apple-system,Segoe UI,sans-serif;box-shadow:0 5px 18px #102a3a55;border:2px solid #fff}#globalHomeLink:hover,#globalHomeLink:focus-visible{background:#087ca6;outline:3px solid #9cdbf1;outline-offset:2px}@media(max-width:500px){#globalHomeLink{right:10px;bottom:10px;padding:10px 12px;font-size:13px}}</style></head><body>
+<style id="globalHomeStyle">#globalHomeLink{position:fixed;right:16px;bottom:18px;z-index:9999;display:inline-flex;align-items:center;gap:7px;padding:11px 16px;border-radius:999px;background:#0d5073;color:#fff!important;text-decoration:none;font:700 14px/1.3 system-ui,-apple-system,Segoe UI,sans-serif;box-shadow:0 5px 18px #102a3a55;border:2px solid #fff}#globalHomeLink:hover,#globalHomeLink:focus-visible{background:#087ca6;outline:3px solid #9cdbf1;outline-offset:2px}@media(max-width:500px){#globalHomeLink{right:10px;bottom:10px;padding:10px 12px;font-size:13px}}</style>
+<!-- Mobile App-Navigation: Zusatz, bestehende Lerninhalte bleiben unverändert -->
+<style id="lw-mobile-nav-style">
+.lw-mobile-nav{display:none!important}
+@media(max-width:700px){
+ body{padding-bottom:calc(82px + env(safe-area-inset-bottom, 0px))!important}
+ .lw-mobile-nav{position:fixed!important;left:0;right:0;bottom:0;z-index:2147483000;display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr));background:#103b59;color:white;padding:7px 5px calc(7px + env(safe-area-inset-bottom, 0px));box-shadow:0 -4px 18px #0003;font-family:Arial,sans-serif}
+ .lw-mobile-nav a{display:flex!important;flex-direction:column;align-items:center;justify-content:center;gap:4px;color:#fff!important;text-decoration:none!important;font-size:12px!important;font-weight:600!important;min-height:49px;padding:3px 1px!important;background:transparent!important;border:0!important;line-height:1.2!important}
+ .lw-mobile-nav a span:first-child{font-size:21px!important;line-height:1!important}
+}
+</style>
+</head><body>
 <header><div class='container nav'><a class='brand' href='index.html'><span style='font-size:1.5rem'>💧</span><span><strong>Lernwerkstatt Sanitärtechnik</strong><small>11. Klasse</small></span></a><nav class='menu'><a href='index.html'>Startseite</a></nav></div></header>
 <main>
 <section class='section' id='tafelbilder'><div class='container'><div class='section-head'><div><div class='eyebrow'>Tafelbilder</div><h2>Board-Inhalte und Übersichten</h2></div><p>Cloud-, Mebis- oder PDF-Sammlungen zentral verlinken.</p></div>
@@ -597,4 +608,6 @@ for(let i=1;i<=12;i++){const x=ARBEITSBLATT_LINKS[i]||{};setLink('ab-'+i,x.ab);s
 })();
 </script>
 
-<a id="globalHomeLink" href="index.html" aria-label="Zur Startseite der Lernwerkstatt">⌂ Zur Startseite</a></body></html>
+<a id="globalHomeLink" href="index.html" aria-label="Zur Startseite der Lernwerkstatt">⌂ Zur Startseite</a>
+<nav class="lw-mobile-nav" aria-label="Mobile App-Navigation"><a href="index.html"><span aria-hidden="true">⌂</span><span>Start</span></a><a href="index.html#klassenzimmer"><span aria-hidden="true">▣</span><span>Klasse</span></a><a href="lernpfad.html?bw=1"><span aria-hidden="true">▦</span><span>Wochen</span></a><a href="lernorte.html#materialien"><span aria-hidden="true">▤</span><span>Material</span></a></nav>
+</body></html>
