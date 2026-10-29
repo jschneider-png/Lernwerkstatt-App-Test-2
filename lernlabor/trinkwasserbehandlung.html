@@ -275,8 +275,9 @@
  <div class="soft-form">
  <label>Ausgangshärte (°dH)<input class="field" type="number" id="soft-hard-in" min="0" max="100" step="0.1" value="24"></label>
  <label>Zielhärte (°dH)<input class="field" type="number" id="soft-hard-out" min="0" max="100" step="0.1" value="4"></label>
- <label>Natrium im Zulauf (mg/l)<input class="field" type="number" id="soft-sodium-in" min="0" max="1000" step="1" value="30"></label>
+ <label><strong>Bereits vorhandenes Natrium im Zulauf (mg/l) – Wasseranalyse!</strong><input class="field" type="number" id="soft-sodium-in" min="0" max="1000" step="1" value="30"></label>
  </div>
+ <p class="info"><strong>Unbedingt den Natriumwert aus der Wasseranalyse eintragen!</strong> Die Wasserhärte allein reicht nicht aus. Das bereits vorhandene Natrium und das durch die Enthärtung zusätzlich eingetragene Natrium werden zusammengezählt. Die 30 mg/l sind nur ein fiktiver Übungswert.</p>
  <div class="soft-result" id="soft-result" role="status" aria-live="polite">24 − 4 = 20 °dH Härtereduktion · 20 × 8,2 = ca. 164 mg/l zusätzliches Natrium · 30 + 164 = ca. 194 mg/l Natrium im Ablauf.</div>
  <p><strong>Natrium-Parameterwert: 200 mg/l.</strong> Die 164 mg/l sind <strong>zusätzlich</strong> zum bereits vorhandenen Natrium. Ob die Maßnahme zulässig und sinnvoll ist, hängt außerdem von Wasseranalyse, Installation und fachgerechter Planung ab.</p>
  <div class="task"><strong>Schülerauftrag:</strong> Ändere den Ausgangsnatriumwert auf 45 mg/l. Was passiert mit dem Ergebnis? Begründe deine Empfehlung an den Kunden.<textarea class="field" data-save="enthaertung-rechenbeispiel" placeholder="Meine Rechnung und Entscheidung ..."></textarea></div>
@@ -285,7 +286,7 @@
  <h4>Wasserhärte richtig einordnen</h4>
  <div class="method-tiles"><article><h4>Weich</h4><p>Weniger als <strong>8,4 °dH</strong></p></article><article><h4>Mittel</h4><p><strong>8,4 bis 14 °dH</strong></p></article><article><h4>Hart</h4><p>Mehr als <strong>14 °dH</strong></p></article></div>
  <div class="info"><strong>Was ist erlaubt?</strong><p>Diese Härtebereiche dienen der Einordnung; die Trinkwasserverordnung legt <strong>keinen allgemeinen Höchstwert für die Wasserhärte</strong> fest. Auch 24 °dH sind daher nicht allein wegen der Härte verboten. Für <strong>Natrium</strong> beträgt der Parameterwert dagegen <strong>200 mg/l</strong>.</p></div>
- <p><strong>Kundenbeispiel:</strong> Von 24 auf 4 °dH bedeutet 20 °dH weniger Härte und rechnerisch etwa <strong>164 mg/l mehr Natrium</strong>. Das vorhandene Natrium zählt mit. Maximal wären damit rein rechnerisch etwa <strong>36 mg/l Ausgangsnatrium</strong> möglich, um 200 mg/l nicht zu überschreiten.</p>
+ <p><strong>Kundenbeispiel:</strong> Von 24 auf 4 °dH bedeutet 20 °dH weniger Härte und rechnerisch etwa <strong>164 mg/l mehr Natrium</strong>. Das <strong>bereits vorhandene Natrium aus der Wasseranalyse</strong> zählt mit! Maximal wären damit rein rechnerisch etwa <strong>36 mg/l Ausgangsnatrium</strong> möglich, um 200 mg/l nicht zu überschreiten.</p>
  <p><strong>Für Wohnanlagen gilt:</strong> Enthärtung ist keine Pflicht allein wegen hartem Wasser. Eine Anlage muss zu Bedarf, Werkstoffen, Hygiene und Wartungsorganisation passen. Eine möglichst niedrige Zielhärte ist nicht automatisch die sinnvollste Einstellung.</p>
  <p class="source">Fachliche Orientierung: <a href="https://www.gesetze-im-internet.de/trinkwv_2023/" target="_blank" rel="noopener noreferrer">Trinkwasserverordnung</a> · <a href="https://www.gesetze-im-internet.de/wmhg/" target="_blank" rel="noopener noreferrer">Wasch- und Reinigungsmittelgesetz (Härtebereiche)</a>.</p>
  </section>
@@ -504,9 +505,9 @@ function updateSoftResult(){
  const a=document.getElementById('soft-hard-in'),b=document.getElementById('soft-hard-out'),c=document.getElementById('soft-sodium-in'),out=document.getElementById('soft-result');if(!a||!b||!c||!out)return;
  const start=Number(a.value),goal=Number(b.value),na=Number(c.value);
  if([a,b,c].some(x=>x.value.trim()==='')||![start,goal,na].every(Number.isFinite)||start<0||goal<0||goal>start||na<0){out.textContent='Bitte gültige Werte eingeben: Zielhärte darf nicht höher als die Ausgangshärte sein.';return}
- const delta=start-goal,add=delta*8.2,total=na+add;
+ const delta=start-goal,add=delta*8.2,total=na+add; const room=Math.max(0,200-na);const maxReduction=room/8.2; const minGoal=Math.max(0,start-maxReduction);
  const fmt=n=>n.toLocaleString('de-DE',{maximumFractionDigits:1});
- out.textContent=fmt(start)+' − '+fmt(goal)+' = '+fmt(delta)+' °dH weniger Härte · '+fmt(delta)+' × 8,2 = '+fmt(add)+' mg/l zusätzliches Natrium · '+fmt(na)+' + '+fmt(add)+' = '+fmt(total)+' mg/l Natrium im Ablauf. '+(total>200?'Achtung: rechnerisch über dem Parameterwert von 200 mg/l.':'Rechnerisch nicht über dem Natrium-Parameterwert von 200 mg/l; weitere fachliche Prüfung bleibt nötig.');
+ out.textContent='1. Ausgangsnatrium: '+fmt(na)+' mg/l. 2. Härtereduktion: '+fmt(start)+' − '+fmt(goal)+' = '+fmt(delta)+' °dH. 3. Natriumzunahme: '+fmt(delta)+' × 8,2 = '+fmt(add)+' mg/l. 4. Natrium im enthärteten Wasser: '+fmt(na)+' + '+fmt(add)+' = '+fmt(total)+' mg/l. '+(total>200?'Achtung: rechnerisch über 200 mg/l! ':'Rechnerisch innerhalb des Natrium-Parameterwerts (200 mg/l). ')+(na>=200?'Das Ausgangswasser liegt bereits am oder über dem Parameterwert; keine rechnerische Natriumreserve.':'Bei diesem Ausgangswasser wäre eine Zielhärte von mindestens ca. '+fmt(minGoal)+' °dH erforderlich, um rechnerisch 200 mg/l nicht zu überschreiten.')+' Fachliche Planung, Untersuchung und Hygieneprüfung bleiben erforderlich.';
 }
 document.addEventListener('input',function(e){if(e.target.matches('#soft-hard-in,#soft-hard-out,#soft-sodium-in'))updateSoftResult()});
 </script></body>
