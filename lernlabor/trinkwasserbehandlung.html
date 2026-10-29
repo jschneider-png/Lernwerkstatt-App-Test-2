@@ -127,7 +127,7 @@
       <div class="task">
         <h3>Freie Aufgabe</h3>
         <p>Formuliere in 2–3 Sätzen: Warum kann eine Trinkwasserbehandlung aus technischen Gründen sinnvoll sein?</p>
-        <textarea class="field" data-save="ziele-note" aria-label="Notiz zu den Zielen" placeholder="Schreibe deine Begründung hier …"></textarea>
+        <select class="field mc-select" data-save="ziele-note" data-mc-correct="Partikel entfernen und die geforderte Wasserqualität sichern"><option value="">Bitte Antwort auswählen …</option><option>Partikel entfernen und die geforderte Wasserqualität sichern</option><option>Nur den Geschmack süßer machen</option><option>Immer alle gelösten Salze entfernen</option></select><button type="button" class="btn mc-check">Antwort prüfen</button><span class="mc-feedback" role="status"></span>
       </div>
       <label class="phase"><span>☐ Phase abgeschlossen</span><input type="checkbox" data-tick="phase1"></label>
     </section>
@@ -161,7 +161,7 @@
       <div class="task">
         <h3>Zusammenfassung</h3>
         <p>Notiere vier Anforderungen an Trinkwasser in Stichworten und ergänze je ein kurzes Beispiel, wie man sie beurteilen könnte.</p>
-        <textarea class="field" data-save="anforderungen-note" placeholder="z. B. klar → keine sichtbaren Schwebstoffe …"></textarea>
+        <select class="field mc-select" data-save="anforderungen-note" data-mc-correct="Hygiene, Inhaltsstoffe und technische Auswirkungen"><option value="">Bitte Antwort auswählen …</option><option>Hygiene, Inhaltsstoffe und technische Auswirkungen</option><option>Nur die Farbe des Wassers</option><option>Nur die Temperatur</option></select><button type="button" class="btn mc-check">Antwort prüfen</button><span class="mc-feedback" role="status"></span>
       </div>
       <label class="phase"><span>☐ Phase abgeschlossen</span><input type="checkbox" data-tick="phase2"></label>
     </section>
@@ -212,7 +212,7 @@
       <div class="task">
         <h3>Freie Übung</h3>
         <p>Erstelle eine Mini-Merkliste mit je zwei Beispielen für physikalische, chemische und biologische Parameter.</p>
-        <textarea class="field" data-save="wasserqualitaet-note" placeholder="Physikalisch: … | Chemisch: … | Biologisch: …"></textarea>
+        <select class="field mc-select" data-save="wasserqualitaet-note" data-mc-correct="Physikalische, chemische und mikrobiologische Merkmale"><option value="">Bitte Antwort auswählen …</option><option>Physikalische, chemische und mikrobiologische Merkmale</option><option>Nur die Wasserhärte</option><option>Nur der Leitungsdruck</option></select><button type="button" class="btn mc-check">Antwort prüfen</button><span class="mc-feedback" role="status"></span>
       </div>
       <label class="phase"><span>☐ Phase abgeschlossen</span><input type="checkbox" data-tick="phase3"></label>
     </section>
@@ -225,17 +225,19 @@
  <nav class="method-tabs" aria-label="Themen der Trinkwasserbehandlung">
  <button type="button" class="method-tab active" data-method-tab="filtration" aria-selected="true">💧 Filtration</button>
  <button type="button" class="method-tab" data-method-tab="enthaertung" aria-selected="false">🔁 Wasserenthärtung</button>
- <button type="button" class="method-tab" data-method-tab="ueberblick" aria-selected="false">🧪 Weitere Verfahren</button>
- <button type="button" class="method-tab" data-method-tab="uebungen" aria-selected="false">✍️ Aufgaben</button>
- <button type="button" class="method-tab method-special" data-method-tab="osmose" aria-selected="false">🔬 Exkurs: Umkehrosmose</button>
+ 
+ 
+ <button type="button" class="method-tab method-special" data-method-tab="osmose" aria-selected="false">🔬 Exkurs: Umkehrosmose</button><button type="button" class="method-tab" data-method-tab="nicetoknow" aria-selected="false">💡 Nice to know (am Schluss)</button>
  </nav>
  <div class="method-view" data-method-view="filtration">
- <h3>Filtration – Schwerpunkt der Stunde</h3>
- <div class="method-media"><img loading="lazy" src="https://media.hornbach.de/hb/packshot/as.96925603.jpg?dvid=8" alt="Hauswasserfilter als Praxisbeispiel"><div><p>Bei der <strong>Filtration</strong> fließt Wasser durch ein geeignetes Filtermedium. Je nach Porengröße und Aufbau bleiben Partikel wie Sand, Rost oder Schwebstoffe zurück.</p><p>Ein mechanischer Filter entfernt <strong>nicht automatisch</strong> gelöste Salze oder Krankheitserreger. Unterschiedliche Filterarten erfüllen unterschiedliche Aufgaben.</p><p class="meta">Praxisbild: <a href="https://media.hornbach.de/hb/packshot/as.96925603.jpg?dvid=8" target="_blank" rel="noopener noreferrer">HORNBACH</a></p></div></div>
- <div class="method-tiles"><article><h4>Partikelfilter</h4><p>Hält feste Schwebstoffe zurück; wichtig z. B. als Schutz nachgeschalteter Bauteile.</p></article><article><h4>Sand- und Mehrschichtfilter</h4><p>Nutzen ein Filterbett; größere Anlagen verwenden sie zur Reduktion von Trübung.</p></article><article><h4>Membranfiltration</h4><p>Je nach Membrantyp können auch sehr kleine Partikel und Mikroorganismen zurückgehalten werden.</p></article></div>
- <div class="task"><h4>Überlege selbst</h4><p>Welche Stoffe hält ein einfacher Partikelfilter zurück – und was kann er nicht leisten?</p><textarea class="field" data-save="filtration-reflexion" placeholder="Meine Erklärung …"></textarea></div>
- </div>
- <div class="method-view hidden" data-method-view="enthaertung" id="enthaertung-lernblock">
+<h3>Filtration in der Trinkwasserinstallation</h3>
+<div class="method-media"><img loading="lazy" src="https://media.hornbach.de/hb/packshot/as.96925603.jpg?dvid=8" alt="Mechanischer Hauswasserfilter am Hausanschluss"><div><p>Ein mechanischer Hauswasserfilter hält feste Partikel wie Sand und Rost zurück und schützt die Installation. <strong>Gelöste Härtebildner</strong> werden dadurch nicht entfernt.</p><p>In Wohnanlagen besonders wichtig: <strong>rückspülbare</strong> und <strong>nicht rückspülbare Filter</strong> unterscheiden sich darin, wie das Filterelement gereinigt bzw. ersetzt wird.</p></div></div>
+<div class="method-tiles"><article><h4>🔄 Rückspülbarer Filter</h4><p><strong>Funktion:</strong> Zum Reinigen wird Wasser in umgekehrter bzw. konstruktiv vorgesehener Spülrichtung durch den Filter geführt; angesammelte Partikel gelangen zum Abwasseranschluss.</p><p><strong>Praxis:</strong> Zentraler Hausanschluss einer Wohnanlage. Vorteil: regelmäßige Reinigung ohne routinemäßigen Wechsel des Filtereinsatzes. Rückspülung nach Herstellerangaben, hygienischer Abwasseranschluss erforderlich.</p></article><article><h4>🧩 Nicht rückspülbarer Filter (Wechselfilter)</h4><p><strong>Funktion:</strong> Der Filtereinsatz fängt Feststoffe auf und wird bei Wartung durch einen geeigneten neuen Einsatz ersetzt – er wird nicht rückgespült.</p><p><strong>Praxis:</strong> Hausanschluss mit austauschbarer Filterkerze. Wichtig: regelmäßiger hygienischer Filterwechsel gemäß Herstellerangaben; verschmutzte Einsätze nicht einfach weiterbetreiben.</p></article></div>
+<div class="soft-flow"><span>Leitungswasser mit Partikeln</span><span>→</span><span>Hauswasserfilter</span><span>→</span><span>partikelärmeres Wasser zur Installation</span></div>
+<div class="task" data-check="filter-rueck" data-correct="1" data-why="Beim rückspülbaren Filter werden zurückgehaltene Partikel durch den vorgesehenen Spülvorgang abgeführt."><h4>Multiple Choice: Welcher Filter ist gemeint?</h4><p>Ein Hausmeister öffnet zur regelmäßigen Reinigung die Rückspülung; Schmutzwasser wird abgeleitet.</p><button class="choice" type="button">Wechselfilter, dessen Einsatz ersetzt werden muss</button><button class="choice" type="button">Rückspülbarer Filter</button><button class="choice" type="button">Enthärtungsanlage</button><div class="feedback hidden"></div></div>
+<div class="task" data-check="filter-wechsel" data-correct="0" data-why="Beim nicht rückspülbaren Filter wird der verschmutzte Filtereinsatz fachgerecht ersetzt."><h4>Multiple Choice: Was ist bei einem Wechselfilter zu tun?</h4><button class="choice" type="button">Filtereinsatz nach Herstellerangaben hygienisch wechseln</button><button class="choice" type="button">Einfach Kochsalz in den Filter geben</button><button class="choice" type="button">Filter auf Dauer ungepflegt weiterbetreiben</button><div class="feedback hidden"></div></div>
+</div>
+<div class="method-view hidden" data-method-view="enthaertung" id="enthaertung-lernblock">
  <div class="stage">Schwerpunkt Wohngebäude · Filtration und Enthärtung</div>
  <h3>Wasserenthärtung: weniger Härte, mehr Natrium</h3>
  <p>In einer Wohnanlage entstehen starke Kalkablagerungen an Armaturen und Warmwasserbereitern. Eine mögliche technische Maßnahme ist die <strong>Enthärtung mit Natrium-Ionenaustausch</strong>. Sie reduziert Calcium- und Magnesiumionen, die die Wasserhärte verursachen – nicht aber Sand oder Rost.</p>
@@ -260,7 +262,7 @@
  <g font-family="Arial,sans-serif" fill="#21475d" font-size="16"><text x="22" y="260">Ca²⁺ und Mg²⁺ im Zulauf</text><text x="310" y="260">Härtebildner bleiben am Harz</text><text x="617" y="260">Na⁺ im Ablauf</text></g>
  </svg></div>
  <p class="meta">Vereinfachte, schematische Animation – nicht maßstabsgetreu. Das Harz tauscht zwei einwertige Natriumionen gegen ein zweiwertiges Calcium- oder Magnesiumion aus.</p>
- <div class="task"><strong>Praxisfrage:</strong> Warum hilft ein Hauswasser-Partikelfilter nicht gegen gelöste Härtebildner?<textarea class="field" data-save="enthaertung-vergleich" placeholder="Deine Erklärung ..."></textarea></div>
+ <div class="task"><strong>Praxisfrage:</strong> Warum hilft ein Hauswasser-Partikelfilter nicht gegen gelöste Härtebildner?<select class="field mc-select" data-save="enthaertung-vergleich" data-mc-correct="Partikelfilter hält Feststoffe zurück, nicht gelöste Härtebildner"><option value="">Bitte Antwort auswählen …</option><option>Partikelfilter hält Feststoffe zurück, nicht gelöste Härtebildner</option><option>Ein Partikelfilter ersetzt eine Enthärtungsanlage</option><option>Ein Partikelfilter macht das Wasser salzfrei</option></select><button type="button" class="btn mc-check">Antwort prüfen</button><span class="mc-feedback" role="status"></span></div>
  </section>
  <section class="soft-panel hidden" data-soft-panel="salz">
  <h4>Was macht das Regeneriersalz NaCl?</h4>
@@ -280,7 +282,7 @@
  <p class="info"><strong>Unbedingt den Natriumwert aus der Wasseranalyse eintragen!</strong> Die Wasserhärte allein reicht nicht aus. Das bereits vorhandene Natrium und das durch die Enthärtung zusätzlich eingetragene Natrium werden zusammengezählt. Die 30 mg/l sind nur ein fiktiver Übungswert.</p>
  <div class="soft-result" id="soft-result" role="status" aria-live="polite">24 − 4 = 20 °dH Härtereduktion · 20 × 8,2 = ca. 164 mg/l zusätzliches Natrium · 30 + 164 = ca. 194 mg/l Natrium im Ablauf.</div>
  <p><strong>Natrium-Parameterwert: 200 mg/l.</strong> Die 164 mg/l sind <strong>zusätzlich</strong> zum bereits vorhandenen Natrium. Ob die Maßnahme zulässig und sinnvoll ist, hängt außerdem von Wasseranalyse, Installation und fachgerechter Planung ab.</p>
- <div class="task"><strong>Schülerauftrag:</strong> Ändere den Ausgangsnatriumwert auf 45 mg/l. Was passiert mit dem Ergebnis? Begründe deine Empfehlung an den Kunden.<textarea class="field" data-save="enthaertung-rechenbeispiel" placeholder="Meine Rechnung und Entscheidung ..."></textarea></div>
+ <div class="task"><strong>Schülerauftrag:</strong> Ändere den Ausgangsnatriumwert auf 45 mg/l. Was passiert mit dem Ergebnis? Begründe deine Empfehlung an den Kunden.<select class="field mc-select" data-save="enthaertung-rechenbeispiel" data-mc-correct="45 + 164 = 209 mg/l, rechnerisch über 200 mg/l"><option value="">Bitte Antwort auswählen …</option><option>45 + 164 = 209 mg/l, rechnerisch über 200 mg/l</option><option>45 + 164 = 164 mg/l, das Rohwasser zählt nicht</option><option>45 + 164 = 194 mg/l</option></select><button type="button" class="btn mc-check">Antwort prüfen</button><span class="mc-feedback" role="status"></span></div>
  </section>
  <section class="soft-panel hidden" data-soft-panel="grenzen">
  <h4>Wasserhärte richtig einordnen</h4>
@@ -292,13 +294,29 @@
  </section>
  </div>
  
- <div class="method-view hidden" data-method-view="ueberblick">
- <h3>Weitere Möglichkeiten – anklicken und vergleichen</h3>
- <p>Die folgenden Verfahren sind bewusst als <strong>Kurzüberblick</strong> angelegt.</p>
- <div class="method-tiles"><article><h4>🌊 Sedimentation</h4><p>Schwerere Partikel setzen sich bei ruhiger Strömung ab.</p></article><article><h4>🫧 Fällung und Flockung</h4><p>Feine oder gelöste Stoffe werden in abtrennbare Flocken überführt.</p></article><article><h4>⚫ Aktivkohle / Adsorption</h4><p>Bestimmte unerwünschte Stoffe lagern sich an Oberflächen an.</p></article><article><h4>☀️ UV-Desinfektion</h4><p>UV-Licht inaktiviert Mikroorganismen bei geeigneter Auslegung und Wasserqualität.</p></article><article><h4>💨 Belüftung und Oxidation</h4><p>Kann Gase austreiben oder Stoffe wie gelöstes Eisen für eine nachfolgende Abtrennung verändern.</p></article><article><h4>🔁 Ionenaustausch</h4><p>Bestimmte gelöste Ionen werden gegen andere ausgetauscht, z. B. bei der Enthärtung. <strong>Keine Vertiefung in diesem Überblick.</strong></p></article><article><h4>🔥 Destillation (Sonderverfahren)</h4><p>Wasser wird verdampft und wieder kondensiert; hoher Energiebedarf.</p></article><article><h4>🌫️ Nebel- und Luftfeuchtegewinnung (Exoten)</h4><p>Gewinnt Wasser aus feuchter Luft; es muss für Trinkwasserzwecke gesondert hygienisch beurteilt und gegebenenfalls behandelt werden.</p></article></div>
+ <div class="method-view hidden" data-method-view="osmose">
+ <div class="stage">Zusatzwissen · optionaler Exkurs</div>
+ <h3>Umkehrosmose – ein Sonderfall der Membranverfahren</h3>
+ <div class="method-media"><img loading="lazy" src="https://www.wiltec.de/thumbnail/84/c5/a1/1773831185/99c9a6aba3d94697bddbf1d3058c1d60_800x800.jpg?ts=1773831196" alt="Beispiel einer Umkehrosmoseanlage"><div><p>Anders als ein gewöhnlicher Partikelfilter kann eine Umkehrosmosemembran auch <strong>viele gelöste Salze</strong> zurückhalten.</p><p>Erkunde Prinzip, Anlagenweg und Nutzen einzeln – ohne den Hauptüberblick zu überladen.</p><p class="meta">Praxisbild: <a href="https://www.wiltec.de/thumbnail/84/c5/a1/1773831185/99c9a6aba3d94697bddbf1d3058c1d60_800x800.jpg?ts=1773831196" target="_blank" rel="noopener noreferrer">WilTec</a></p></div></div>
+ <nav class="osm-tabs" aria-label="Unterthemen des Umkehrosmose-Exkurses">
+ <button type="button" class="osm-tab active" data-osm-tab="prinzip" aria-selected="true">1 · Prinzip</button>
+ <button type="button" class="osm-tab" data-osm-tab="anlage" aria-selected="false">2 · Anlagenweg</button>
+ <button type="button" class="osm-tab" data-osm-tab="nutzen" aria-selected="false">3 · Nutzen & Grenzen</button>
+ <button type="button" class="osm-tab" data-osm-tab="check" aria-selected="false">4 · Wissenscheck</button></nav>
+ <div class="osm-view" data-osm-view="prinzip"><div class="info"><strong>Prinzip</strong><p>Bei der natürlichen Osmose strömt Wasser durch eine semipermeable Membran vereinfacht zur Seite mit der höheren gelösten Stoffkonzentration. Die <strong>Umkehrosmose</strong> nutzt ausreichend hohen Druck, um Wasser in Gegenrichtung durch die Membran zu bewegen.</p><p>Das durchgetretene Wasser heißt <strong>Permeat</strong>. Der abgetrennte, konzentrierte Teil heißt <strong>Konzentrat</strong>.</p></div><div class="osm-flow" aria-label="Schematisches Prinzip"><span>Zulauf + Druck</span><span>→</span><span>Membran</span><span>↗ Permeat</span><span>↘ Konzentrat</span></div></div>
+ <div class="osm-view hidden" data-osm-view="anlage"><h4>Typische Schritte im Haushalt</h4><div class="answer-row" style="flex-wrap:wrap;gap:.75rem"><span class="pill">Zulauf / Vorfilter</span><span aria-hidden="true">→</span><span class="pill">Druck / Membran</span><span aria-hidden="true">→</span><span class="pill">Permeat (Nutzwasser)</span></div><p class="meta">Zweiter Abgang an der Membran: Konzentrat → vorgesehener Abwasseranschluss. Dies ist eine textliche Prozessübersicht, keine Animation.</p>
+<p>1. Vorfilter zum Partikelschutz · 2. gegebenenfalls Aktivkohle und Druckerhöhung · 3. Membran · 4. getrennte Wege für Permeat und Konzentrat · 5. gegebenenfalls Tank, Nachbehandlung und gesonderte Entnahme.</p></div>
+ <div class="osm-view hidden" data-osm-view="nutzen"><div class="info"><strong>Wann ist das sinnvoll?</strong><p>Für einwandfreies deutsches Leitungswasser ist eine zusätzliche Umkehrosmoseanlage im Haushalt im Regelfall <strong>nicht erforderlich</strong>. Ein spezieller Bedarf sollte sich aus der Wasseranalyse und einem konkreten Behandlungsziel ergeben.</p><p><strong>Grenzen:</strong> Konzentrat fällt als Abwasser an; Wartung, Wasser- und Energieverbrauch sowie Hygiene müssen berücksichtigt werden. Installation und Betrieb richten sich nach den geltenden Regeln.</p></div></div>
+ <div class="osm-view hidden" data-osm-view="check"><div class="task" data-check="osm-1" data-correct="1" data-why="Umkehrosmose nutzt einen über den osmotischen Druck hinausgehenden Betriebsdruck; die Membran trennt Permeat und Konzentrat."><h3>Wissensfrage 1</h3><p>Wie wird bei der Umkehrosmose der Wassertransport technisch erreicht?</p><button class="choice" type="button">Durch Rückspülung eines normalen Hauswasserfilters.</button><button class="choice" type="button">Durch Druck an einer semipermeablen Membran.</button><button class="choice" type="button">Durch Erwärmen bis zum Sieden.</button><div class="feedback hidden" role="status"></div></div>
+<div class="task" data-check="osm-2" data-correct="2" data-why="Die Entscheidung richtet sich nach einer belastbaren Wasseranalyse, dem konkreten Behandlungsziel und hygienischen sowie betrieblichen Risiken."><h3>Wissensfrage 2</h3><p>Ein Einfamilienhaus wird mit einwandfreiem Leitungswasser versorgt. Was ist die fachlich sinnvolle Aussage?</p><button class="choice" type="button">Umkehrosmose ist ausnahmslos vorgeschrieben.</button><button class="choice" type="button">Die Anlage verbessert die Qualität ohne jeden Nachteil.</button><button class="choice" type="button">In der Regel ist sie nicht erforderlich; einen Sonderbedarf müsste man fachlich prüfen.</button><div class="feedback hidden" role="status"></div></div>
+<div class="task"><h3>Kundenauftrag</h3><p>Ein Kunde fragt: „Warum entstehen bei der Umkehrosmose gleichzeitig Permeat und Konzentrat, und brauche ich die Anlage überhaupt?“ Antworte in 3–4 Sätzen und nenne einen Nachteil.</p><select class="field mc-select" data-save="umkehrosmose-kundenerklaerung" data-mc-correct="Permeat und Konzentrat entstehen; bei einwandfreiem Leitungswasser meist nicht nötig"><option value="">Bitte Antwort auswählen …</option><option>Permeat und Konzentrat entstehen; bei einwandfreiem Leitungswasser meist nicht nötig</option><option>Es entsteht kein Abwasser und keine Wartung ist erforderlich</option><option>Die Anlage entfernt nur sichtbaren Sand</option></select><button type="button" class="btn mc-check">Antwort prüfen</button><span class="mc-feedback" role="status"></span></div>
+<p class="source">Fachquellen: <a href="https://www.umweltbundesamt.de/trinkwasser-aufbereiten" target="_blank" rel="noopener">Umweltbundesamt: Trinkwasser aufbereiten</a> · <a href="https://www.verbraucherzentrale.de/wissen/umwelt-haushalt/wasser/wasserbehandlung-im-haushalt-das-muessen-sie-ueber-wasserfilter-wissen-12071" target="_blank" rel="noopener">Verbraucherzentrale: Wasserbehandlung im Haushalt</a> · <a href="https://www.bundestag.de/presse/hib/kurzmeldungen-1025642" target="_blank" rel="noopener">Bundestag: Nachbehandlung im privaten Haushalt</a>.</p></div>
  </div>
- <div class="method-view hidden" data-method-view="uebungen">
- <h3>Aufgaben – prüfen, zuordnen, sichern</h3><p>Die bisherigen interaktiven Aufgaben bleiben erhalten. Der Ionenaustausch wird hier nur als Vergleichsverfahren erwähnt.</p>
+ <div class="method-view hidden" data-method-view="nicetoknow"><div class="stage">Zum Abschluss · Zusatzwissen</div><h3>💡 Nice to know – andere Verfahren</h3><p>Im Wohngebäude sind <strong>Hauswasserfilter</strong> und bei nachgewiesenem Bedarf <strong>Wasserenthärtung</strong> unsere Schwerpunkte. Andere Verfahren lernst du hier nur als Überblick kennen.</p>
+ <h3>Andere Verfahren (nicht Schwerpunkt Hausinstallation)</h3>
+ <p>Dies ist Zusatzwissen außerhalb der typischen Hausinstallation.</p>
+ <div class="method-tiles"><article><h4>🌊 Sedimentation</h4><p>Schwerere Partikel setzen sich bei ruhiger Strömung ab.</p></article><article><h4>🫧 Fällung und Flockung</h4><p>Feine oder gelöste Stoffe werden in abtrennbare Flocken überführt.</p></article><article><h4>⚫ Aktivkohle / Adsorption</h4><p>Bestimmte unerwünschte Stoffe lagern sich an Oberflächen an.</p></article><article><h4>☀️ UV-Desinfektion</h4><p>UV-Licht inaktiviert Mikroorganismen bei geeigneter Auslegung und Wasserqualität.</p></article><article><h4>💨 Belüftung und Oxidation</h4><p>Kann Gase austreiben oder Stoffe wie gelöstes Eisen für eine nachfolgende Abtrennung verändern.</p></article><article><h4>🔥 Destillation (Sonderverfahren)</h4><p>Wasser wird verdampft und wieder kondensiert; hoher Energiebedarf.</p></article><article><h4>🌫️ Nebel- und Luftfeuchtegewinnung (Exoten)</h4><p>Gewinnt Wasser aus feuchter Luft; es muss für Trinkwasserzwecke gesondert hygienisch beurteilt und gegebenenfalls behandelt werden.</p></article></div><div class="info"><strong>Wo begegnet uns das?</strong><p>Flockung/Absetzen: Wasserwerk, Trübstoffe entfernen. Belüftung/Oxidation: Rohwasseraufbereitung, z. B. Eisen für eine Filtration vorbereiten. Destillation: Labor, Wasser für spezielle Zwecke. Nebelnetze: Wassergewinnung in bestimmten trockenen Regionen.</p></div><h3>Zusatzaufgaben (freiwillig)</h3>
+ <h3>Aufgaben – prüfen, zuordnen, sichern</h3><p>Freiwillige Zuordnungs- und Auswahlaufgaben.</p>
  <div class="task" data-pair="verfahren-funktionen">
         <h3>Verfahren und Wirkung</h3>
         <p>Ordne zu.</p>
@@ -347,29 +365,8 @@
       <div class="task">
         <h3>Arbeitsnotiz</h3>
         <p>Notiere zwei Verfahren, die du bereits sicher unterscheiden kannst, und erkläre den Unterschied kurz.</p>
-        <textarea class="field" data-save="verfahren-note"></textarea>
-      </div>
-      
- </div>
- <div class="method-view hidden" data-method-view="osmose">
- <div class="stage">Zusatzwissen · optionaler Exkurs</div>
- <h3>Umkehrosmose – ein Sonderfall der Membranverfahren</h3>
- <div class="method-media"><img loading="lazy" src="https://www.wiltec.de/thumbnail/84/c5/a1/1773831185/99c9a6aba3d94697bddbf1d3058c1d60_800x800.jpg?ts=1773831196" alt="Beispiel einer Umkehrosmoseanlage"><div><p>Anders als ein gewöhnlicher Partikelfilter kann eine Umkehrosmosemembran auch <strong>viele gelöste Salze</strong> zurückhalten.</p><p>Erkunde Prinzip, Anlagenweg und Nutzen einzeln – ohne den Hauptüberblick zu überladen.</p><p class="meta">Praxisbild: <a href="https://www.wiltec.de/thumbnail/84/c5/a1/1773831185/99c9a6aba3d94697bddbf1d3058c1d60_800x800.jpg?ts=1773831196" target="_blank" rel="noopener noreferrer">WilTec</a></p></div></div>
- <nav class="osm-tabs" aria-label="Unterthemen des Umkehrosmose-Exkurses">
- <button type="button" class="osm-tab active" data-osm-tab="prinzip" aria-selected="true">1 · Prinzip</button>
- <button type="button" class="osm-tab" data-osm-tab="anlage" aria-selected="false">2 · Anlagenweg</button>
- <button type="button" class="osm-tab" data-osm-tab="nutzen" aria-selected="false">3 · Nutzen & Grenzen</button>
- <button type="button" class="osm-tab" data-osm-tab="check" aria-selected="false">4 · Wissenscheck</button></nav>
- <div class="osm-view" data-osm-view="prinzip"><div class="info"><strong>Prinzip</strong><p>Bei der natürlichen Osmose strömt Wasser durch eine semipermeable Membran vereinfacht zur Seite mit der höheren gelösten Stoffkonzentration. Die <strong>Umkehrosmose</strong> nutzt ausreichend hohen Druck, um Wasser in Gegenrichtung durch die Membran zu bewegen.</p><p>Das durchgetretene Wasser heißt <strong>Permeat</strong>. Der abgetrennte, konzentrierte Teil heißt <strong>Konzentrat</strong>.</p></div><div class="osm-flow" aria-label="Schematisches Prinzip"><span>Zulauf + Druck</span><span>→</span><span>Membran</span><span>↗ Permeat</span><span>↘ Konzentrat</span></div></div>
- <div class="osm-view hidden" data-osm-view="anlage"><h4>Typische Schritte im Haushalt</h4><div class="answer-row" style="flex-wrap:wrap;gap:.75rem"><span class="pill">Zulauf / Vorfilter</span><span aria-hidden="true">→</span><span class="pill">Druck / Membran</span><span aria-hidden="true">→</span><span class="pill">Permeat (Nutzwasser)</span></div><p class="meta">Zweiter Abgang an der Membran: Konzentrat → vorgesehener Abwasseranschluss. Dies ist eine textliche Prozessübersicht, keine Animation.</p>
-<p>1. Vorfilter zum Partikelschutz · 2. gegebenenfalls Aktivkohle und Druckerhöhung · 3. Membran · 4. getrennte Wege für Permeat und Konzentrat · 5. gegebenenfalls Tank, Nachbehandlung und gesonderte Entnahme.</p></div>
- <div class="osm-view hidden" data-osm-view="nutzen"><div class="info"><strong>Wann ist das sinnvoll?</strong><p>Für einwandfreies deutsches Leitungswasser ist eine zusätzliche Umkehrosmoseanlage im Haushalt im Regelfall <strong>nicht erforderlich</strong>. Ein spezieller Bedarf sollte sich aus der Wasseranalyse und einem konkreten Behandlungsziel ergeben.</p><p><strong>Grenzen:</strong> Konzentrat fällt als Abwasser an; Wartung, Wasser- und Energieverbrauch sowie Hygiene müssen berücksichtigt werden. Installation und Betrieb richten sich nach den geltenden Regeln.</p></div></div>
- <div class="osm-view hidden" data-osm-view="check"><div class="task" data-check="osm-1" data-correct="1" data-why="Umkehrosmose nutzt einen über den osmotischen Druck hinausgehenden Betriebsdruck; die Membran trennt Permeat und Konzentrat."><h3>Wissensfrage 1</h3><p>Wie wird bei der Umkehrosmose der Wassertransport technisch erreicht?</p><button class="choice" type="button">Durch Rückspülung eines normalen Hauswasserfilters.</button><button class="choice" type="button">Durch Druck an einer semipermeablen Membran.</button><button class="choice" type="button">Durch Erwärmen bis zum Sieden.</button><div class="feedback hidden" role="status"></div></div>
-<div class="task" data-check="osm-2" data-correct="2" data-why="Die Entscheidung richtet sich nach einer belastbaren Wasseranalyse, dem konkreten Behandlungsziel und hygienischen sowie betrieblichen Risiken."><h3>Wissensfrage 2</h3><p>Ein Einfamilienhaus wird mit einwandfreiem Leitungswasser versorgt. Was ist die fachlich sinnvolle Aussage?</p><button class="choice" type="button">Umkehrosmose ist ausnahmslos vorgeschrieben.</button><button class="choice" type="button">Die Anlage verbessert die Qualität ohne jeden Nachteil.</button><button class="choice" type="button">In der Regel ist sie nicht erforderlich; einen Sonderbedarf müsste man fachlich prüfen.</button><div class="feedback hidden" role="status"></div></div>
-<div class="task"><h3>Kundenauftrag</h3><p>Ein Kunde fragt: „Warum entstehen bei der Umkehrosmose gleichzeitig Permeat und Konzentrat, und brauche ich die Anlage überhaupt?“ Antworte in 3–4 Sätzen und nenne einen Nachteil.</p><textarea class="field" data-save="umkehrosmose-kundenerklaerung" aria-label="Kundenerklärung zur Umkehrosmose" placeholder="Ich würde dem Kunden erklären, dass …"></textarea></div>
-<p class="source">Fachquellen: <a href="https://www.umweltbundesamt.de/trinkwasser-aufbereiten" target="_blank" rel="noopener">Umweltbundesamt: Trinkwasser aufbereiten</a> · <a href="https://www.verbraucherzentrale.de/wissen/umwelt-haushalt/wasser/wasserbehandlung-im-haushalt-das-muessen-sie-ueber-wasserfilter-wissen-12071" target="_blank" rel="noopener">Verbraucherzentrale: Wasserbehandlung im Haushalt</a> · <a href="https://www.bundestag.de/presse/hib/kurzmeldungen-1025642" target="_blank" rel="noopener">Bundestag: Nachbehandlung im privaten Haushalt</a>.</p></div>
- </div>
- <label class="phase"><span>☐ Phase abgeschlossen</span><input type="checkbox" data-tick="phase4"></label>
+        <select class="field mc-select" data-save="verfahren-note" data-mc-correct="Filtration hält Partikel zurück; Ionenaustausch verändert gelöste Ionen"><option value="">Bitte Antwort auswählen …</option><option>Filtration hält Partikel zurück; Ionenaustausch verändert gelöste Ionen</option><option>Alle Verfahren haben dieselbe Wirkung</option><option>UV-Licht entfernt die Wasserhärte</option></select><button type="button" class="btn mc-check">Antwort prüfen</button><span class="mc-feedback" role="status"></span>
+      </div></div><label class="phase"><span>☐ Phase abgeschlossen</span><input type="checkbox" data-tick="phase4"></label>
  </section>
 
  <section class="card content-panel hidden" id="panel-desinfektion">
@@ -401,7 +398,7 @@
       <div class="task">
         <h3>Freie Aufgabe</h3>
         <p>Vergleiche Chlorung, UV und Ozon in drei Stichpunkten: Wirkungsweise, Vorteil, Grenze.</p>
-        <textarea class="field" data-save="desinfektion-note"></textarea>
+        <select class="field mc-select" data-save="desinfektion-note" data-mc-correct="UV kann Keime inaktivieren, entfernt aber keine gelösten Salze"><option value="">Bitte Antwort auswählen …</option><option>UV kann Keime inaktivieren, entfernt aber keine gelösten Salze</option><option>UV ist eine Enthärtung</option><option>Jede UV-Anlage wirkt unabhängig von Wasserqualität</option></select><button type="button" class="btn mc-check">Antwort prüfen</button><span class="mc-feedback" role="status"></span>
       </div>
       <label class="phase"><span>☐ Phase abgeschlossen</span><input type="checkbox" data-tick="phase5"></label>
     </section>
@@ -442,7 +439,7 @@
       <div class="task">
         <h3>Mini-Fallanalyse</h3>
         <p>Wähle einen Fall aus und begründe in 3–4 Sätzen, welche Information dir für eine sichere Entscheidung noch fehlen würde.</p>
-        <textarea class="field" data-save="beispiele-note"></textarea>
+        <select class="field mc-select" data-save="beispiele-note" data-mc-correct="Ursache und Wasseranalyse prüfen, bevor ein Verfahren gewählt wird"><option value="">Bitte Antwort auswählen …</option><option>Ursache und Wasseranalyse prüfen, bevor ein Verfahren gewählt wird</option><option>Ohne Messung immer Umkehrosmose einbauen</option><option>Bei jeder Kalkspur sofort desinfizieren</option></select><button type="button" class="btn mc-check">Antwort prüfen</button><span class="mc-feedback" role="status"></span>
       </div>
       <label class="phase"><span>☐ Phase abgeschlossen</span><input type="checkbox" data-tick="phase6"></label>
     </section>
@@ -463,13 +460,13 @@
       <div class="task">
         <h3>3–2–1-Sicherung</h3>
         <p>Notiere <strong>3 Erkenntnisse</strong>, <strong>2 wichtige Fachbegriffe</strong> und <strong>1 offene Frage</strong>.</p>
-        <textarea class="field" data-save="lernergebnisse-note"></textarea>
+        <select class="field mc-select" data-save="lernergebnisse-note" data-mc-correct="Filtration hält Partikel zurück; Enthärtung reduziert Härtebildner"><option value="">Bitte Antwort auswählen …</option><option>Filtration hält Partikel zurück; Enthärtung reduziert Härtebildner</option><option>Ein Filter entfernt immer alle Stoffe</option><option>Hartes Wasser ist grundsätzlich verboten</option></select><button type="button" class="btn mc-check">Antwort prüfen</button><span class="mc-feedback" role="status"></span>
       </div>
 
       <div class="task">
         <h3>Zusammenfassung für dein Heft / digitales Heft</h3>
         <p>Formuliere einen kurzen Gesamtüberblick: Was sind Ziele, wichtige Anforderungen und typische Verfahren der Trinkwasserbehandlung?</p>
-        <textarea class="field" data-save="gesamtzusammenfassung"></textarea>
+        <select class="field mc-select" data-save="gesamtzusammenfassung" data-mc-correct="Bedarf prüfen, Verfahren passend auswählen und Wartung sicherstellen"><option value="">Bitte Antwort auswählen …</option><option>Bedarf prüfen, Verfahren passend auswählen und Wartung sicherstellen</option><option>Je mehr Anlagen, desto besser</option><option>Sämtliches Hauswasser grundsätzlich entsalzen</option></select><button type="button" class="btn mc-check">Antwort prüfen</button><span class="mc-feedback" role="status"></span>
       </div>
       <label class="phase"><span>☐ Phase abgeschlossen</span><input type="checkbox" data-tick="phase7"></label>
     </section>
@@ -510,5 +507,5 @@ function updateSoftResult(){
  out.textContent='1. Ausgangsnatrium: '+fmt(na)+' mg/l. 2. Härtereduktion: '+fmt(start)+' − '+fmt(goal)+' = '+fmt(delta)+' °dH. 3. Natriumzunahme: '+fmt(delta)+' × 8,2 = '+fmt(add)+' mg/l. 4. Natrium im enthärteten Wasser: '+fmt(na)+' + '+fmt(add)+' = '+fmt(total)+' mg/l. '+(total>200?'Achtung: rechnerisch über 200 mg/l! ':'Rechnerisch innerhalb des Natrium-Parameterwerts (200 mg/l). ')+(na>=200?'Das Ausgangswasser liegt bereits am oder über dem Parameterwert; keine rechnerische Natriumreserve.':'Bei diesem Ausgangswasser wäre eine Zielhärte von mindestens ca. '+fmt(minGoal)+' °dH erforderlich, um rechnerisch 200 mg/l nicht zu überschreiten.')+' Fachliche Planung, Untersuchung und Hygieneprüfung bleiben erforderlich.';
 }
 document.addEventListener('input',function(e){if(e.target.matches('#soft-hard-in,#soft-hard-out,#soft-sodium-in'))updateSoftResult()});
-</script></body>
+</script><script id="mcSelectScript">document.addEventListener("click",function(e){const b=e.target.closest(".mc-check");if(!b)return;const sel=b.previousElementSibling;const out=b.nextElementSibling;if(!sel||!out)return;out.textContent=!sel.value?"Bitte zuerst eine Antwort auswählen.":sel.value===sel.dataset.mcCorrect?"✓ Richtig!":"Noch nicht richtig – versuche es erneut.";});</script></body>
 </html>
