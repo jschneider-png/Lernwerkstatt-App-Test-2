@@ -26,7 +26,7 @@
 @media(prefers-reduced-motion:reduce){.method-view,.osm-view{animation:none}.method-tab,.osm-tab{transition:none}}
 </style><style id="softeningStyles">
 .soft-tabs{display:flex;flex-wrap:wrap;gap:.55rem;margin:1rem 0}.soft-tab{background:#ebf5fc;color:#145171;border:2px solid #accddf;border-radius:12px;padding:.75rem .9rem;font:700 1rem system-ui;cursor:pointer}.soft-tab.active{background:#176b90;color:#fff}.soft-panel.hidden{display:none!important}.soft-panel{animation:methodAppear .3s ease}.soft-diagram{margin:12px 0;border-radius:16px;overflow:hidden;border:1px solid #b6d5e4}.soft-ions-in{animation:softMoveIn 4s ease-in-out infinite alternate}.soft-ions-out{animation:softMoveOut 4s ease-in-out infinite alternate}@keyframes softMoveIn{to{transform:translateX(100px)}}@keyframes softMoveOut{to{transform:translateX(80px)}}.soft-form{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}.soft-form label{font-weight:700;display:grid;gap:6px}.soft-result{background:#e9f6ed;border:2px solid #b2d5c0;border-radius:14px;padding:16px;margin:14px 0;font-weight:700;line-height:1.5}.soft-flow{display:flex;gap:.4rem;flex-wrap:wrap;align-items:center;padding:12px;background:#edf7fb;border-radius:12px}.soft-flow span{padding:.45rem;background:#fff;border-radius:8px}@media(prefers-reduced-motion:reduce){.soft-ions-in,.soft-ions-out,.soft-panel{animation:none}}
-</style></head>
+</style><style id="languageLevelStyles">.language-level{margin:14px 0;padding:14px;border:2px solid #a8cddd;border-radius:14px;background:#f3f9fc;display:flex;align-items:center;flex-wrap:wrap;gap:8px}.language-level button{border-radius:10px;padding:8px 11px;background:white;color:#19556e;border:1px solid #8bb8ca;cursor:pointer}.language-level button.active{background:#135e7d;color:white}.language-level #language-explanation{flex-basis:100%;background:white;border-left:4px solid #16799e;padding:12px;line-height:1.55;border-radius:9px}.language-level #language-explanation[hidden]{display:none}</style></head>
 <body data-unit="behandlung-v2">
   <header>
     <div class="eyebrow">Lernwerkstatt Sanitärtechnik · Interaktive Unterrichtseinheit</div>
@@ -222,7 +222,12 @@
  <h2>Verfahren der Trinkwasserbehandlung</h2>
  <div class="student-step"><strong>Dein Auftrag:</strong> Wähle einen Themen-Button. Erkunde besonders die Filtration und vergleiche weitere Verfahren. Die Umkehrosmose ist ein <strong>separater freiwilliger Exkurs</strong>.<div class="student-step-note">Bearbeite die Aufgaben in deinem eigenen Tempo und markiere anschließend „Phase abgeschlossen“.</div></div>
  <div class="info"><strong>Überblick</strong><p>Welches Verfahren hilft, hängt von Wasserqualität, Verunreinigung und Behandlungsziel ab. Nicht jedes Trinkwasser benötigt alle Verfahren. <strong>Ionenaustausch zur Enthärtung</strong> wird hier praxisnah behandelt: Funktion, Regeneration und Natriumberechnung.</p></div>
- <nav class="method-tabs" aria-label="Themen der Trinkwasserbehandlung">
+ <div id="sprache-stufe" class="language-level" aria-label="Sprachliche Unterstützung"><strong>Sprache im Kurs:</strong>
+<button type="button" data-language-level="leicht" aria-pressed="false">Einfach erklärt</button>
+<button type="button" data-language-level="standard" aria-pressed="true">Standard</button>
+<button type="button" data-language-level="fach" aria-pressed="false">Fachsprache + Begriffe</button>
+<div id="language-explanation" role="status" aria-live="polite" hidden></div></div>
+<nav class="method-tabs" aria-label="Themen der Trinkwasserbehandlung">
  <button type="button" class="method-tab active" data-method-tab="filtration" aria-selected="true">💧 Filtration</button>
  <button type="button" class="method-tab" data-method-tab="enthaertung" aria-selected="false">🔁 Wasserenthärtung</button>
  
@@ -546,6 +551,28 @@ document.addEventListener('input',function(e){if(e.target.matches('#soft-hard-in
   }
  });
  document.querySelectorAll('.mc-select').forEach(el=>{if(el.value)el.dispatchEvent(new Event('change',{bubbles:true}))});
+})();
+</script><script id="languageLevelScript">
+(function(){
+const data={
+filtration:{leicht:'Ein Filter hält kleine feste Teilchen fest, zum Beispiel Sand und Rost. Rückspülfilter werden mit Wasser gereinigt. Bei Wechselfiltern wird der Einsatz ausgetauscht.',fach:'Partikelfiltration schützt Bauteile der Trinkwasserinstallation. Rückspülbare Filter reinigen das Filterelement durch einen Spülvorgang; nicht rückspülbare Filter erfordern einen hygienischen Filterelementwechsel.'},
+enthaertung:{leicht:'Hartes Wasser enthält Calcium und Magnesium. Die Enthärtungsanlage hält diese Stoffe im Harz fest. Dafür gibt sie Natrium ab. Mit Salzwasser wird das Harz wieder bereit gemacht.',fach:'Natrium-Ionenaustausch: Calcium- und Magnesiumionen werden am Kationenaustauscherharz gebunden und gegen Natriumionen ausgetauscht. Regeneration erfolgt mit Natriumchlorid-Sole. Die zusätzliche Natriumkonzentration beträgt näherungsweise 8,2 mg/l je 1 °dH Härtereduktion.'},
+osmose:{leicht:'Eine spezielle Membran trennt Wasser von vielen gelösten Stoffen. Es entsteht ein nutzbarer Wasserstrom und ein zweiter Strom mit den zurückgehaltenen Stoffen. Für Wohnungen ist das meist eine Sonderlösung.',fach:'Bei der Umkehrosmose erzeugt Betriebsdruck an einer semipermeablen Membran einen salzärmeren Permeatstrom und ein Konzentrat. Betrieb, Abwasseranfall, Hygiene und Wartung sind fachlich zu beurteilen.'},
+nicetoknow:{leicht:'Hier lernst du andere Arten der Wasseraufbereitung kennen. Sie werden meistens nicht direkt im Wohnhaus verwendet.',fach:'Sedimentation, Flockung, Adsorption, Desinfektion und weitere Sonderverfahren werden der Rohwasseraufbereitung beziehungsweise besonderen Anwendungsfällen zugeordnet.'}
+};
+const wrap=document.getElementById('sprache-stufe');if(!wrap)return;
+const out=document.getElementById('language-explanation');
+let mode='standard';
+function update(){
+ wrap.querySelectorAll('[data-language-level]').forEach(b=>{let on=b.dataset.languageLevel===mode;b.classList.toggle('active',on);b.setAttribute('aria-pressed',String(on))});
+ const active=document.querySelector('#panel-verfahren .method-view:not(.hidden)[data-method-view]');
+ const key=active?.dataset.methodView||'filtration';
+ out.hidden=mode==='standard';out.textContent=mode==='standard'?'':data[key]?.[mode]||'';
+}
+wrap.addEventListener('click',e=>{const b=e.target.closest('[data-language-level]');if(!b)return;mode=b.dataset.languageLevel;update()});
+document.addEventListener('click',e=>{if(e.target.closest('[data-method-tab]'))queueMicrotask(update)});
+new MutationObserver(update).observe(document.getElementById('panel-verfahren'),{attributes:true,attributeFilter:['class']});
+update();
 })();
 </script></body>
 </html>
