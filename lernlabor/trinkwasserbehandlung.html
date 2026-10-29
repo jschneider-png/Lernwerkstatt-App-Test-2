@@ -507,5 +507,44 @@ function updateSoftResult(){
  out.textContent='1. Ausgangsnatrium: '+fmt(na)+' mg/l. 2. Härtereduktion: '+fmt(start)+' − '+fmt(goal)+' = '+fmt(delta)+' °dH. 3. Natriumzunahme: '+fmt(delta)+' × 8,2 = '+fmt(add)+' mg/l. 4. Natrium im enthärteten Wasser: '+fmt(na)+' + '+fmt(add)+' = '+fmt(total)+' mg/l. '+(total>200?'Achtung: rechnerisch über 200 mg/l! ':'Rechnerisch innerhalb des Natrium-Parameterwerts (200 mg/l). ')+(na>=200?'Das Ausgangswasser liegt bereits am oder über dem Parameterwert; keine rechnerische Natriumreserve.':'Bei diesem Ausgangswasser wäre eine Zielhärte von mindestens ca. '+fmt(minGoal)+' °dH erforderlich, um rechnerisch 200 mg/l nicht zu überschreiten.')+' Fachliche Planung, Untersuchung und Hygieneprüfung bleiben erforderlich.';
 }
 document.addEventListener('input',function(e){if(e.target.matches('#soft-hard-in,#soft-hard-out,#soft-sodium-in'))updateSoftResult()});
-</script><script id="mcSelectScript">document.addEventListener("click",function(e){const b=e.target.closest(".mc-check");if(!b)return;const sel=b.previousElementSibling;const out=b.nextElementSibling;if(!sel||!out)return;out.textContent=!sel.value?"Bitte zuerst eine Antwort auswählen.":sel.value===sel.dataset.mcCorrect?"✓ Richtig!":"Noch nicht richtig – versuche es erneut.";});</script></body>
+</script><script id="instantAnswersScript">
+(function(){
+ // Lückentexte als Auswahlfelder statt offener Texteingaben.
+ document.querySelectorAll('.fill-task').forEach(box=>{
+  const gaps=Array.from(box.querySelectorAll('input.gap[data-answer]'));
+  const pool=[...new Set(gaps.map(el=>el.dataset.answer.split('|')[0].trim()))];
+  const words=Array.from(box.querySelectorAll('.word-help span')).map(el=>el.textContent.trim());
+  words.forEach(w=>{if(!pool.some(p=>p.toLowerCase()===w.toLowerCase()))pool.push(w)});
+  if(pool.length<3)['Filtration','Desinfektion','Enthärtung'].forEach(w=>{if(!pool.some(p=>p.toLowerCase()===w.toLowerCase()))pool.push(w)});
+  gaps.forEach(el=>{
+   const select=document.createElement('select');select.className=el.className;select.dataset.gap=el.dataset.gap;select.dataset.answer=el.dataset.answer;select.setAttribute('aria-label',el.getAttribute('aria-label')||'Lücke auswählen');
+   select.innerHTML='<option value="">Bitte wählen …</option>';
+   pool.forEach(w=>{const opt=document.createElement('option');opt.value=w;opt.textContent=w;select.append(opt)});
+   el.replaceWith(select);
+  });
+ });
+ document.querySelectorAll('.mc-check').forEach(b=>b.hidden=true);
+ document.querySelectorAll('.verify,.verify-gaps').forEach(b=>b.hidden=true);
+ document.addEventListener('change',e=>{
+  const el=e.target;
+  if(el.matches('.mc-select')){
+   const feedback=el.parentElement.querySelector('.mc-feedback') || el.nextElementSibling?.nextElementSibling;
+   if(feedback){
+    const ok=el.value===el.dataset.mcCorrect;
+    feedback.textContent=!el.value?'Bitte auswählen.':ok?'✓ Richtig!':'✗ Noch nicht richtig – versuche es erneut.';
+    feedback.style.color=ok?'#176a3b':'#a43630';
+    feedback.style.fontWeight='700';
+   }
+  }
+  if(el.matches('[data-pair]')&&el.tagName==='SELECT'){
+   const box=el.closest('.task[data-pair]');
+   if(box){const btn=box.querySelector('.verify');if(btn)btn.click()}
+  }
+  if(el.matches('select.gap')){
+   const box=el.closest('.fill-task');if(box){const btn=box.querySelector('.verify-gaps');if(btn)btn.click()}
+  }
+ });
+ document.querySelectorAll('.mc-select').forEach(el=>{if(el.value)el.dispatchEvent(new Event('change',{bubbles:true}))});
+})();
+</script></body>
 </html>
