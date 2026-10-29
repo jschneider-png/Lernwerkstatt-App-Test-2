@@ -5,7 +5,26 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Trinkwasserbehandlung – Interaktive Wegweiser-Einheit</title>
   <link rel="stylesheet" href="style.css?v=timer-2">
-<style id="globalHomeStyle">#globalHomeLink{position:fixed;right:16px;bottom:18px;z-index:9999;display:inline-flex;align-items:center;gap:7px;padding:11px 16px;border-radius:999px;background:#0d5073;color:#fff!important;text-decoration:none;font:700 14px/1.3 system-ui,-apple-system,Segoe UI,sans-serif;box-shadow:0 5px 18px #102a3a55;border:2px solid #fff}#globalHomeLink:hover,#globalHomeLink:focus-visible{background:#087ca6;outline:3px solid #9cdbf1;outline-offset:2px}@media(max-width:500px){#globalHomeLink{right:10px;bottom:10px;padding:10px 12px;font-size:13px}}</style></head>
+<style id="globalHomeStyle">#globalHomeLink{position:fixed;right:16px;bottom:18px;z-index:9999;display:inline-flex;align-items:center;gap:7px;padding:11px 16px;border-radius:999px;background:#0d5073;color:#fff!important;text-decoration:none;font:700 14px/1.3 system-ui,-apple-system,Segoe UI,sans-serif;box-shadow:0 5px 18px #102a3a55;border:2px solid #fff}#globalHomeLink:hover,#globalHomeLink:focus-visible{background:#087ca6;outline:3px solid #9cdbf1;outline-offset:2px}@media(max-width:500px){#globalHomeLink{right:10px;bottom:10px;padding:10px 12px;font-size:13px}}</style><style id="methodTabsStyles">
+.method-tabs,.osm-tabs{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.2rem 0}
+.method-tab,.osm-tab{border:2px solid #9ac5d3;background:#edf8fc;color:#16455b;border-radius:14px;padding:.85rem 1rem;font:700 1rem/1.35 system-ui,sans-serif;cursor:pointer;transition:transform .15s,background .15s,box-shadow .15s}
+.method-tab:hover,.osm-tab:hover{transform:translateY(-2px);box-shadow:0 4px 12px #15445c22}
+.method-tab.active,.osm-tab.active{background:#075b80;border-color:#075b80;color:white}
+.method-special{border-color:#9578c5;background:#f4effc;color:#493478}
+.method-special.active{background:#633d9e;border-color:#633d9e}
+.method-view,.osm-view{animation:methodAppear .3s ease both}
+.method-view.hidden,.osm-view.hidden{display:none!important}
+.method-media{display:grid;grid-template-columns:minmax(150px,240px) 1fr;gap:1.1rem;align-items:center;margin:1rem 0}
+.method-media img{width:100%;max-height:200px;object-fit:contain;border-radius:12px;background:#f4f7f9}
+.method-tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.75rem;margin:1rem 0}
+.method-tiles article{border:1px solid #b6d4e1;border-radius:14px;padding:1rem;background:#f5fafc}
+.method-tiles h4{margin:0 0 .5rem;color:#16465e}.method-tiles p{margin:0}
+.osm-flow{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;padding:1rem;background:#ecf7fb;border-radius:12px}
+.osm-flow span{padding:.5rem .75rem;border-radius:9px;background:white;border:1px solid #aed2df}
+@keyframes methodAppear{from{opacity:.2;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:600px){.method-media{grid-template-columns:1fr}.method-tabs .method-tab{flex:1 1 43%}.osm-tabs .osm-tab{flex:1 1 43%}}
+@media(prefers-reduced-motion:reduce){.method-view,.osm-view{animation:none}.method-tab,.osm-tab{transition:none}}
+</style></head>
 <body data-unit="behandlung-v2">
   <header>
     <div class="eyebrow">Lernwerkstatt Sanitärtechnik · Interaktive Unterrichtseinheit</div>
@@ -197,22 +216,30 @@
     </section>
 
     <section class="card content-panel hidden" id="panel-verfahren">
-      <div class="stage">Phase 4 · 11 Minuten</div>
-      <h2>Verfahren der Trinkwasserbehandlung</h2>
-      <div class="student-step"><strong>Dein Auftrag:</strong> Sieh dir die Praxisbilder an. Vergleiche die Aufbereitungsverfahren, bearbeite die Aufgaben und entscheide, welches Verfahren zu welchem Problem passt.<div class="student-step-note">Wenn du fertig bist: „Phase abgeschlossen“ markieren und oben die nächste Phase wählen oder zum Wegweiser zurückkehren.</div></div>
-<div class="equipment-gallery" aria-label="Praxisbilder zu Filter, Ionenaustausch und Umkehrosmose"><figure><img loading="lazy" src="https://media.hornbach.de/hb/packshot/as.96925603.jpg?dvid=8" alt="Praxisbild eines Hauswasserfilters" title="Bildquelle: HORNBACH"><figcaption><strong>Filter</strong> – <a href="https://media.hornbach.de/hb/packshot/as.96925603.jpg?dvid=8" target="_blank" rel="noopener noreferrer" title="Bildquelle: HORNBACH">Bildquelle: HORNBACH</a></figcaption></figure>
-<figure><img loading="lazy" src="https://tse1.mm.bing.net/th/id/OIP.OkCV22ocgSSWkKe4sGEWhQHaEo?r=0&amp;rs=1&amp;pid=ImgDetMain&amp;o=7&amp;rm=3" alt="Praxisbild zur Trinkwasserbehandlung" title="Bildquelle: Bing-Bildvorschau; ursprünglicher Bildurheber nicht verifiziert"><figcaption><strong>Ionenaustausch</strong> – <a href="https://tse1.mm.bing.net/th/id/OIP.OkCV22ocgSSWkKe4sGEWhQHaEo?r=0&amp;rs=1&amp;pid=ImgDetMain&amp;o=7&amp;rm=3" target="_blank" rel="noopener noreferrer" title="Bildquelle: Bing-Bildvorschau; ursprünglicher Bildurheber nicht verifiziert">Bildquelle: Bing-Bildvorschau; ursprünglicher Bildurheber nicht verifiziert</a></figcaption></figure>
-<figure><img loading="lazy" src="https://www.wiltec.de/thumbnail/84/c5/a1/1773831185/99c9a6aba3d94697bddbf1d3058c1d60_800x800.jpg?ts=1773831196" alt="Praxisbild einer Umkehrosmoseanlage" title="Bildquelle: WilTec"><figcaption><strong>Umkehrosmose</strong> – <a href="https://www.wiltec.de/thumbnail/84/c5/a1/1773831185/99c9a6aba3d94697bddbf1d3058c1d60_800x800.jpg?ts=1773831196" target="_blank" rel="noopener noreferrer" title="Bildquelle: WilTec">Bildquelle: WilTec</a></figcaption></figure></div>
-      <div class="info"><strong>Wissensbox</strong><p>Man kann Aufbereitungsverfahren grob nach ihrem Wirkprinzip ordnen: <strong>mechanisch</strong> (z. B. Sedimentation, Filtration), <strong>chemisch</strong> (z. B. Fällung/Flockung, Desinfektion) und <strong>physikalisch</strong> bzw. physikalisch-chemisch (z. B. Adsorption, Membranverfahren). Zusätzlich sind <strong>Ionenaustausch</strong>, Belüftung und Oxidation bedeutsam. Die Einteilung ist eine didaktische Vereinfachung; Verfahren kombinieren häufig mehrere Wirkprinzipien.</p></div>
-
-      <div class="grid">
-        <div class="mini"><h3>Mechanisch</h3><p>Sedimentation, Filtration</p></div>
-        <div class="mini"><h3>Chemisch</h3><p>Fällung, Flockung, Desinfektion</p></div>
-        <div class="mini"><h3>Physikalisch</h3><p>Adsorption, UV, Membranverfahren</p></div>
-        <div class="mini"><h3>Ionenaustausch</h3><p>Gezielte Entfernung gelöster Ionen, etwa bei der Enthärtung.</p></div>
-      </div>
-
-      <div class="task" data-pair="verfahren-funktionen">
+ <div class="stage">Phase 4 · 11 Minuten</div>
+ <h2>Verfahren der Trinkwasserbehandlung</h2>
+ <div class="student-step"><strong>Dein Auftrag:</strong> Wähle einen Themen-Button. Erkunde besonders die Filtration und vergleiche weitere Verfahren. Die Umkehrosmose ist ein <strong>separater freiwilliger Exkurs</strong>.<div class="student-step-note">Bearbeite die Aufgaben in deinem eigenen Tempo und markiere anschließend „Phase abgeschlossen“.</div></div>
+ <div class="info"><strong>Überblick</strong><p>Welches Verfahren hilft, hängt von Wasserqualität, Verunreinigung und Behandlungsziel ab. Nicht jedes Trinkwasser benötigt alle Verfahren. <strong>Ionenaustausch</strong> wird hier nur kurz eingeordnet; die Vertiefung findet im weiterführenden Unterricht statt.</p></div>
+ <nav class="method-tabs" aria-label="Themen der Trinkwasserbehandlung">
+ <button type="button" class="method-tab active" data-method-tab="filtration" aria-selected="true">💧 Filtration</button>
+ <button type="button" class="method-tab" data-method-tab="ueberblick" aria-selected="false">🧪 Weitere Verfahren</button>
+ <button type="button" class="method-tab" data-method-tab="uebungen" aria-selected="false">✍️ Aufgaben</button>
+ <button type="button" class="method-tab method-special" data-method-tab="osmose" aria-selected="false">🔬 Exkurs: Umkehrosmose</button>
+ </nav>
+ <div class="method-view" data-method-view="filtration">
+ <h3>Filtration – Schwerpunkt der Stunde</h3>
+ <div class="method-media"><img loading="lazy" src="https://media.hornbach.de/hb/packshot/as.96925603.jpg?dvid=8" alt="Hauswasserfilter als Praxisbeispiel"><div><p>Bei der <strong>Filtration</strong> fließt Wasser durch ein geeignetes Filtermedium. Je nach Porengröße und Aufbau bleiben Partikel wie Sand, Rost oder Schwebstoffe zurück.</p><p>Ein mechanischer Filter entfernt <strong>nicht automatisch</strong> gelöste Salze oder Krankheitserreger. Unterschiedliche Filterarten erfüllen unterschiedliche Aufgaben.</p><p class="meta">Praxisbild: <a href="https://media.hornbach.de/hb/packshot/as.96925603.jpg?dvid=8" target="_blank" rel="noopener noreferrer">HORNBACH</a></p></div></div>
+ <div class="method-tiles"><article><h4>Partikelfilter</h4><p>Hält feste Schwebstoffe zurück; wichtig z. B. als Schutz nachgeschalteter Bauteile.</p></article><article><h4>Sand- und Mehrschichtfilter</h4><p>Nutzen ein Filterbett; größere Anlagen verwenden sie zur Reduktion von Trübung.</p></article><article><h4>Membranfiltration</h4><p>Je nach Membrantyp können auch sehr kleine Partikel und Mikroorganismen zurückgehalten werden.</p></article></div>
+ <div class="task"><h4>Überlege selbst</h4><p>Welche Stoffe hält ein einfacher Partikelfilter zurück – und was kann er nicht leisten?</p><textarea class="field" data-save="filtration-reflexion" placeholder="Meine Erklärung …"></textarea></div>
+ </div>
+ <div class="method-view hidden" data-method-view="ueberblick">
+ <h3>Weitere Möglichkeiten – anklicken und vergleichen</h3>
+ <p>Die folgenden Verfahren sind bewusst als <strong>Kurzüberblick</strong> angelegt.</p>
+ <div class="method-tiles"><article><h4>🌊 Sedimentation</h4><p>Schwerere Partikel setzen sich bei ruhiger Strömung ab.</p></article><article><h4>🫧 Fällung und Flockung</h4><p>Feine oder gelöste Stoffe werden in abtrennbare Flocken überführt.</p></article><article><h4>⚫ Aktivkohle / Adsorption</h4><p>Bestimmte unerwünschte Stoffe lagern sich an Oberflächen an.</p></article><article><h4>☀️ UV-Desinfektion</h4><p>UV-Licht inaktiviert Mikroorganismen bei geeigneter Auslegung und Wasserqualität.</p></article><article><h4>💨 Belüftung und Oxidation</h4><p>Kann Gase austreiben oder Stoffe wie gelöstes Eisen für eine nachfolgende Abtrennung verändern.</p></article><article><h4>🔁 Ionenaustausch</h4><p>Bestimmte gelöste Ionen werden gegen andere ausgetauscht, z. B. bei der Enthärtung. <strong>Keine Vertiefung in diesem Überblick.</strong></p></article><article><h4>🔥 Destillation (Sonderverfahren)</h4><p>Wasser wird verdampft und wieder kondensiert; hoher Energiebedarf.</p></article><article><h4>🌫️ Nebel- und Luftfeuchtegewinnung (Exoten)</h4><p>Gewinnt Wasser aus feuchter Luft; es muss für Trinkwasserzwecke gesondert hygienisch beurteilt und gegebenenfalls behandelt werden.</p></article></div>
+ </div>
+ <div class="method-view hidden" data-method-view="uebungen">
+ <h3>Aufgaben – prüfen, zuordnen, sichern</h3><p>Die bisherigen interaktiven Aufgaben bleiben erhalten. Der Ionenaustausch wird hier nur als Vergleichsverfahren erwähnt.</p>
+ <div class="task" data-pair="verfahren-funktionen">
         <h3>Verfahren und Wirkung</h3>
         <p>Ordne zu.</p>
         <div class="answer-row"><label style="min-width:220px">Sedimentation</label><select class="field" data-pair="verfahren-funktionen-0" data-answer="Partikel setzen sich ab"><option value="">Bitte auswählen …</option><option>Partikel setzen sich ab</option><option>Kleine Teilchen werden zu Flocken</option><option>Gelöste organische Stoffe adsorbieren</option><option>Ionen werden ausgetauscht</option><option>Gelöste Salze werden weitgehend zurückgehalten</option></select></div>
@@ -262,21 +289,30 @@
         <p>Notiere zwei Verfahren, die du bereits sicher unterscheiden kannst, und erkläre den Unterschied kurz.</p>
         <textarea class="field" data-save="verfahren-note"></textarea>
       </div>
-      <section class="task" id="umkehrosmose-lernblock"><h3>Umkehrosmose – Aufbau, Betrieb und Beurteilung</h3>
-<div class="info"><strong>Wissensbox: Osmose und Umkehrosmose</strong>
-<p><strong>Osmose</strong> ist der natürliche Transport von Wasser durch eine semipermeable Membran in Richtung der Seite mit höherer Konzentration gelöster Stoffe (vereinfacht, bis zum Gleichgewicht).</p>
-<p><strong>Umkehrosmose:</strong> Ein ausreichend hoher Druck überwindet den osmotischen Druck. Das zu behandelnde Wasser wird an einer speziellen Membran entlanggeführt. Ein Teil tritt als salzarmes <strong>Permeat</strong> durch die Membran; gelöste Stoffe verbleiben überwiegend im <strong>Konzentrat</strong>, das abgeleitet wird.</p>
-<p><strong>Typischer Ablauf im Einfamilienhaus:</strong> 1. Trinkwasserzulauf und Vorfilter (Partikelschutz), 2. gegebenenfalls Aktivkohle und Druckerhöhung je nach Anlagentyp, 3. Umkehrosmose-Membran, 4. getrennte Leitungen für Permeat und Konzentrat, 5. gegebenenfalls Speichertank, Nachbehandlung und separate Entnahmearmatur. Einbau und Wartung erfolgen nach Herstellerunterlagen und den für Trinkwasserinstallationen geltenden Regeln.</p>
-<p><strong>Sinnvoll oder nicht?</strong> Für üblicherweise einwandfreies deutsches Leitungswasser ist eine zusätzliche Umkehrosmoseanlage im Haushalt in der Regel nicht notwendig. Bei einem nachgewiesenen, spezifischen Stoffproblem kann sie nach fachlicher Prüfung eine Option sein. Nachteile sind Wasser- und Energieverbrauch, Konzentrat als Abwasser, Wartung und mögliche hygienische Probleme bei unsachgemäßem Betrieb.</p></div>
-<div class="answer-row" style="flex-wrap:wrap;gap:.75rem"><span class="pill">Zulauf / Vorfilter</span><span aria-hidden="true">→</span><span class="pill">Druck / Membran</span><span aria-hidden="true">→</span><span class="pill">Permeat (Nutzwasser)</span></div><p class="meta">Zweiter Abgang an der Membran: Konzentrat → vorgesehener Abwasseranschluss. Dies ist eine textliche Prozessübersicht, keine Animation.</p>
-<div class="task" data-check="osm-1" data-correct="1" data-why="Umkehrosmose nutzt einen über den osmotischen Druck hinausgehenden Betriebsdruck; die Membran trennt Permeat und Konzentrat."><h3>Wissensfrage 1</h3><p>Wie wird bei der Umkehrosmose der Wassertransport technisch erreicht?</p><button class="choice" type="button">Durch Rückspülung eines normalen Hauswasserfilters.</button><button class="choice" type="button">Durch Druck an einer semipermeablen Membran.</button><button class="choice" type="button">Durch Erwärmen bis zum Sieden.</button><div class="feedback hidden" role="status"></div></div>
+      
+ </div>
+ <div class="method-view hidden" data-method-view="osmose">
+ <div class="stage">Zusatzwissen · optionaler Exkurs</div>
+ <h3>Umkehrosmose – ein Sonderfall der Membranverfahren</h3>
+ <div class="method-media"><img loading="lazy" src="https://www.wiltec.de/thumbnail/84/c5/a1/1773831185/99c9a6aba3d94697bddbf1d3058c1d60_800x800.jpg?ts=1773831196" alt="Beispiel einer Umkehrosmoseanlage"><div><p>Anders als ein gewöhnlicher Partikelfilter kann eine Umkehrosmosemembran auch <strong>viele gelöste Salze</strong> zurückhalten.</p><p>Erkunde Prinzip, Anlagenweg und Nutzen einzeln – ohne den Hauptüberblick zu überladen.</p><p class="meta">Praxisbild: <a href="https://www.wiltec.de/thumbnail/84/c5/a1/1773831185/99c9a6aba3d94697bddbf1d3058c1d60_800x800.jpg?ts=1773831196" target="_blank" rel="noopener noreferrer">WilTec</a></p></div></div>
+ <nav class="osm-tabs" aria-label="Unterthemen des Umkehrosmose-Exkurses">
+ <button type="button" class="osm-tab active" data-osm-tab="prinzip" aria-selected="true">1 · Prinzip</button>
+ <button type="button" class="osm-tab" data-osm-tab="anlage" aria-selected="false">2 · Anlagenweg</button>
+ <button type="button" class="osm-tab" data-osm-tab="nutzen" aria-selected="false">3 · Nutzen & Grenzen</button>
+ <button type="button" class="osm-tab" data-osm-tab="check" aria-selected="false">4 · Wissenscheck</button></nav>
+ <div class="osm-view" data-osm-view="prinzip"><div class="info"><strong>Prinzip</strong><p>Bei der natürlichen Osmose strömt Wasser durch eine semipermeable Membran vereinfacht zur Seite mit der höheren gelösten Stoffkonzentration. Die <strong>Umkehrosmose</strong> nutzt ausreichend hohen Druck, um Wasser in Gegenrichtung durch die Membran zu bewegen.</p><p>Das durchgetretene Wasser heißt <strong>Permeat</strong>. Der abgetrennte, konzentrierte Teil heißt <strong>Konzentrat</strong>.</p></div><div class="osm-flow" aria-label="Schematisches Prinzip"><span>Zulauf + Druck</span><span>→</span><span>Membran</span><span>↗ Permeat</span><span>↘ Konzentrat</span></div></div>
+ <div class="osm-view hidden" data-osm-view="anlage"><h4>Typische Schritte im Haushalt</h4><div class="answer-row" style="flex-wrap:wrap;gap:.75rem"><span class="pill">Zulauf / Vorfilter</span><span aria-hidden="true">→</span><span class="pill">Druck / Membran</span><span aria-hidden="true">→</span><span class="pill">Permeat (Nutzwasser)</span></div><p class="meta">Zweiter Abgang an der Membran: Konzentrat → vorgesehener Abwasseranschluss. Dies ist eine textliche Prozessübersicht, keine Animation.</p>
+<p>1. Vorfilter zum Partikelschutz · 2. gegebenenfalls Aktivkohle und Druckerhöhung · 3. Membran · 4. getrennte Wege für Permeat und Konzentrat · 5. gegebenenfalls Tank, Nachbehandlung und gesonderte Entnahme.</p></div>
+ <div class="osm-view hidden" data-osm-view="nutzen"><div class="info"><strong>Wann ist das sinnvoll?</strong><p>Für einwandfreies deutsches Leitungswasser ist eine zusätzliche Umkehrosmoseanlage im Haushalt im Regelfall <strong>nicht erforderlich</strong>. Ein spezieller Bedarf sollte sich aus der Wasseranalyse und einem konkreten Behandlungsziel ergeben.</p><p><strong>Grenzen:</strong> Konzentrat fällt als Abwasser an; Wartung, Wasser- und Energieverbrauch sowie Hygiene müssen berücksichtigt werden. Installation und Betrieb richten sich nach den geltenden Regeln.</p></div></div>
+ <div class="osm-view hidden" data-osm-view="check"><div class="task" data-check="osm-1" data-correct="1" data-why="Umkehrosmose nutzt einen über den osmotischen Druck hinausgehenden Betriebsdruck; die Membran trennt Permeat und Konzentrat."><h3>Wissensfrage 1</h3><p>Wie wird bei der Umkehrosmose der Wassertransport technisch erreicht?</p><button class="choice" type="button">Durch Rückspülung eines normalen Hauswasserfilters.</button><button class="choice" type="button">Durch Druck an einer semipermeablen Membran.</button><button class="choice" type="button">Durch Erwärmen bis zum Sieden.</button><div class="feedback hidden" role="status"></div></div>
 <div class="task" data-check="osm-2" data-correct="2" data-why="Die Entscheidung richtet sich nach einer belastbaren Wasseranalyse, dem konkreten Behandlungsziel und hygienischen sowie betrieblichen Risiken."><h3>Wissensfrage 2</h3><p>Ein Einfamilienhaus wird mit einwandfreiem Leitungswasser versorgt. Was ist die fachlich sinnvolle Aussage?</p><button class="choice" type="button">Umkehrosmose ist ausnahmslos vorgeschrieben.</button><button class="choice" type="button">Die Anlage verbessert die Qualität ohne jeden Nachteil.</button><button class="choice" type="button">In der Regel ist sie nicht erforderlich; einen Sonderbedarf müsste man fachlich prüfen.</button><div class="feedback hidden" role="status"></div></div>
 <div class="task"><h3>Kundenauftrag</h3><p>Ein Kunde fragt: „Warum entstehen bei der Umkehrosmose gleichzeitig Permeat und Konzentrat, und brauche ich die Anlage überhaupt?“ Antworte in 3–4 Sätzen und nenne einen Nachteil.</p><textarea class="field" data-save="umkehrosmose-kundenerklaerung" aria-label="Kundenerklärung zur Umkehrosmose" placeholder="Ich würde dem Kunden erklären, dass …"></textarea></div>
-<p class="source">Fachquellen: <a href="https://www.umweltbundesamt.de/trinkwasser-aufbereiten" target="_blank" rel="noopener">Umweltbundesamt: Trinkwasser aufbereiten</a> · <a href="https://www.verbraucherzentrale.de/wissen/umwelt-haushalt/wasser/wasserbehandlung-im-haushalt-das-muessen-sie-ueber-wasserfilter-wissen-12071" target="_blank" rel="noopener">Verbraucherzentrale: Wasserbehandlung im Haushalt</a> · <a href="https://www.bundestag.de/presse/hib/kurzmeldungen-1025642" target="_blank" rel="noopener">Bundestag: Nachbehandlung im privaten Haushalt</a>.</p></section>
-<label class="phase"><span>☐ Phase abgeschlossen</span><input type="checkbox" data-tick="phase4"></label>
-    </section>
+<p class="source">Fachquellen: <a href="https://www.umweltbundesamt.de/trinkwasser-aufbereiten" target="_blank" rel="noopener">Umweltbundesamt: Trinkwasser aufbereiten</a> · <a href="https://www.verbraucherzentrale.de/wissen/umwelt-haushalt/wasser/wasserbehandlung-im-haushalt-das-muessen-sie-ueber-wasserfilter-wissen-12071" target="_blank" rel="noopener">Verbraucherzentrale: Wasserbehandlung im Haushalt</a> · <a href="https://www.bundestag.de/presse/hib/kurzmeldungen-1025642" target="_blank" rel="noopener">Bundestag: Nachbehandlung im privaten Haushalt</a>.</p></div>
+ </div>
+ <label class="phase"><span>☐ Phase abgeschlossen</span><input type="checkbox" data-tick="phase4"></label>
+ </section>
 
-    <section class="card content-panel hidden" id="panel-desinfektion">
+ <section class="card content-panel hidden" id="panel-desinfektion">
       <div class="stage">Phase 5 · 6 Minuten</div>
       <h2>Desinfektion</h2>
       <div class="student-step"><strong>Dein Auftrag:</strong> Vergleiche Chlor, UV und Ozon. Beantworte die Fragen und halte die wichtigsten Unterschiede in eigenen Worten fest.<div class="student-step-note">Wenn du fertig bist: „Phase abgeschlossen“ markieren und oben die nächste Phase wählen oder zum Wegweiser zurückkehren.</div></div>
@@ -390,5 +426,18 @@
 
   <footer>Konzipiert für selbstständiges Arbeiten, Austauschen und Sichern von Lernergebnissen · GitHub-Pages-fähig</footer>
   <script src="app.js?v=backfix15" defer></script>
-<a id="globalHomeLink" href="../index.html" aria-label="Zur Startseite der Lernwerkstatt">⌂ Zur Startseite</a></body>
+<a id="globalHomeLink" href="../index.html" aria-label="Zur Startseite der Lernwerkstatt">⌂ Zur Startseite</a><script id="methodTabsScript">
+document.addEventListener('click',function(ev){
+ const btn=ev.target.closest('button[data-method-tab],button[data-osm-tab]');
+ if(!btn)return;
+ const isOsm=btn.hasAttribute('data-osm-tab');
+ const attr=isOsm?'data-osm-tab':'data-method-tab';
+ const viewAttr=isOsm?'data-osm-view':'data-method-view';
+ const container=btn.closest(isOsm?'.method-view': '#panel-verfahren');
+ if(!container)return;
+ const selected=btn.getAttribute(attr);
+ container.querySelectorAll('button['+attr+']').forEach(el=>{const active=el===btn;el.classList.toggle('active',active);el.setAttribute('aria-selected',String(active));});
+ container.querySelectorAll('['+viewAttr+']').forEach(el=>el.classList.toggle('hidden',el.getAttribute(viewAttr)!==selected));
+});
+</script></body>
 </html>
